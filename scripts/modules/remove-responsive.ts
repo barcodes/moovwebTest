@@ -1,0 +1,1 @@
+remove("//script[contains(@src, 'responsive.js')] | //link[contains(@href, 'responsive')]")

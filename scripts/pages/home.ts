@@ -1,1 +1,33 @@
 # Place holder/example file
+
+$("body") {
+    add_class("_home")
+
+    insert_top("style", type: "text/css") {
+        inject(read("../../assets/stylesheets/flexslider.css"))
+        text() {
+            replace("/assets/fonts", concat($asset_host, "fonts"))
+            replace("/assets/images", concat($asset_host, "images"))
+        }
+    }
+    insert_top("script", type: "text/javascript", src: asset("javascript/jquery.flexslider-min.js"))
+    $("//a[contains(@href, 'best-sellers')][contains(@style, 'url(')]")
+    {
+        create_image_from_bg()
+        add_class("_best-seller-link")
+
+        insert_after("div", id:"_flexslider", class: "flexslider") {
+            %slider = this()
+            $("//ul[@id='slider']") {
+                attributes(id: "_slider", class: "slides")
+                remove("@style")
+                $("li") {
+                    inner("")
+                    create_image_from_bg()
+                }
+                move(this(), %slider, position("bottom"))
+            }
+            remove("following-sibling::div")
+        }
+    }
+}
