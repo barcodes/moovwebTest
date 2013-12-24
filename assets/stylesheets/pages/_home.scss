@@ -3,8 +3,15 @@
 ._home {
     .homepage {
         .bottombannercontainer {
-            img {
+            a, img, div {
                 width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        #ftwrapper {
+            div {
+                max-width: 100%;
             }
         }
     }

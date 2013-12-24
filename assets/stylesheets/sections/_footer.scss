@@ -1,3 +1,6 @@
-footer._footer {
-
+#ftwrapper {
+    div {
+        max-width: 100%;
+        @include box-sizing(border-box);
+    }
 }

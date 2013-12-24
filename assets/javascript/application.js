@@ -7,7 +7,6 @@ var fs_opts = {
 };
 
 function do_slider() {
-    debugger;
     if(typeof(jQuery.flexslider) == 'function') {
         jQuery('.flexslider').flexslider(fs_opts);
     }

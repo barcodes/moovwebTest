@@ -2,4 +2,5 @@
     width: auto;
     min-width: 0;
     padding: 6px;
+    @include box-sizing(border-box);
 }
