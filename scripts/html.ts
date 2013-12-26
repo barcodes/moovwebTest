@@ -1,22 +1,22 @@
 # HTML Transformations go here
 
 $("/html") {
-  rewrite_links()
-  absolutize_srcs()
+    #fix nasty markup
+    @import modules/fix-broken-markup.ts
+    rewrite_links()
+    absolutize_srcs()
 
+    add_assets()
 
+    $("./head") {
+        insert("script", type: "text/javascript", src: asset("javascript/application.js"))
+    }
 
-  add_assets()
+    @import sections/header.ts
+    @import sections/footer.ts
 
-  $("./head") {
-    insert("script", type: "text/javascript", src: asset("javascript/application.js"))
-  }
+    @import mappings.ts
 
-  @import sections/header.ts
-  @import sections/footer.ts
-
-  @import mappings.ts
-
-  @import modules/remove-responsive.ts
+    @import modules/remove-responsive.ts
 }
 
