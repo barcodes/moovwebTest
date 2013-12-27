@@ -1,0 +1,91 @@
+.categorywrapper {
+    .categorymenu {
+        float: none;
+        height: auto;
+        ul, li, div {
+            top: 0;
+            left: 0;
+            border: 0px !important;
+            padding: 0px;
+            height: auto;
+            float: none;
+            width: 100%;
+            position: initial;
+
+            ul, li {
+                padding: 0;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                border: 0px;
+                position: initial;
+                visibility: visible;
+                display: block;
+                > a {
+                    &[data-ur-state=enabled] i {
+                        @include transform(rotate(90deg));
+                    }
+                }
+                &.topLevelMenu {
+                    padding: 0px;
+                    height: auto;
+                    > a {
+                        color: #000;
+                        background-color: #FFF;
+                        border-bottom: 1px solid #000;
+                        i {
+                           color: #969696;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .topLevelMenu {
+                    height: auto;
+                    padding: 0;
+                }
+            }
+            a:hover .subMenuContent, .subMenuContent {
+                visibility: auto;
+                border-style: none !important;
+            }
+        }
+        ul {
+            > li {
+                a, div.hasThirdLevel {
+                    color: #969696;
+                    margin: 6px 0;
+                    background-color: #F0F0F0;
+                    font-size: 16px;
+                    padding: 15px 6px !important;
+                    &.hasThirdLevelMobile {
+                        display: block !important;
+                    }
+                    @include box-sizing(border-box);
+                    &:visited {
+                        color: #969696;
+                    }
+                    i {
+                        float: right;
+                    }
+                }
+                > div > ul {
+                    li {
+                        a {
+                            text-indent: 10px;
+                        }
+                    }
+                    li:first-of-type a {
+                        margin-top: 0;
+                    }
+                    li:last-of-type a {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .minicarthover {
+        display: none;
+    }
+}
