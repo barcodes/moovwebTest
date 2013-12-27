@@ -9,7 +9,12 @@ $("//div[@id='footer']") {
     $(".//div[@id='ftwrapper']") {
         remove(".//@style")
     }
+    $("div") {
+        #Fix privacy policy
+        insert("div", class: "ftgroup")
+    }
     $(".//div[@class='ftgroup']") {
+
         attributes(data-ur-set: "toggler")
         $("div[1]") {
             attributes(data-ur-toggler-component: "button")

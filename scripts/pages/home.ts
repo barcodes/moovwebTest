@@ -11,6 +11,23 @@ $("body") {
         }
     }
     insert_top("script", type: "text/javascript", src: asset("javascript/jquery.flexslider-min.js"))
+
+    //when there is a main-banner
+    $("//div[@id='main-banner']/..") {
+        remove("div[@id='main-banner']")
+        remove("@style")
+        attributes(id:"_flexslider", class: "flexslider")
+        insert("ul", class: "slides") {
+            move_here("../div") {
+                name("li")
+                remove("@style")
+            }
+        }
+        copy_here("//div[@class='categorywrapper']", "after") {
+            remove("@data-ur-toggler-component")
+        }
+    }
+    //when there is a slider
     $("//a[contains(@href, 'best-sellers')][contains(@style, 'url(')]")
     {
         create_image_from_bg()
@@ -29,5 +46,8 @@ $("body") {
             }
             remove("following-sibling::div")
         }
+
     }
+
+    remove("//div[@class='home-slot-bottom']")
 }

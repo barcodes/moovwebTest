@@ -10,6 +10,10 @@ $("//div[@id='header']") {
         attributes(data-ur-set:'toggler')
         $("a") {
             attributes(data-ur-toggler-component: 'button', href: 'javascript:void(0);')
+            $(". | ../div//a")
+            {
+                insert("i", class:"fa fa-chevron-right")
+            }
         }
         $("div[not(contains(@class, 'hasThirdLevel')) and not(contains(@class, 'subcategories'))]") {
             attributes(data-ur-toggler-component: 'content')
@@ -19,5 +23,40 @@ $("//div[@id='header']") {
     $("//div[@class='headerslotcontent']/div[@class='bottombannercontainer']") {
         remove(".//@style")
         remove(".//span/span")
+    }
+    $("//div[@class='categorywrapper']") {
+        attributes(data-ur-toggler-component: "content")
+        wrap("div", data-ur-set: "toggler")
+        {
+            insert_top("div",class: "_header-buttons") {
+                insert_top("a", id:"_bag-button", class: "_header-button")
+                {
+                    insert("div", "My Bag") {
+                        insert_top("i", class: "_button-bag")
+                    }
+                }
+                insert_top("a", id:"_sale-button", class: "_header-button")
+                {
+                    insert("div", "Sale") {
+                        insert_top("i", class: "fa fa-tags")
+                    }
+                }
+                insert_top("a", id:"_menu-button", class: "_header-button", data-ur-toggler-component: "button")
+                {
+                    insert("div", "Menu") {
+                        insert_top("i", class: "fa fa-bars")
+                    }
+                }
+            }
+        }
+        $(".//li[@class='test']/a[@class='hasThirdLevelMobile']/..") {
+            attributes(data-ur-set: "toggler")
+            $("a[@class='hasThirdLevelMobile']") {
+                attributes(data-ur-toggler-component: "button")
+            }
+            insert("div", data-ur-toggler-component: "content") {
+                move_here("../div[@class='subcategories']")
+            }
+        }
     }
 }

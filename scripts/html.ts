@@ -9,6 +9,7 @@ $("/html") {
     add_assets()
 
     $("./head") {
+        insert('link', href:'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel:'stylesheet', type:'text/css')
         insert("script", type: "text/javascript", src: asset("javascript/application.js"))
     }
 
