@@ -50,4 +50,5 @@ $("body") {
     }
 
     remove("//div[@class='home-slot-bottom']")
+    remove("//div[@class='extended-text']")
 }

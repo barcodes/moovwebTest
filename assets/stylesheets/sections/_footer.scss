@@ -1,6 +1,120 @@
-#ftwrapper {
-    div {
-        max-width: 100%;
-        @include box-sizing(border-box);
+#footer {
+    height: auto;
+    border-top: 14px solid #000;
+    border-bottom: 0;
+    #ftwrapper {
+        height: auto;
+        clear: both;
+        div {
+            max-width: 100%;
+            @include box-sizing(border-box);
+        }
+
+        ._footer-group-button {
+            width: 100%;
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            padding: 15px 6px;
+            font-weight: bold;
+            border-bottom: 1px solid #e0e0e0;
+            color: #666666;
+            @include box-sizing(border-box);
+
+            i {
+                float: right;
+                color: #e0e0e0;
+            }
+            &[data-ur-state=enabled] {
+                i {
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+        ._footer-group-content {
+            a {
+                padding: 15px 6px;
+                display: block;
+                width: 100%;
+                background-color: #F0F0F0;
+                color: #969696;
+                margin: 3px 0;
+                font-size: 13px;
+                @include box-sizing(border-box);
+
+                i {
+                    float: right;
+                    color: #e0e0e0;
+                }
+            }
+
+        }
+        a[data-mw-footer-item] {
+            border-bottom: 0;
+        }
+        a[data-mw-usage=email-button] {
+            display: block;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0 !important;
+            padding: 15px;
+            text-align: center;
+            color: #333333;
+            border: 1px solid #999999;
+            @include border-radius(5px);
+            @include box-sizing(border-box);
+        }
+
+        .txtCopyright {
+            float: none;
+            width: auto;
+            text-align: center;
+            padding-top: 6px;
+        }
+
+        ._footer-social-bar {
+            padding-top: 15px;
+            a {
+                background: image-url("social-buttons.png") no-repeat 1px 0;
+                background-size: auto 37px;
+                height: 37px;
+                width: 38px;
+                float: none;
+                display: inline-block;
+                margin-left: 0;
+                &.social-icons-twitter {
+                    background-position: -47px 0;
+                    margin-left: 10px;
+                }
+                &.social-icons-youtube {
+                    background-position: -96px 0;
+                    margin-left: 10px;
+                }
+                &.social-icons-pinterest {
+                    background-position: -143px 0;
+                    margin-left: 10px;
+                }
+                &.social-icons-instagram {
+                    background-position: -190px 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+
+    }
+}
+.copytxt-inner {
+    text-align: center;
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+
+        &.stellaServiceFooter {
+            margin-left: 10px;
+        }
+        span {
+            display: none !important;
+        }
     }
 }
