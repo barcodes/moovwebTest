@@ -34,10 +34,13 @@
                         background-color: #FFF;
                         border-bottom: 1px solid #000;
                         i {
-                           color: #969696;
+                           color: #000;
                         }
                     }
                 }
+            }
+            &#primaryNavigationList {
+                border-top: 2px solid #000 !important;
             }
             &:hover {
                 .topLevelMenu {
@@ -54,7 +57,7 @@
             > li {
                 a, div.hasThirdLevel {
                     color: #969696;
-                    margin: 6px 0;
+                    margin: 3px 0;
                     background-color: #F0F0F0;
                     font-size: 16px;
                     padding: 15px 6px !important;

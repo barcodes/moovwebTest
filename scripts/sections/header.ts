@@ -31,11 +31,13 @@ $("//div[@id='header']") {
             insert_top("div",class: "_header-buttons") {
                 insert_top("a", id:"_bag-button", class: "_header-button")
                 {
-                    insert("div", "My Bag") {
-                        insert_top("i", class: "_button-bag")
+                    insert("div") {
+                        insert("span", "My Bag") {
+                            insert_top("i", class: "_button-bag")
+                        }
                     }
                 }
-                insert_top("a", id:"_sale-button", class: "_header-button")
+                insert_top("a", id:"_sale-button", class: "_header-button", href: "/sale")
                 {
                     insert("div", "Sale") {
                         insert_top("i", class: "fa fa-tags")
