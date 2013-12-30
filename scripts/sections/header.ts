@@ -61,4 +61,9 @@ $("//div[@id='header']") {
             }
         }
     }
+    $(".//script[contains(text(), 'width:\"580px\"')]") {
+        text() {
+            replace("width:\"580px\"", "width:\"98%\", height:\"50%\"")
+        }
+    }
 }
