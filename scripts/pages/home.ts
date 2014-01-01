@@ -14,17 +14,24 @@ $("body") {
 
     //when there is a main-banner
     $("//div[@id='main-banner']/..") {
-        remove("div[@id='main-banner']")
-        remove("@style")
-        attributes(id:"_flexslider", class: "flexslider")
-        insert("ul", class: "slides") {
-            move_here("../div") {
-                name("li")
-                remove("@style")
-            }
+        %divs = $("div") {
+            remove("@style")
         }
-        copy_here("//div[@class='categorywrapper']", "after") {
-            remove("@data-ur-toggler-component")
+        remove("@style")
+        match(%divs) {
+            not("1") {
+                remove("div[@id='main-banner']")
+                attributes(id:"_flexslider", class: "flexslider")
+                insert("ul", class: "slides") {
+                    move_here("../div") {
+                        name("li")
+                        remove("@style")
+                    }
+                }
+                copy_here("//div[@class='categorywrapper']", "after") {
+                    remove("@data-ur-toggler-component")
+                }
+            }
         }
     }
     //when there is a slider
