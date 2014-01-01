@@ -23,7 +23,8 @@ match($status) {
         @import pages/home.ts
       }
       else() {
-        log("--> No page match in mappings.ts")
+        log("--> Importing content-mapping.ts")
+        @import content-mapping.ts
       }
     }
   }

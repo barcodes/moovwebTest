@@ -15,3 +15,5 @@ function do_slider() {
 $(function() {
     setTimeout(do_slider, 500);
 })
+
+app.quickView.show = function(){}

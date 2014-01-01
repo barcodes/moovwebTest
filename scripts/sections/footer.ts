@@ -25,27 +25,27 @@ $("//div[@id='footer']") {
     }
     #Create View Desktop Site link
 
-    $(".//div[@class='ftgroup']") {
-        attributes(data-ur-set: "toggler", class: "_footer-group")
-        $("div[not(@class = 'ftlinks')]") {
-            attributes(data-ur-toggler-component: "button", class: "_footer-group-button")
-            %text = text()
-            insert("i", class: "fa fa-chevron-right")
-            $("../."){
-                attribute("data-mw-footer-item", %text)
+    $(".//div[@id='ftwrapper']") {
+        $(".//div[@class='ftgroup']") {
+            attributes(data-ur-set: "toggler", class: "_footer-group")
+            $("div[not(@class = 'ftlinks')]") {
+                attributes(data-ur-toggler-component: "button", class: "_footer-group-button")
+                %text = text()
+                insert("i", class: "fa fa-chevron-right")
+                $("../."){
+                    attribute("data-mw-footer-item", %text)
+                }
             }
-        }
 
-        insert("div", class:"_footer-group-content", data-ur-toggler-component: "content")
-        {
-            move_here("../div[@class='ftlinks']", class: "_footer-group-link") {
-                $("a") {
-                    insert("i", class: "fa fa-chevron-right")
+            insert("div", class:"_footer-group-content", data-ur-toggler-component: "content")
+            {
+                move_here("../div[@class='ftlinks']", class: "_footer-group-link") {
+                    $("a") {
+                        insert("i", class: "fa fa-chevron-right")
+                    }
                 }
             }
         }
-    }
-    $(".//div[@id='ftwrapper']") {
         insert_top("a", "VIEW DESKTOP SITE") {
             attributes(data-mw-footer-item: "VIEW DESKTOP SITE", href:"#", class: "_footer-group-button")
             insert("i", class: "fa fa-chevron-right")
