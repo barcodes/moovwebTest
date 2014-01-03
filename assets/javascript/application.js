@@ -14,6 +14,23 @@ function do_slider() {
 
 $(function() {
     setTimeout(do_slider, 500);
+    setTimeout(override_functions, 1500);
 })
 
-app.quickView.show = function(){}
+
+function override_functions() {
+    app.ProductCache.showImages = function(selectedVal, vals) {
+        $.each(vals, function() {
+            if (this.val == selectedVal) {
+                $('.flexslider').removeData("flexslider");
+                $(".flexslider").empty().append("<ul class='slides'>")
+                $.each(this.images.large, function() {
+                    $(".flexslider ul").append("<li><img src='" + this + "'/></li>");
+                });
+                $('.flexslider').flexslider(fs_opts);
+            }
+        });
+    }
+
+    app.quickView.show = function(){}
+}

@@ -18,5 +18,21 @@
                 }
             }
         }
+        .swatches.color
+        {
+            li {
+                width: 30px !important;
+                height: 30px !important;
+                border-radius: 15px !important;
+                a.swatchanchor
+                {
+                    width: 30px !important;
+                    height: 30px !important;
+                    @include box-sizing(border-box);
+                    border-radius: 15px !important;
+                    border: 5px double #CCC;
+                }
+            }
+        }
     }
 }

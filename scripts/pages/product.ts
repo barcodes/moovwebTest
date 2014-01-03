@@ -22,15 +22,17 @@ $("body") {
                 %slider = this()
                 insert("ul", id: "_slider", class: "slides") {
                     %slides = this()
+                    %path = path()
                     $("//div[@class='productthumbnails']/img") {
-                        attr("src") {
-                            value() {
-                                replace(/sw\=([0-9].*)/, "sw=320")
+                        copy_to(%path) {
+                            attr("src") {
+                                value() {
+                                    replace(/sw\=([0-9].*)/, "sw=320")
+                                }
                             }
+                            wrap("li")
                         }
-                        wrap("li") {
-                            move(this(), %slides, position("bottom"))
-                        }
+
                     }
                 }
             }
