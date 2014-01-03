@@ -12,15 +12,15 @@ $("body") {
     }
     insert_top("script", type: "text/javascript", src: asset("javascript/jquery.flexslider-min.js"))
 
-    //when there is a main-banner
-    $("//div[@id='main-banner']/..") {
+    //when there is a main-banner or large-hp-banner
+    $("//div[@id='main-banner']/.. | //div[@id='large-hp-banner']/..") {
         %divs = $("div") {
             remove("@style")
         }
         remove("@style")
         match(%divs) {
             not("1") {
-                remove("div[@id='main-banner']")
+                remove("div[@id='main-banner'] | div[@id='large-hp-banner']")
                 attributes(id:"_flexslider", class: "flexslider")
                 insert("ul", class: "slides") {
                     move_here("../div") {

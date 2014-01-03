@@ -3,6 +3,7 @@ $("//body") {
     remove("//div[@id='mysitewide-banner']/@style")
     remove("//script[contains(text(), 'productsPerRow = 3.0;')]")
     remove("//div[@class='quickviewbutton']")
+    remove("//div[contains(@class, 'cat-banner')]")
 
     $("//div[@id='leftcolumn']") {
         insert_before("div", class: "_action-buttons") {

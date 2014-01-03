@@ -1,0 +1,22 @@
+._product {
+    .productdetail .productinfo {
+        width: auto;
+        float: none !important;
+        margin: 0;
+
+        .swatches:not(.color) {
+            .swatchanchor {
+                padding: 10px;
+                border-color: #999999;
+
+                @include border-radius(0px);
+            }
+            .selected {
+                .swatchanchor {
+                    background-color: #999999;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
