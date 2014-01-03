@@ -23,6 +23,21 @@ header#header._header {
 
         .headerleft {
             float: none;
+
+            a#_search-toggle {
+                color: #999;
+                background: #eee;
+                position: absolute;
+                z-index: 10000;
+                right: 0px;
+                text-align: center;
+                i {
+                    font-size: 25px;
+                    width: 40px;
+                    line-height: 40px;
+                }
+            }
+
             h1.logo
             {
                 height: 40px;
@@ -36,9 +51,38 @@ header#header._header {
                 }
             }
         }
-        .headersearchwrapper {
-            display: none;
+
+        .headerright {   
+            float: none;
+
+            .headersearchwrapper {
+                display: none;
+                width: 100%;
+
+                .sitesearch {
+                    margin: 5px 0px;
+                    form {
+                        padding: 5px 20px 5px 5px;
+
+                        fieldset {
+                            width: auto;
+
+                            input {
+                                margin: 0px 5px;
+                                height: 32px !important;
+                                line-height: 32px;
+                                font-size: 24px;
+                                width: 100%;
+                            }
+                            button {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
+
     }
     iframe {
         display: none;

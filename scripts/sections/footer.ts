@@ -1,9 +1,3 @@
-# $("./body") {
-#   insert_bottom("footer", class: "_footer") {
-#     Move stuff here
-#   }
-# }
-
 $("//div[@id='footer']") {
     name("footer")
     $(".//div[@id='ftwrapper']") {

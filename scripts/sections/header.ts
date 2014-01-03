@@ -1,8 +1,3 @@
-# $('./body') {
-#   insert_top("header", class: "_header") {
-#     Move stuff here
-#   }
-# }
 $("//div[@id='header']") {
     name("header")
     add_class("_header")
@@ -23,6 +18,11 @@ $("//div[@id='header']") {
     $("//div[@class='headerslotcontent']/div[@class='bottombannercontainer']") {
         remove(".//@style")
         remove(".//span/span")
+    }
+    $("//div[@class='headerleft']") {
+        insert_top('a', id:'_search-toggle') {
+            insert('i', class:'fa fa-search')
+        }
     }
     $("//div[@class='categorywrapper']") {
         attributes(data-ur-toggler-component: "content")
