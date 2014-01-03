@@ -108,6 +108,7 @@ header#header._header {
                 }
             }
             &#_bag-button {
+                position: relative;
                 div {
                     padding: 13px 13px 14px;
                     text-indent: 15px;
@@ -124,6 +125,18 @@ header#header._header {
                             background-size: 15px;
                         }
                     }
+                }
+                span._cart-count {
+                    position:absolute;
+                    right: -5px;
+                    top: -5px;
+                    background: #cc0000;
+                    color: #fff;
+                    padding: 3px 5px 3px 3px;
+
+                    font-size: 11px;
+
+                    @include border-radius(15px);
                 }
 
             }

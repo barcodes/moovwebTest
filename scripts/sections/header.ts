@@ -29,7 +29,7 @@ $("//div[@id='header']") {
         wrap("div", data-ur-set: "toggler")
         {
             insert_top("div",class: "_header-buttons") {
-                insert_top("a", id:"_bag-button", class: "_header-button")
+                insert_top("a", id:"_bag-button", class: "_header-button", href: fetch("//a[@class='linkminicart']/@href"))
                 {
                     insert("div") {
                         insert("span", "My Bag") {
