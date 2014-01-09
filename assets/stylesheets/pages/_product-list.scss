@@ -127,10 +127,14 @@
 
 
                 .actionsblock {
-                    display: none;
+                    /*display: none;*/
                     clear: both;
                 }
             }
+        }
+
+        .extended-text-title {
+            text-align: left;
         }
 
         .pagination li.firstlast {

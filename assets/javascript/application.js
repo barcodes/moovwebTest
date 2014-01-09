@@ -35,6 +35,54 @@ $(function() {
     }).on('click', '#_slider-next', function() {
         $(this).parents("#_flexslider").find(".flexslider").flexslider("next");
     });
+
+    if($('body').hasClass('_cart')) {
+
+        checkForShippingOptionsInterval = setInterval(function() {
+            options = $('#shippingMethodID').children();
+            if(options.length > 0) {
+                options.each( function() {
+                    self = $(this);
+                    var option = $('<label for="'+self.attr('value')+'_new" class="shippingLabel">'
+                        + '<input type="radio" name="shippingOption" '
+                        + 'id="'+self.attr('value')+'_new" value="'+self.attr('value')+'">'
+                        + '<span>' +self.text() + '</span>'
+                        + '</label>');
+                    option.insertBefore($('.calculator > fieldset'));
+                    option.find('input').bind('change', function() {
+                        self = $(this);
+                        value = self.val();
+                        $('#shippingMethodID').val(value);
+                        $('.calculator > fieldset button').click();
+                    });
+                });
+                $('.shippingLabel :first').attr('checked', true);
+                label = $('.calculator > fieldset > div :first').removeAttr().detach();
+                $('.calculator').prepend(label);
+                clearInterval(checkForShippingOptionsInterval);
+            }
+        },1000);
+
+        $('._row-qty-plus').bind('click', function() {
+            self = $(this);
+            input = self.parent().find('.cartquantity');
+            value = parseInt(input.val());
+            input.val(value+1);
+            self.parents('.productrow').find('.updatetextbutton').click();
+        });
+
+        $('._row-qty-minus').bind('click', function() {
+            self = $(this);
+            input = self.parent().find('.cartquantity');
+            value = parseInt(input.val());
+            if( value > 1 ) {
+                input.val(value-1);
+            }
+            self.parents('.productrow').find('.updatetextbutton').click();
+        });
+
+    }
+
 })
 
 

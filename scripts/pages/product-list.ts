@@ -5,8 +5,8 @@ $("//body") {
     remove("//div[@class='quickviewbutton']")
     remove("//div[contains(@class, 'cat-banner')]")
 
-    $("//div[@id='leftcolumn']") {
-        insert_before("div", class: "_action-buttons") {
+    $("//div[@id='pe_rBanner']") {
+        insert_after("div", class: "_action-buttons") {
             insert("a", id: "_sort-button", class: "_action-button") {
                 insert("div", "Sort") {
                     insert("i", class: "fa fa-chevron-down")

@@ -22,6 +22,9 @@ match($status) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
+      with(/\/basket/) {
+        @import pages/cart.ts
+      }
       else() {
         log("--> Importing content-mapping.ts")
         @import content-mapping.ts
