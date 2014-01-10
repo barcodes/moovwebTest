@@ -7,8 +7,10 @@ header#header._header {
             color: #e57f7f;
             font-weight: bold;
             text-transform: uppercase;
+            font-family: arial !important;
         }
         a.fancybox {
+            display: none;
             text-transform: capitalize;
             text-decoration: underline;
         }
@@ -47,7 +49,7 @@ header#header._header {
                     width: 100% !important;
                     height: 20px;
                     margin-top: 0;
-                    background-size: contain;
+                    background-size: 80%;
                 }
             }
         }

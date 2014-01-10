@@ -18,6 +18,11 @@ $("//div[@id='header']") {
     $("//div[@class='headerslotcontent']/div[@class='bottombannercontainer']") {
         remove(".//@style")
         remove(".//span/span")
+        $('.//a[1]/span') {
+            text() {
+                replace('-','')
+            }
+        }
     }
     $("//div[@class='headerleft']") {
         insert_top('a', id:'_search-toggle') {
