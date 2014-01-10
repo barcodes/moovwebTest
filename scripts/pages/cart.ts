@@ -49,6 +49,11 @@ $('body') {
 						move(this(), %qtyDIV, position('before'))
 					}
 				}
+				$('.//div[@class="detailscolumn"]') {
+					$('.//div') {
+						remove('@class')
+					}
+				}
 				insert('div', style:"clear:both")
 			}
 		}
