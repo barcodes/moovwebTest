@@ -37,15 +37,20 @@
                                 max-width: 100%;
                             }
                         }
-                        // div.name {
-                        //     a {
-                        //         font-size: 14px;
-                        //         font-weight: bold;
-                        //     }
-                        // }
+                        div.name {
+                            a {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                        }
                         div.productattributes {
                             span {
                                 float: none !important;
+                            }
+                            .attribute {
+                                .label, .value {
+                                    font-size: 12px !important;
+                                }
                             }
                         }
                         div.stockstate {
