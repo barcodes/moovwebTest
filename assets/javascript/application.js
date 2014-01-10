@@ -36,6 +36,10 @@ $(function() {
         $(this).parents("#_flexslider").find(".flexslider").flexslider("next");
     });
 
+    if($('body').hasClass('_product-list')) {
+        app.quickView.show = function() { return; }
+    }
+
     if($('body').hasClass('_cart')) {
 
         checkForShippingOptionsInterval = setInterval(function() {

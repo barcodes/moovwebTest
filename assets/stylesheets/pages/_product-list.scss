@@ -1,12 +1,15 @@
 ._product-list {
     #pe_rBanner {
         width: auto;
+        height: 35px;
+        line-height: 35px;
+        margin: 0px;
     }
     .promo {
         float: left;
     }
     ._action-buttons {
-        margin-top: 25px;
+        margin-top: 10px;
         display: table;
         width: 100%;
         table-spacing: 1px;
@@ -133,8 +136,16 @@
             }
         }
 
+        .extended-text {
+            padding: 5px 0px 0px !important;
+        }
+
         .extended-text-title {
             text-align: left;
+        }
+
+        .producthits {
+            margin-top: -10px;
         }
 
         .pagination li.firstlast {

@@ -60,6 +60,7 @@ $("//div[@id='header']") {
                 move_here("../div[@class='subcategories']")
             }
         }
+        remove('.//li[@id="pepress"]')
     }
     $(".//script[contains(text(), 'width:\"580px\"')]") {
         text() {
