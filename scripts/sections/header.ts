@@ -72,4 +72,10 @@ $("//div[@id='header']") {
             replace("width:\"580px\"", "width:\"98%\", height:\"100%\"")
         }
     }
+    $('//h1[@class="logo"]/a/span') {
+        name('img')
+        attribute('alt', text())
+        text('')
+        attribute('src', asset('images/new-pe-logo.png'))
+    }
 }

@@ -7,7 +7,12 @@
         margin-top: 6px;
     }
 }
+
+#cboxOverlay {
+    display: none !important;
+}
 #colorbox {
+    display: none !important;
     #cboxWrapper {
 
         @include box-sizing(border-box);

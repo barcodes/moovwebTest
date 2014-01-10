@@ -46,10 +46,14 @@ header#header._header {
                 margin: 0;
                 display: block;
                 a {
+                    background: none;
                     width: 100% !important;
                     height: 20px;
                     margin-top: 0;
-                    background-size: 80%;
+
+                    img {
+                        max-width: 80%;
+                    }
                 }
             }
         }
