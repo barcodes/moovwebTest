@@ -56,6 +56,12 @@ $("body") {
 
     }
 
+    $('//div[@class="home-slot-top"]') {
+        $('//div') {
+            remove('@style')
+        }
+    }
+
     remove("//div[@class='home-slot-bottom']")
     remove("//div[@class='extended-text']")
 }
