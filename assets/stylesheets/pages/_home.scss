@@ -1,6 +1,17 @@
 // Every page should have a class on the body
 // Scope that in each file at the start
 ._home {
+    #banners-container {
+        a {
+            display:block;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
     .homepage {
         .bottombannercontainer {
             a, img, div {

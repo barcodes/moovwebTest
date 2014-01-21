@@ -6,11 +6,11 @@
   are on a certain page.
 
   Example starting code:
-*/
+  */
 
-match($status) {
+  match($status) {
 
-  with(/302/) {
+    with(/302/) {
     log("--> STATUS: 302") # redirect: just let it go through
   }
 
@@ -19,14 +19,12 @@ match($status) {
 
     match($path) {
       with(/^\/$|^\/\?/) {
-        log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
       with(/\/basket/) {
         @import pages/cart.ts
       }
       else() {
-        log("--> Importing content-mapping.ts")
         @import content-mapping.ts
       }
     }
