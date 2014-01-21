@@ -2,6 +2,8 @@ $("//div[@id='header']") {
     name("header")
     add_class("_header")
 
+    remove('./div[@class="headerbanner"]')
+
     $("//li[contains(@class, 'topLevelMenu')]") {
         attributes(data-ur-set:'toggler')
 
