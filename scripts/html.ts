@@ -3,12 +3,13 @@
 $("/html") {
     #fix nasty markup
     @import modules/fix-broken-markup.ts
+
     rewrite_links()
+    absolutize_srcs()
     absolutize('.//link', 'href')
 
     clean_mobile_meta_tags()
     remove_html_comments()
-
 
     add_assets()
 
@@ -23,4 +24,3 @@ $("/html") {
 
     @import modules/remove-responsive.ts
 }
-

@@ -91,17 +91,19 @@ $(function() {
 
 
 function override_functions() {
-    app.ProductCache.showImages = function(selectedVal, vals) {
-        $.each(vals, function() {
-            if (this.val == selectedVal) {
-                $('.flexslider').removeData("flexslider");
-                $(".flexslider").empty().append("<ul class='slides'>")
-                $.each(this.images.large, function() {
-                    $(".flexslider ul").append("<li><img src='" + this + "'/></li>");
-                });
-                $('.flexslider').flexslider(fs_opts);
-            }
-        });
+    if(app.ProductCache != null) {
+        app.ProductCache.showImages = function(selectedVal, vals) {
+            $.each(vals, function() {
+                if (this.val == selectedVal) {
+                    $('.flexslider').removeData("flexslider");
+                    $(".flexslider").empty().append("<ul class='slides'>")
+                    $.each(this.images.large, function() {
+                        $(".flexslider ul").append("<li><img src='" + this + "'/></li>");
+                    });
+                    $('.flexslider').flexslider(fs_opts);
+                }
+            });
+        }
     }
 
     app.quickView.show = function(){}

@@ -49,11 +49,13 @@ $("//div[@id='header']") {
                         }
                     }
                 }
+
                 insert_top("a", id:"_sale-button", class: "_header-button", href: "/sale") {
                     insert("div", "Sale") {
                         insert_top("i", class: "fa fa-tags")
                     }
                 }
+
                 insert_top("a", id:"_menu-button", class: "_header-button", data-ur-toggler-component: "button") {
                     insert("div", "Menu") {
                         insert_top("i", class: "fa fa-bars")
@@ -64,9 +66,11 @@ $("//div[@id='header']") {
 
         $(".//li[@class='test']/a[@class='hasThirdLevelMobile']/..") {
             attributes(data-ur-set: "toggler")
+
             $("a[@class='hasThirdLevelMobile']") {
                 attributes(data-ur-toggler-component: "button")
             }
+
             insert("div", data-ur-toggler-component: "content") {
                 move_here("../div[@class='subcategories']")
             }
