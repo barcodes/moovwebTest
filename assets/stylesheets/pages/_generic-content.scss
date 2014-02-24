@@ -52,7 +52,7 @@
                         }
 
                         .panel {
-                            
+
                             > h3 a {
                                 padding: 0px 0px 5px;
                             }
@@ -60,7 +60,26 @@
                                 padding: 0px;
                             }
                         }
+                    }
 
+                    .size-chart-table {
+                        ul.ui-tabs-nav {
+                            padding: 0px;
+
+                            li {
+                                float: none;
+                                clear: both;
+                                border: none;
+                                border-bottom: 1px solid #ccc;
+
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    padding: 10px 0px;
+                                    color: #333 !important;
+                                }
+                            }
+                        }
                     }
 
                 }

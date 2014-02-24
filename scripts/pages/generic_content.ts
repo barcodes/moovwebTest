@@ -7,6 +7,9 @@ $('//body') {
         remove('div[@id="leftcolumn"]')
 
         $('div[@id="content"]/div[@class="contentassetpage"]/div') {
+
+            remove('div/@style')
+
             $('//img') {
                 remove('@width')
                 remove('@height')
