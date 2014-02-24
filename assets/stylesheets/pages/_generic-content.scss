@@ -41,6 +41,28 @@
                         }
                     }
 
+                    #international-shipping-faq {
+                        width: 100%;
+
+                        > h1 {
+                            background: none;
+                            color: #333;
+                            padding: 0px;
+                            width: 100%;
+                        }
+
+                        .panel {
+                            
+                            > h3 a {
+                                padding: 0px 0px 5px;
+                            }
+                            ul {
+                                padding: 0px;
+                            }
+                        }
+
+                    }
+
                 }
             }
         }
