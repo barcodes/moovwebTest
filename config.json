@@ -1,18 +1,6 @@
 {
 	"host_map": [
 		"$.perryellis.com => www.perryellis.com",
-		"$.perryellis.com => perryellis.com",
-		"$.originalpenguin.com => www.originalpenguin.com",
-		"$.originalpenguin.com => www.originalpenguin.com",
-		"$.cubavera.com => www.cubavera.com",
-		"$.cubavera.com => cubavera.com",
-		"$.callawayapparel.com => www.callawayapparel.com",
-		"$.callawayapparel.com => callawayapparel.com",
-		"$.candccalifornia.com => www.candccalifornia.com",
-		"$.candccalifornia.com => candccalifornia.com",
-		"$.rafaellasportswear.com => www.rafaellasportswear.com",
-		"$.rafaellasportswear.com => rafaellasportswear.com",
-		"$.farah.co.uk => www.farah.co.uk",
-		"$.farah.co.uk => farah.co.uk"
+		"$.perryellis.com => perryellis.com"
 	]
 }
