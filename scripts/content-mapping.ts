@@ -8,3 +8,8 @@ match($("//div[@id='pdpMain']")) {
         @import pages/product.ts
     }
 }
+match($("//div[@class='contentassetpage']")) {
+    not('0') {
+        @import pages/generic_content.ts
+    }
+}

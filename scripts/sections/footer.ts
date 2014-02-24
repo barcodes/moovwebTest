@@ -36,7 +36,7 @@ $("//div[@id='footer']") {
                 move_here("../div[@class='ftlinks']", class: "_footer-group-link") {
                     $("a") {
                         insert("i", class: "fa fa-chevron-right")
-                        attribute('href', '#header')
+                        #attribute('href', '#header')
                     }
                 }
             }
