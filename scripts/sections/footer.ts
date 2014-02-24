@@ -36,9 +36,9 @@ $("//div[@id='footer']") {
                 move_here("../div[@class='ftlinks']", class: "_footer-group-link") {
                     $("a") {
                         insert("i", class: "fa fa-chevron-right")
-                        #attribute('href', '#header')
                     }
                 }
+                remove('div[@class="_footer-group-link"]/a[contains(@href,"careers")]')
             }
         }
         insert_top("a", "VIEW DESKTOP SITE") {
