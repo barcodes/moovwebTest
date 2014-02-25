@@ -1,0 +1,48 @@
+._account-login {
+
+    #container {
+        #main {
+            margin-top: 0px;
+            #content {
+                width: 100%;
+
+                .repad {
+                    margin: 5px;
+
+                    .loginContent {
+                        width: 100%;
+                    }
+
+                    .loginbox {
+                        width: auto;
+                        float: none;
+                        border: none;
+                        clear: both;
+                        padding: 0px;
+                    }
+
+                    .logincustomers {
+                        .returningcustomers {
+                            margin: 0px;
+                            .formfield .rememberme {
+                                margin-left: 0px !important;
+                            }
+                            .formactions {
+                                margin: 0px !important;
+                            }
+                        }
+                    }
+
+                    .check-order {
+                        width: 100% !important;
+                        .formactions {
+                            text-align: left;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
