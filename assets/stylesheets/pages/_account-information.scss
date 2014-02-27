@@ -1,0 +1,24 @@
+._account-information {
+    .formfield {
+        .label {
+            display: block;
+            width: auto;
+            margin: 0;
+            text-align: left;
+        }
+        .value {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+        .emailsignupcheckbox {
+            margin: 0px;
+            clear: both;
+        }
+    }
+    .formactions {
+        width: 100%;
+    }
+}

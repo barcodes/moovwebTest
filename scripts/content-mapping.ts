@@ -33,3 +33,8 @@ match($("//div[@class='giftcertpurchase']")) {
         @import pages/gc_purchase.ts
     }
 }
+match($("//div[@class='registrationform']")) {
+    not('0') {
+        @import pages/account-information.ts
+    }
+}
