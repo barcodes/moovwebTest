@@ -38,3 +38,8 @@ match($("//div[@class='registrationform']")) {
         @import pages/account-information.ts
     }
 }
+match($("//div[@class='accountpaymentinstruments']")) {
+    not('0') {
+        @import pages/account-payment-methods.ts
+    }
+}
