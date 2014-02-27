@@ -1,0 +1,16 @@
+._account-addresses {
+    .ui-dialog {
+        width: 100% !important;
+        left: 0px !important;
+        top: 50px !important;
+
+        .formfield {
+            .label {
+                display: block;
+                width: auto;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+}
