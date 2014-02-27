@@ -18,3 +18,8 @@ match($("//div[@class='accountlogin']")) {
         @import pages/account_login.ts
     }
 }
+match($("//div[@class='accountoverview']")) {
+    not('0') {
+        @import pages/account_overview.ts
+    }
+}
