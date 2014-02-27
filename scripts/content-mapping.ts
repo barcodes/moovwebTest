@@ -28,3 +28,8 @@ match($("//div[@class='accounteditaddress']")) {
         @import pages/account_addresses.ts
     }
 }
+match($("//div[@class='giftcertpurchase']")) {
+    not('0') {
+        @import pages/gc_purchase.ts
+    }
+}
