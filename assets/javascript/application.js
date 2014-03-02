@@ -128,3 +128,13 @@ function _updateMobileCart() {
     }
 }
 
+$(document).ready(function() {
+    var menu = '.categorywrapper',
+        trigger = '#_menu-button',
+        jpm = $.jPanelMenu({
+            menu: menu,
+            trigger: trigger
+        });
+    $('body script').remove();
+    jpm.on();
+});
