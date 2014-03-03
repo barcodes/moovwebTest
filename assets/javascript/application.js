@@ -87,19 +87,19 @@ $(function() {
 
     }
 
-    $('body script').remove();
-    $.ajax({
-        url: 'http://jpanelmenu.com/jquery.jpanelmenu.js',
-        dataType: 'script',
-        success: function() {
-            $('.categorywrapper').attr('style', 'display: none;');
-            var jPM = $.jPanelMenu({
-                menu: '.categorywrapper',
-                trigger: '#_menu-button'
-            });
-            jPM.on();   
-        }
-    });
+    // $('body script').remove();
+    // $.ajax({
+    //     url: 'http://jpanelmenu.com/jquery.jpanelmenu.js',
+    //     dataType: 'script',
+    //     success: function() {
+    //         $('.categorywrapper').attr('style', 'display: none;');
+    //         var jPM = $.jPanelMenu({
+    //             menu: '.categorywrapper',
+    //             trigger: '#_menu-button'
+    //         });
+    //         jPM.on();   
+    //     }
+    // });
 
 })
 
