@@ -136,4 +136,3 @@ function _updateMobileCart() {
         $("#_bag-button").append("<span class='_cart-count'>" + total + "</span>");
     }
 }
-
