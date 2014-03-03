@@ -5,7 +5,7 @@
     @include box-sizing(border-box);
 
     #main {
-        margin-top: 35px;
+        margin-top: 40px;
     }
 }
 #cboxOverlay {
@@ -30,6 +30,7 @@
 
 .headerslot .headerslotcontent .bottombannercontainer {
     text-align: center;
+    margin-bottom: 5px;
     span {
         color: #e57f7f;
         font-weight: bold;
@@ -52,4 +53,8 @@
 }
 .custinfo {
     display: none;
+}
+#jPanelMenu-menu {
+    background-color: #333;
+    overflow-y: auto !important;
 }

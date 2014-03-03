@@ -54,7 +54,6 @@ $("//div[@id='header']") {
     }
 
     $("//div[@class='categorywrapper']") {
-        #attributes(data-ur-toggler-component: "content")
 
         $(".//li[@class='test']/a[@class='hasThirdLevelMobile']/..") {
             attributes(data-ur-set: "toggler")
@@ -67,7 +66,25 @@ $("//div[@id='header']") {
                 move_here("../div[@class='subcategories']")
             }
         }
+
+        insert_top('div', 'SHOP', class: 'categorywrapper-section-header')
+
+        move('//div[@class="headersearchwrapper"]', '.', 'top') 
+
+        insert_bottom('div', 'ACCOUNT', class: 'categorywrapper-section-header')
+
+        move('//div[@class="headercustomerinfo"]','.', 'bottom')
+
+        $('div[@class="headercustomerinfo"]') {
+            $('a') {
+                insert_bottom('i', class: 'fa fa-chevron-right')
+            }
+        }
+
         remove('.//li[@id="pepress"]')
+        remove('.//li[@id="peblog"]')
+        remove('//div[@class="headersearchwrapper"]/@style')
+
     }
 
     $(".//script[contains(text(), 'width:\"580px\"')]") {

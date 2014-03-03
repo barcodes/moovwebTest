@@ -1,5 +1,6 @@
 .categorywrapper {
     border-bottom: 0px;
+    margin: 0px;
     .categorymenu {
         float: none;
         height: auto;
@@ -31,11 +32,11 @@
                     padding: 0px;
                     height: auto;
                     > a {
-                        color: #000;
-                        background-color: #FFF;
+                        color: #ccc;
+                        background-color: #333;
                         border-bottom: 1px solid #000;
                         i {
-                           color: #000;
+                           color: #555;
                         }
                     }
                 }
@@ -61,7 +62,7 @@
                     margin: 3px 0;
                     background-color: #F0F0F0;
                     font-size: 16px;
-                    padding: 15px 6px !important;
+                    padding: 8px 6px !important;
                     &.hasThirdLevelMobile {
                         display: block !important;
                     }
@@ -91,5 +92,48 @@
     }
     .minicarthover {
         display: none;
+    }
+    .sitesearch {
+        margin: 0px;
+
+        fieldset {
+            width:251px !important;
+
+            input {
+                width: 213px !important;
+            }
+        }
+    }
+    .headercustomerinfo {
+        a {
+            display: block;
+            color: #ccc;
+            background-color: #333;
+            border-bottom: 1px solid #000;
+            color: #969696;
+            margin: 3px 0;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 6px !important;
+            text-transform: uppercase;
+
+            .fa {
+                color: #555;
+                float: right;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .divider {
+            display: none;
+        }
+    }
+    .categorywrapper-section-header {
+        background-color: #444;
+        color: #999;
+        font-size: 16px;
+        padding: 8px 6px !important;
+        margin: 0;
     }
 }

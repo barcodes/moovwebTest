@@ -87,19 +87,14 @@ $(function() {
 
     }
 
-    // $('body script').remove();
-    // $.ajax({
-    //     url: 'http://jpanelmenu.com/jquery.jpanelmenu.js',
-    //     dataType: 'script',
-    //     success: function() {
-    //         $('.categorywrapper').attr('style', 'display: none;');
-    //         var jPM = $.jPanelMenu({
-    //             menu: '.categorywrapper',
-    //             trigger: '#_menu-button'
-    //         });
-    //         jPM.on();   
-    //     }
-    // });
+    $('body script').remove();
+    $('body').append('<div id="menu_container" style="display:none;"></div>');
+    var jPM = $.jPanelMenu({
+        menu: '#menu_container',
+        trigger: '#_menu-button'
+    });
+    jPM.on();
+    $('#jPanelMenu-menu').append($('.categorywrapper').detach());   
 
 })
 
