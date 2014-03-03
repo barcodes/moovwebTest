@@ -79,6 +79,18 @@
                 width: 50%;
                 height: 300px;
                 padding: 6px 0;
+                .more_options_available {
+                    width: 100%;
+                    background-color: red;
+                    color: #fff;
+                    position: absolute;
+                    bottom: 0px;
+                    font-weight: bold;
+                    opacity: 0.85;
+                    line-height: 20px;
+                    text-align: center;
+                    margin:0px 1px;
+                }
                 .image {
                     display: block;
                     width: 100%;

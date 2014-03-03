@@ -41,6 +41,13 @@ $("//body") {
         remove('div[position() > 1]')
 
     }
+    $('//div[@class="swatches"]') {
+        $('.//div[@class="innerpalette"]/a[2]') {
+            $('../../../..//div[@class="image"]') {
+                insert('div', 'More colors available', class: 'more_options_available')
+            }
+        }
+    }
 
     remove("//div[@class='linkTop']")
     remove("//div[@class='searchresultsheader']")
