@@ -32,6 +32,14 @@ $("//body") {
         remove("@style")
         remove("//div[@class='searchresultsfooter']/div[@class='pagination']")
         move_here("//div[@class='pagination']", "after")
+
+        remove('div/div[@class="clear"]')
+
+        $('div[1]') {
+            move_here('../div[position() > 1]/div')
+        }
+        remove('div[position() > 1]')
+
     }
 
     remove("//div[@class='linkTop']")

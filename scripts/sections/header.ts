@@ -32,37 +32,29 @@ $("//div[@id='header']") {
     }
 
     $("//div[@class='headerleft']") {
-        insert_top('a', id:'_search-toggle') {
-            insert('i', class:'fa fa-search')
+        insert_top("a", id:"_menu-button", class: "_header-button", data-ur-toggler-component: "button") {
+            insert("div") {
+                insert_top("i", class: "fa fa-bars")
+            }
         }
-    }
-
-    $("//div[@class='categorywrapper']") {
-        attributes(data-ur-toggler-component: "content")
-
-        wrap("div", data-ur-set: "toggler") {
-            insert_top("div",class: "_header-buttons") {
-                insert_top("a", id:"_bag-button", class: "_header-button", href: fetch("//a[@class='linkminicart']/@href")) {
-                    insert("div") {
-                        insert("span", "My Bag") {
-                            insert_top("i", class: "_button-bag")
-                        }
-                    }
-                }
-
-                insert_top("a", id:"_sale-button", class: "_header-button", href: "/sale") {
-                    insert("div", "Sale") {
-                        insert_top("i", class: "fa fa-tags")
-                    }
-                }
-
-                insert_top("a", id:"_menu-button", class: "_header-button", data-ur-toggler-component: "button") {
-                    insert("div", "Menu") {
-                        insert_top("i", class: "fa fa-bars")
-                    }
+        insert_bottom("a", id:"_bag-button", class: "_header-button", href: fetch("//a[@class='linkminicart']/@href")) {
+            insert("div") {
+                attribute('class', 'mini_cart')
+                insert("span") {
+                    insert_top("i", class: "fa fa-shopping-cart")
                 }
             }
         }
+        $('*') {
+            wrap('div')
+        }
+        /*insert_top('a', id:'_search-toggle') {
+            insert('i', class:'fa fa-search')
+        }*/
+    }
+
+    $("//div[@class='categorywrapper']") {
+        #attributes(data-ur-toggler-component: "content")
 
         $(".//li[@class='test']/a[@class='hasThirdLevelMobile']/..") {
             attributes(data-ur-set: "toggler")
@@ -90,4 +82,7 @@ $("//div[@id='header']") {
         text('')
         attribute('src', asset('images/new-pe-logo.png'))
     }
+
+    move('//div[@class="headerslot"]','//div[@id="content"]', 'top')
+
 }

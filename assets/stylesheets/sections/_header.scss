@@ -1,30 +1,29 @@
 header#header._header {
     height: auto;
     width: auto !important;
-    .headerslot .headerslotcontent .bottombannercontainer {
-        text-align: center;
-        span {
-            color: #e57f7f;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-family: arial !important;
-        }
-        a.fancybox {
-            display: none;
-            text-transform: capitalize;
-            text-decoration: underline;
-        }
-        padding-bottom: 6px;
-    }
-    .custinfo {
-        display: none;
-    }
     .headerbottom {
         height: auto;
         border-bottom: 1px solid black;
+        border: none;
+        position: fixed;
+        top: 0px;
 
         .headerleft {
             float: none;
+            display: table;
+            height: 45px;
+
+            > div {
+                display: table-cell;
+                vertical-align: top;
+                text-align: center;
+                padding: 10px;
+
+            }
+            > div:nth-child(2) {
+                border-left: 1px solid #222;
+                border-right: 1px solid #222;
+            }
 
             a#_search-toggle {
                 color: #999;
@@ -40,9 +39,27 @@ header#header._header {
                 }
             }
 
+            .fa {
+                font-size: 24px;
+            }
+
+            span._cart-count{
+                position:absolute;
+                right: 5px;
+                top: 4px;
+                background: #cc0000;
+                color: #fff;
+                padding: 3px 3px 3px 3px;
+
+                font-size: 10px;
+                font-weight: bold;
+
+                @include border-radius(2px);
+            }
+
             h1.logo
             {
-                height: 40px;
+                height: auto;
                 margin: 0;
                 display: block;
                 a {
@@ -50,9 +67,9 @@ header#header._header {
                     width: 100% !important;
                     height: 20px;
                     margin-top: 0;
-
+                    top: 0px;
                     img {
-                        max-width: 80%;
+                        max-width: 100%;
                     }
                 }
             }
@@ -112,40 +129,6 @@ header#header._header {
                 i {
                     padding: 5px;
                 }
-            }
-            &#_bag-button {
-                position: relative;
-                div {
-                    padding: 13px 13px 14px;
-                    text-indent: 15px;
-                    span {
-                        position: relative;
-                        i {
-                            background: image-url("button-bag.png") no-repeat;
-                            width: 20px;
-                            height: 20px;
-                            display: block;
-                            position: absolute;
-                            left: -20px;
-                            top: 2px;
-                            background-size: 15px;
-                        }
-                    }
-                }
-                span._cart-count {
-                    position:absolute;
-                    right: 5px;
-                    top: -4px;
-                    background: #cc0000;
-                    color: #fff;
-                    padding: 3px 5px 3px 3px;
-
-                    font-size: 11px;
-                    font-weight: bold;
-
-                    @include border-radius(2px);
-                }
-
             }
             &:last-of-type {
                 div {

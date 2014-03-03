@@ -71,19 +71,21 @@
         width: 100%;
         .productlisting {
             width: auto;
+
+            .producttile {
+                margin: 0px !important;
+            }
             .product {
-                width: 100%;
-                height: auto;
+                width: 50%;
+                height: 300px;
                 padding: 6px 0;
-                border-bottom: 1px solid #e8e8e8;
                 .image {
                     display: block;
-                    width: 33%;
-                    float:left;
+                    width: 100%;
                 }
                 .productimage {
                     height: auto;
-                    border: 1px solid #cccccc;
+                    border: 1px solid #fff;
 
                     &.crossfade {
                         height: auto;
@@ -128,6 +130,9 @@
                     }
                 }
 
+                .swatches {
+                    display: none;
+                }
 
                 .actionsblock {
                     /*display: none;*/
@@ -146,6 +151,12 @@
 
         .producthits {
             margin-top: -10px;
+        }
+
+        .pagination li {
+            font-size: 10px;
+            width: 28px;
+            height: 24px;
         }
 
         .pagination li.firstlast {
