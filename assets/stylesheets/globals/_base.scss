@@ -4,9 +4,6 @@
     padding: 6px;
     @include box-sizing(border-box);
 
-    #main {
-        margin-top: 40px;
-    }
 }
 #cboxOverlay {
     display: none !important;
