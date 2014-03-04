@@ -117,7 +117,8 @@
                 {
                     float: left;
                     height: auto;
-                    width: 60%;
+                    width: 100%;
+                    text-align: center;
 
                     .palette {
                         height: auto;
@@ -149,6 +150,16 @@
                 .actionsblock {
                     /*display: none;*/
                     clear: both;
+                    width: 100%;
+                    text-align: center;
+
+                    .review {
+                        width: 100%;
+                    }
+                }
+
+                .promo {
+                    display: none;
                 }
             }
         }
