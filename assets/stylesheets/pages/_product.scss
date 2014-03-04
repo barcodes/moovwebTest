@@ -1,4 +1,23 @@
 ._product {
+    h1.productname {
+        margin: 5px 0px 0px;
+    }.productinfopricing {
+        margin: 0px 0px 5px;
+
+        .productid {
+            display: none;
+        }
+
+        :nth-child(1) {
+            width: 100% !important;
+            float: none !important;
+
+            .salesprice, .standardprice {
+                font-size: 14px;
+            }
+        }
+
+    }
     #_flexslider {
         position: relative;
         min-height: 276px;
@@ -151,5 +170,36 @@
     }
     .productactions, .productrelateditems, .productreview {
         display: none;
+    }
+    #BVRRRatingSummaryLinkWriteID {
+        display: none !important;
+    }
+    #BVRRRatingSummaryLinkReadID {
+        background: none;
+    }
+    .BVRRReviewDisplayStyle5Header {
+        margin: 0px;
+    }
+    .BVRRReviewDisplayStyle5BodyContentSecondary {
+        float: none;
+        width:100%;
+        margin: 0px;
+    }
+    .BVRRReviewDisplayStyle5BodyContentPrimary {
+        float: none;
+        width:100%;
+        margin: 0px;    
+    }
+    .BVRRReviewDisplayStyle5BodyUser {
+        float: none;
+        width:100%;
+        margin: 0px;    
+    }
+    .BVRRBuyAgainContainer {
+        clear: both;
+        width: 100% !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
     }
 }

@@ -1,6 +1,7 @@
 .categorywrapper {
     border-bottom: 0px;
     margin: 0px;
+    display: none;
     .categorymenu {
         float: none;
         height: auto;
@@ -62,7 +63,7 @@
                     margin: 3px 0;
                     background-color: #F0F0F0;
                     font-size: 16px;
-                    padding: 8px 6px !important;
+                    padding: 12px 6px !important;
                     &.hasThirdLevelMobile {
                         display: block !important;
                     }
@@ -114,7 +115,7 @@
             margin: 3px 0;
             font-size: 16px;
             font-weight: bold;
-            padding: 8px 6px !important;
+            padding: 12px 6px !important;
             text-transform: uppercase;
 
             .fa {
@@ -133,7 +134,7 @@
         background-color: #444;
         color: #999;
         font-size: 16px;
-        padding: 8px 6px !important;
+        padding: 12px 6px !important;
         margin: 0;
     }
 }

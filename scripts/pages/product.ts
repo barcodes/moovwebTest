@@ -19,7 +19,7 @@ $("body") {
         remove(".//div[contains(@class, 'primaryproductimage')]")
         $(".//div[@class='productinfopricing']") {
             insert_after("div", id:"_flexslider") {
-                insert("i", class: "fa fa-chevron-left", id: "_slider-prev")
+                #insert("i", class: "fa fa-chevron-left", id: "_slider-prev")
                 insert("div", class: "flexslider") {
                     %slider = this()
                     insert("ul", id: "_slider", class: "slides") {
@@ -38,7 +38,9 @@ $("body") {
                         }
                     }
                 }
-                insert("i", class: "fa fa-chevron-right", id: "_slider-next")
+                #insert("i", class: "fa fa-chevron-right", id: "_slider-next")
+                move('../div[@class="OneLinkHide"]','.','before')
+                move('..//div[@class="promotion"]','.','after')
             }
             $("..") {
                 add_class("_slider-container")

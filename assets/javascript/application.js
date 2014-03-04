@@ -1,8 +1,8 @@
 var fs_opts = {
     animation:"slide",
-    direction: "horizontal",
+    //direction: "horizontal",
     directionNav:false,
-    controlNav:false,
+    //controlNav:false,
     useCSS:false
 };
 
@@ -89,12 +89,12 @@ $(function() {
 
     $('body script').remove();
     $('body').append('<div id="menu_container" style="display:none;"></div>');
+    $('#menu_container').append($('.categorywrapper').show().detach());
     var jPM = $.jPanelMenu({
         menu: '#menu_container',
         trigger: '#_menu-button'
     });
     jPM.on();
-    $('#jPanelMenu-menu').append($('.categorywrapper').detach());   
 
 })
 
