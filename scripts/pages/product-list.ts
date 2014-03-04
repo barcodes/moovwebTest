@@ -18,6 +18,14 @@ $("//body") {
                 }
             }
         }
+        move('../div[@class="extended-text"]','.','after')
+        $('../div[@class="extended-text"]') {
+            $('a') {
+                text('')
+                insert('i', class: 'fa fa-info-circle')
+            }
+            move('div[@class="extended-text-content"]','.','after')
+        }
     }
     $("//img[contains(@src, 'sw=15')]") {
         attr("src") {
