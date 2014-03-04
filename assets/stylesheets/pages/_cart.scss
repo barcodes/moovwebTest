@@ -9,8 +9,37 @@
         }
         #main {
             #content {
-                .breadcrumb, .actions {
+                .breadcrumb {
                     display: none;
+                }
+                .actions {
+                    margin: 0px;
+
+                    .cartpaymentoptions {
+                        width: 100%;
+                        
+                        .contentasset {
+                            margin: 0px;
+
+                            p img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .formcheckout {
+                        .botcheckoutbutton {
+                            margin-top:0px;
+
+                            button {
+                                margin-top: 10px;
+                                padding: 0px;
+                                background: none;
+                            }
+                        }
+                    }
+                    .paypalcheckout {
+                        float: left;
+                    }
                 }
                 .cart {
                     h2 {

@@ -60,6 +60,12 @@ $('body') {
 			}
 		}
 	}
+
+	remove('//div[@class="actions"][1]')
+	$('//div[@class="actions"]') {
+		remove('span[@name="dwfrm_cart_continueShopping"]')
+	}
+
 	$$('.productrelateditems') {
 		remove()
 	}
