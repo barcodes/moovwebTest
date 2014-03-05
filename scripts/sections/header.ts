@@ -59,7 +59,7 @@ $("//div[@id='header']") {
             attributes(data-ur-set: "toggler")
 
             $("a[@class='hasThirdLevelMobile']") {
-                attributes(data-ur-toggler-component: "button")
+                attributes(data-ur-toggler-component: "button", href: "javascript:void(0)")
             }
 
             insert("div", data-ur-toggler-component: "content") {
