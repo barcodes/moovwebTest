@@ -179,6 +179,40 @@
                     }
                 }
             }
+            .headerslot, .contentasset, .breadcrumb {
+                display: none;
+            }
+            .checkoutloginhome .checkoutlogin {
+                .loginContent {
+                    width: 100%;
+                    float: none;
+
+                    .loginbox {
+                        border: none;
+                        height: auto !important;
+                        border: none;
+                        padding: 0px;
+                        margin-bottom: 10px;
+                    }
+                    .formfield {
+                        width: 100%;
+
+                        .label {
+                            display: block;
+                            float: none;
+                            clear: both;
+                            text-align: left;
+                        }
+                        .value {
+                            width:100%;
+
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

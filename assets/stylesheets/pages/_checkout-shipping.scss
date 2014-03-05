@@ -1,0 +1,38 @@
+._checkout-shipping {
+
+    #container {
+        #main {
+            .checkoutprogressindicator > div {
+                float: none;
+                display: block;
+            }
+            .checkoutshipping {
+                border: none;
+                .formfield {
+                    width: 100%;
+
+                    .label {
+                        display: block;
+                        float: none;
+                        clear: both;
+                        text-align: left;
+                    }
+                    .value {
+                        width:100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            #rightcolumn {
+                width: 100%;
+                margin-top: 0px;
+            }
+        }
+    }
+    #cartbackmsg {
+        display: none !important;
+    }
+}

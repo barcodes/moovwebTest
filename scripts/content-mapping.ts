@@ -18,9 +18,14 @@ match($("//div[@class='accountlogin']")) {
         @import pages/account_login.ts
     }
 }
-match($("//div[@class='checkoutloginhome']")) {
+match($("//div[@class='checkoutshipping']")) {
     not('0') {
-        @import pages/account_login.ts
+        @import pages/checkout_shipping.ts
+    }
+}
+match($("//div[@class='checkoutbilling']")) {
+    not('0') {
+        @import pages/checkout_billing.ts
     }
 }
 match($("//div[@class='accountoverview']")) {

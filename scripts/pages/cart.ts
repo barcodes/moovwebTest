@@ -66,6 +66,10 @@ $('body') {
 		remove('span[@name="dwfrm_cart_continueShopping"]')
 	}
 
+	$('//div[contains(@class, "logincreate")]') {
+		attributes(class: 'loginbox')
+	}
+
 	$$('.productrelateditems') {
 		remove()
 	}

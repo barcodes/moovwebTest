@@ -1,0 +1,48 @@
+._checkout-billing {
+
+    #container {
+        #main {
+            .checkoutprogressindicator > div {
+                float: none;
+                display: block;
+            }
+            .checkoutbilling {
+                border: none;
+                .formfield {
+                    width: 100%;
+
+                    .label {
+                        display: block;
+                        float: none;
+                        clear: both;
+                        text-align: left;
+                    }
+                    .value {
+                        width:100%;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+                    .expirationdate {
+                        div {
+                            width: 100px;
+                            float: left;
+
+                        }
+                        .selectbox {
+                            width: 100px;
+                        }
+                    }
+            #rightcolumn {
+                width: 100%;
+                margin-top: 0px;
+            }
+        }
+    }
+    #cartbackmsg {
+        display: none !important;
+    }
+}
