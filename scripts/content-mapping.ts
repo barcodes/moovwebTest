@@ -28,6 +28,11 @@ match($("//div[@class='checkoutbilling']")) {
         @import pages/checkout_billing.ts
     }
 }
+match($("//div[@class='checkoutplaceorder']")) {
+    not('0') {
+        @import pages/checkout_review.ts
+    }
+}
 match($("//div[@class='accountoverview']")) {
     not('0') {
         @import pages/account_overview.ts
