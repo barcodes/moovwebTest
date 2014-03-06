@@ -96,6 +96,11 @@ $(function() {
     });
     jPM.on();
 
+    if($('body').hasClass('_cart')) {
+        // It's hack vs  hack
+        equalHeight = function() { return; };
+    }
+
 })
 
 
