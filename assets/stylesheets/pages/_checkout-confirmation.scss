@@ -1,0 +1,36 @@
+._checkout-confirmation {
+
+    #container {
+        #main {
+
+            .orderpaymentdetails {
+                > div {
+                    padding: 10px 5px;
+                    border-bottom: 1px solid #ccc;
+
+                    .minicreditcard, .paymentamount, .miniaddress {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .ordershipmenttable {
+                th {
+                    background-color: #F0F0F0;
+                }
+            }
+
+            #rightcolumn {
+                width: 100%;
+                margin-top: 0px;
+                .createaccount {
+                    margin-top: 0px !important;
+                    background: none;
+                }
+            }
+        }
+    }
+    #cartbackmsg {
+        display: none !important;
+    }
+}

@@ -33,6 +33,11 @@ match($("//div[@class='checkoutplaceorder']")) {
         @import pages/checkout_review.ts
     }
 }
+match($('//div[@class="orderconfirmation"]')) {
+    not('0') {
+        @import pages/checkout_confirmation.ts
+    }
+}
 match($("//div[@class='accountoverview']")) {
     not('0') {
         @import pages/account_overview.ts
