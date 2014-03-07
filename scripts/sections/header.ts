@@ -48,7 +48,7 @@ $("//div[@id='header']") {
         $('*') {
             wrap('div')
         }
-        $('.//div[a[contains(@class, "_header-button")]]') {
+        $('.//div[3]') {
             attributes(onclick: 'javascript:location.href="'+fetch("//a[@class='linkminicart']/@href")+'"')
         }
         /*insert_top('a', id:'_search-toggle') {
