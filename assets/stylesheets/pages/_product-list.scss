@@ -87,10 +87,13 @@
 
             .producttile {
                 margin: 0px !important;
+                display: inline-block;
+                float: none;
+
             }
             .product {
-                width: 50%;
-                height: 300px;
+                width: 145px;
+                height: 320px;
                 padding: 6px 0;
                 .more_options_available {
                     width: 100%;
