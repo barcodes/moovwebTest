@@ -63,3 +63,8 @@ match($("//div[@class='accountpaymentinstruments']")) {
         @import pages/account-payment-methods.ts
     }
 }
+match($("//form[contains(@action,'CustomerService-ContactUs')]")) {
+    not('0') {
+        @import pages/customer-service.ts
+    }
+}
