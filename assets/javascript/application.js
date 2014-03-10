@@ -90,10 +90,17 @@ $(function() {
     $('body script').remove();
     $('body').append('<div id="menu_container" style="display:none;"></div>');
     $('#menu_container').append($('.categorywrapper').show().detach());
+    var html = jQuery('html');
     var jPM = $.jPanelMenu({
         menu: '#menu_container',
         trigger: '#_menu-button',
-        openPosition: '280px'
+        openPosition: '280px',
+        beforeOpen: function() {
+            html.css('overflow', 'hidden');
+        },
+        afterClose: function() {
+            html.css('overflow', 'auto');
+        }
     });
     jPM.on();
 
