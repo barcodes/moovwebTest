@@ -1,0 +1,20 @@
+._account-orders {
+
+    #container {
+        #main {
+            margin-top: 0px;
+            #content {
+                width: 100%;
+
+                .orders {
+                    .order {
+                        .orderheader .btnOrderHistory {
+                            margin-top: 10px;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

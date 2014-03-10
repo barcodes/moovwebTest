@@ -1,0 +1,39 @@
+._account-order {
+
+    #container {
+        #main {
+
+            .orderpaymentdetails {
+                > div {
+                    padding: 10px 5px;
+                    border-bottom: 1px solid #ccc;
+
+                    .minicreditcard, .paymentamount, .miniaddress {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .ordershipmenttable {
+                th {
+                    white-space: normal;
+                    vertical-align: top;
+                    background-color: #F0F0F0;
+                }
+                .shipping-row {
+                    background-color: #f0f0f0;
+                }
+            }
+
+            .formactions {
+                font-size: 14px;
+                font-weight: bold;
+
+                :nth-child(2) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}

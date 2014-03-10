@@ -63,6 +63,11 @@ match($("//div[@class='accountpaymentinstruments']")) {
         @import pages/account-payment-methods.ts
     }
 }
+match($('//div[@class="orders"]')) {
+    not("0") {
+        @import pages/account-orders.ts
+    }
+}
 match($("//form[contains(@action,'CustomerService-ContactUs')]")) {
     not('0') {
         @import pages/customer-service.ts
@@ -71,5 +76,10 @@ match($("//form[contains(@action,'CustomerService-ContactUs')]")) {
 match($('//div[@id="store-locator-div"]')) {
     not("0") {
         @import pages/store-locator.ts
+    }
+}
+match($('//div[@class="orderdetails"]')) {
+    not('0') {
+        @import pages/account-order.ts
     }
 }
