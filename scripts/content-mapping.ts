@@ -88,3 +88,13 @@ match($('//div[@id="loyalty-container"]')) {
         @import pages/supreme-perks.ts
     }
 }
+match($('//div[@class="wishlistlogin"]')) {
+    not('0') {
+        @import pages/account_login.ts
+    }
+}
+match($('//div[@class="wishlist"]')) {
+    not('0') {
+        @import pages/supreme-perks.ts
+    }
+}

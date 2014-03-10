@@ -44,7 +44,6 @@ $('body') {
 							}
 							move(this(), %qtyDIV, position('before'))
 						}
-						remove('./button[contains(@class, "addtowishlist")]')
 					}
 					insert('a', class:'_row-qty-plus') {
 						insert('i', class:'fa fa-plus')
@@ -58,6 +57,7 @@ $('body') {
 					$('../div[@class="unitpricecolumn"]') {
 						move(this(), %qtyDIV, position('before'))
 					}
+					move_here('..//button[contains(@class, "addtowishlist")]')
 				}
 				insert('div', style:"clear:both")
 			}

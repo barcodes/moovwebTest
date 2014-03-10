@@ -21,6 +21,8 @@
     #_flexslider {
         position: relative;
         min-height: 276px;
+        margin-bottom: 40px;
+        
         i {
             position: absolute;
             top: 40%;
@@ -31,7 +33,7 @@
             }
         }
         .flexslider {
-            width: 50%;
+            width: 80%;
             margin: 0 auto;
             padding: 15px 0;
             @include box-shadow(none);
