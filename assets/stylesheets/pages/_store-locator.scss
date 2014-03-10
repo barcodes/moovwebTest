@@ -1,0 +1,36 @@
+._store-locator {
+
+    #container {
+        #main {
+            margin-top: 0px;
+            #content {
+                width: 100%;
+                #filter-div {
+                    display: none;
+                }
+                input[type="text"] {
+                    height: 25px;
+                    margin: 10px 0px;
+                }
+                select, button {
+                    height: 25px;
+                    margin: 0px 10px 10px 0px;
+                }
+                #stores-div {
+                    border: 1px solid #ddd;
+                    padding: 5px;
+                    margin-bottom: 5px;
+
+                    h3 {
+                        font-weight: bold;
+                    }
+                    >div {
+                        margin: 10px 0 0;
+                        border-top: 1px solid #ddd;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -68,3 +68,8 @@ match($("//form[contains(@action,'CustomerService-ContactUs')]")) {
         @import pages/customer-service.ts
     }
 }
+match($('//div[@id="store-locator-div"]')) {
+    not("0") {
+        @import pages/store-locator.ts
+    }
+}
