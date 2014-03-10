@@ -92,7 +92,8 @@ $(function() {
     $('#menu_container').append($('.categorywrapper').show().detach());
     var jPM = $.jPanelMenu({
         menu: '#menu_container',
-        trigger: '#_menu-button'
+        trigger: '#_menu-button',
+        openPosition: '280px'
     });
     jPM.on();
 

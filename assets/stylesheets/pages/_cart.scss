@@ -178,6 +178,17 @@
                         }
                     }
                 }
+                .flexslider {
+                    margin: 0 auto;
+                    width: 200px;
+                    height: auto;
+                }
+
+                .flexslider .slides img {
+                    width: 200px;
+                    height: auto;
+                }
+
             }
             .headerslot, .contentasset, .breadcrumb {
                 display: none;

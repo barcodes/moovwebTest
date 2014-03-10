@@ -62,11 +62,21 @@ $("//div[@id='footer']") {
         move_here("//div[@class='txtCopyright']")
 
         insert("div", class: "_footer-social-bar") {
-            move_here("//a[@class='social-icons-fb']")
-            move_here("//a[@class='social-icons-twitter']")
-            move_here("//a[@class='social-icons-youtube']")
-            move_here("//a[@class='social-icons-pinterest']")
-            move_here("//a[@class='social-icons-instagram']")
+            move_here("//a[@class='social-icons-fb']") {
+                insert_top('i', class: 'fa fa-facebook-square')
+            }
+            move_here("//a[@class='social-icons-twitter']") {
+                insert_top('i', class: 'fa fa-twitter-square')
+            }
+            move_here("//a[@class='social-icons-youtube']") {
+                insert_top('i', class: 'fa fa-youtube-square')
+            }
+            move_here("//a[@class='social-icons-pinterest']") {
+                insert_top('i', class: 'fa fa-pinterest-square')
+            }
+            move_here("//a[@class='social-icons-instagram']") {
+                insert_top('i', class: 'fa fa-instagram')
+            }
         }
     }
     remove(".//div[@id='ftcontent'] | .//div[@class='ftextra']")

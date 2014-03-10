@@ -32,7 +32,7 @@ $("//div[@id='header']") {
     }
 
     $("//div[@class='headerleft']") {
-        insert_top("a", id:"_menu-button", class: "_header-button", data-ur-toggler-component: "button") {
+        insert_top("a", class: "_header-button") {
             insert("div") {
                 insert_top("i", class: "fa fa-bars")
             }
@@ -50,6 +50,9 @@ $("//div[@id='header']") {
         }
         $('.//div[3]') {
             attributes(onclick: 'javascript:location.href="'+fetch("//a[@class='linkminicart']/@href")+'"')
+        }
+        $('.//div[1]') {
+            attributes(id: "_menu-button", data-ur-toggler-component: "button")
         }
         /*insert_top('a', id:'_search-toggle') {
             insert('i', class:'fa fa-search')

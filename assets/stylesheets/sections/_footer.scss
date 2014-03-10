@@ -75,30 +75,19 @@
 
         ._footer-social-bar {
             padding-top: 15px;
+            background: none;
             a {
-                background: image-url("social-buttons.png") no-repeat 1px 0;
-                background-size: auto 37px;
-                height: 37px;
-                width: 38px;
+                background: none;
                 float: none;
                 display: inline-block;
-                margin-left: 0;
-                &.social-icons-twitter {
-                    background-position: -47px 0;
-                    margin-left: 10px;
-                }
-                &.social-icons-youtube {
-                    background-position: -96px 0;
-                    margin-left: 10px;
-                }
-                &.social-icons-pinterest {
-                    background-position: -143px 0;
-                    margin-left: 10px;
-                }
-                &.social-icons-instagram {
-                    background-position: -190px 0;
-                    margin-left: 10px;
-                }
+                width: auto;
+                height: auto;
+                margin: 0 5px;
+                color: #444;
+               
+               i {
+                    font-size: 45px;
+               } 
             }
         }
 

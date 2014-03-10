@@ -1,5 +1,15 @@
 $('body') {
 	add_class('_cart')
+
+	insert_top("style", type: "text/css") {
+        inject(read("../../assets/stylesheets/flexslider.css"))
+        text() {
+            replace("/assets/fonts", concat($asset_host, "fonts"))
+            replace("/assets/images", concat($asset_host, "images"))
+        }
+    }
+	insert_top("script", type: "text/javascript", src: asset("javascript/jquery.flexslider-min.js"))
+
 	$$('.cart') {
 		%cart = this()
 		$('//div[@class="breadcrumb"]/a') {
@@ -71,6 +81,13 @@ $('body') {
 	}
 
 	$$('.productrelateditems') {
-		remove()
+		#remove()
+		$('./div[@id="cart_rr"]') {
+			attributes(class: 'flexslider')
+
+			$('./ul') {
+				attributes(class: 'slides')
+			}
+		}
 	}
 }
