@@ -82,6 +82,31 @@
                         }
                     }
 
+                    #sp_details_wrapper {
+                        width: 100%;
+                        height: auto;
+
+                        #sp_details_box1 {
+                            width: 100%;
+
+                            p:first-of-type {
+                                font-size: 24px !important;
+                            }
+                            p:last-of-type {
+                                display: none;
+                            }
+                            p {
+                                margin: 5px 0px;
+                            }
+                        }
+
+                        #sp_details_box2 {
+                            float: none;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+
                 }
             }
         }

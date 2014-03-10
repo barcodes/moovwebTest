@@ -1,0 +1,51 @@
+._supreme-perks {
+
+    #container {
+        #main {
+            margin-top: 0px;
+            #content {
+                width: 100%;
+
+                #loyalty-container {
+                    width: 100%;
+                    height: auto;
+
+                    #sp_profile_details_wrapper {
+                        width: 100%;
+                        height: auto;
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+
+                        #sp_profile_details_box1 {
+                            float: none;
+                            width: auto;
+
+                            p:first-of-type {
+                                font-size: 24px !important;
+                            }
+                            p:last-of-type {
+                                display: none;
+                            }
+                            p {
+                                margin: 5px 0px;
+                            }
+                            br {
+                                display: none;
+                            }
+                        }
+
+                        #sp_profile_details_box2 {
+                            float: none;
+                            width: auto;
+                            padding: 0;
+                            text-align: center;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}

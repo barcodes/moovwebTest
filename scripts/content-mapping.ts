@@ -83,3 +83,8 @@ match($('//div[@class="orderdetails"]')) {
         @import pages/account-order.ts
     }
 }
+match($('//div[@id="loyalty-container"]')) {
+    not('0') {
+        @import pages/supreme-perks.ts
+    }
+}

@@ -16,7 +16,6 @@ $('//body') {
         }
         $('//div[@class="ordershipment"]') {
             $('./table') {
-                copy_here('./tr[1]')
                 $('./tr') {
                     insert_after('tr') {
                         attributes(class: 'shipping-row')
