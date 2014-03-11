@@ -114,6 +114,15 @@ $(function() {
 
 })
 
+$(function setupSortAndRefine() {
+    var wrapper = $('#_sort-refine');
+    $('#_refine-button').click(function refineButtonClick() {
+        wrapper.attr('class', wrapper.hasClass('_show-refine') ? '' : '_show-refine');
+    });
+    $('#_sort-button').click(function sortButtonClick() {
+        wrapper.attr('class', wrapper.hasClass('_show-sort') ? '' : '_show-sort');
+    });
+});
 
 function override_functions() {
     if(app.ProductCache != null) {

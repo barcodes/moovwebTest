@@ -6,18 +6,6 @@ $("//body") {
     remove("//div[contains(@class, 'cat-banner')]")
 
     $("//div[@id='pe_rBanner']") {
-        insert_after("div", class: "_action-buttons") {
-            insert("a", id: "_sort-button", class: "_action-button") {
-                insert("div", "Sort") {
-                    insert("i", class: "fa fa-chevron-down")
-                }
-            }
-            insert("a", id: "_refine-button", class: "_action-button") {
-                insert("div", "Refine") {
-                    insert("i", class: "fa fa-chevron-down")
-                }
-            }
-        }
         move('../div[@class="extended-text"]','.','after')
         $('../div[@class="extended-text"]') {
             $('a') {
@@ -25,6 +13,49 @@ $("//body") {
                 insert('i', class: 'fa fa-info-circle')
             }
             move('div[@class="extended-text-content"]','.','after')
+        }
+    }
+    $('//div[contains(@class, "producthits")]') {
+        insert_before('div', id:'_sort-refine') {
+            insert("div", class: "_action-buttons") {
+                insert("a", id: "_sort-button", class: "_action-button") {
+                    insert("div", "Sort") {
+                        insert("i", class: "fa fa-chevron-down")
+                    }
+                }
+                insert("a", id: "_refine-button", class: "_action-button") {
+                    insert("div", "Refine") {
+                        insert("i", class: "fa fa-chevron-down")
+                    }
+                }
+            }
+            move_here('//div[@class="searchrefinements"]') {
+                $('./div[contains(@class, "refinement")]/div[@class="refinedclear"]') {
+                    remove_text_nodes()
+                    $('./a') {
+                        text('')
+                        insert('i', class:'fa fa-times-circle-o')
+                    }
+                    # Prevent from getting picked up for JS AJAX calls:
+                    attr('class', '_refinedClear')
+                }
+            }
+            insert('ul', class:'_sort-options') {
+                move_here('//select[@id="grid-sort-header"]/option') {
+                    name('a')
+                    attr('href', fetch('./@value')) {
+                        value() {
+                            replace(/^https?:\/\/www\.perryellis\.com/, '')
+                        }
+                    }
+                    remove('./@value')
+                    match(fetch('./@selected'), 'selected') {
+                        add_class('_selected')
+                        remove('./@selected')
+                    }
+                    wrap('li')
+                }
+            }
         }
     }
     $("//img[contains(@src, 'sw=15')]") {
