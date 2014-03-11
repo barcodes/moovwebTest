@@ -5,7 +5,10 @@
         padding: 0px;
     }
     #footer {
-        padding: 6px;
+        padding: 0px 6px 6px;
+    }
+    #main, #content {
+        height: 282px;
     }
     #banners-container {
         a {
@@ -17,7 +20,9 @@
             }
         }
     }
-
+    .headerslot .headerslotcontent .bottombannercontainer {
+        margin-bottom: 0px;
+    }
     .homepage {
         .bottombannercontainer {
             a, img, div {

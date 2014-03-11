@@ -54,9 +54,7 @@ $("//div[@id='header']") {
         $('.//div[1]') {
             attributes(id: "_menu-button", data-ur-toggler-component: "button")
         }
-        /*insert_top('a', id:'_search-toggle') {
-            insert('i', class:'fa fa-search')
-        }*/
+
     }
 
     $("//div[@class='categorywrapper']") {
@@ -76,6 +74,14 @@ $("//div[@id='header']") {
         insert_top('div', 'SHOP', class: 'categorywrapper-section-header')
 
         move('//div[@class="headersearchwrapper"]', '.', 'top') 
+        $('.//div[@class="headersearchwrapper"]') {
+            $('.//input[@id="searchinput"]') {
+                %placeholder = fetch('@value')
+                attributes(placeholder: %placeholder)
+                remove('@class')
+                remove('@value')
+            }
+        }
 
         insert_bottom('div', 'ACCOUNT', class: 'categorywrapper-section-header')
 

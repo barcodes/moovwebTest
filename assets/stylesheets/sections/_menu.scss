@@ -96,12 +96,24 @@
     }
     .sitesearch {
         margin: 0px;
+        height: 35px;
 
         fieldset {
             width:281px !important;
+            height: 35px;
 
             input {
-                width: 242px !important;
+                border: none;
+                padding: 0px;
+                width: 236px !important;
+                height: 35px;
+                line-height: 35px;
+                font-size: 16px;
+            }
+            button[type="submit"] {
+                height: 35px !important;
+                width: 40px !important;
+                background-size: cover;
             }
         }
     }
