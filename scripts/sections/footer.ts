@@ -79,7 +79,7 @@ $("//div[@id='footer']") {
             }
         }
     }
-    remove(".//div[@id='ftcontent'] | .//div[@class='ftextra']")
+    remove(".//div[@id='ftcontent'] | .//div[@class='ftextra'] | .//div[@class='ftgroup']")
 }
 $("//div[@class='copytxt-inner']") {
     remove(".//@style")

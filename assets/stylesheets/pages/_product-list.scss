@@ -18,6 +18,7 @@
     }
     .promo {
         float: left;
+        padding: 0px;
     }
     ._action-buttons {
         border-top: 1px solid #d0d0d0;
@@ -84,6 +85,7 @@
         width: 100%;
         .productlisting {
             width: auto;
+            text-align: center;
 
             .producttile {
                 margin: 0px !important;
@@ -93,7 +95,8 @@
             }
             .product {
                 width: 145px;
-                height: 320px;
+                // height: 310px;
+                height: auto;
                 padding: 6px 0;
                 .more_options_available {
                     width: 100%;
@@ -110,6 +113,7 @@
                 .image {
                     display: block;
                     width: 100%;
+                    height: 196px;
                 }
                 .productimage {
                     height: auto;
@@ -128,9 +132,13 @@
                         }
                     }
                 }
-
+                .review {
+                    padding: 0px;
+                    margin-left: -10px;
+                }
                 .swatches, .name, .pricing
                 {
+                    margin: -5px 0 0px;
                     float: left;
                     height: auto;
                     width: 100%;
@@ -172,10 +180,6 @@
                     .review {
                         width: 100%;
                     }
-                }
-
-                .promo {
-                    display: none;
                 }
             }
         }

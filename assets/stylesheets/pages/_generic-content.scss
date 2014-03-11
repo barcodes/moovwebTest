@@ -9,6 +9,15 @@
                     margin: 5px 0px;
                     width: 100%;
 
+                    p {
+                        margin: 2px 0px;
+                    }
+
+                    p, a {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
                     ul, ol {
                         padding: 0px 0px 0px 15px;
                     }

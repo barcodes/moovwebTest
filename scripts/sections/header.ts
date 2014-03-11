@@ -41,7 +41,8 @@ $("//div[@id='header']") {
             insert("div") {
                 attribute('class', 'mini_cart')
                 insert("span") {
-                    insert_top("i", class: "fa fa-shopping-cart")
+                    #insert_top("i", class: "fa fa-shopping-cart")
+                    insert_top('img', src: asset('images/bag.png'))
                 }
             }
         }

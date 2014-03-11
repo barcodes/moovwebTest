@@ -72,9 +72,10 @@ $('body') {
 		}
 	}
 
-	remove('//div[@class="actions"][1]')
+	#remove('//div[@class="actions"][1]')
 	$('//div[@class="actions"]') {
 		remove('span[@name="dwfrm_cart_continueShopping"]')
+		remove('.//div/@style')
 	}
 
 	$('//div[contains(@class, "logincreate")]') {
