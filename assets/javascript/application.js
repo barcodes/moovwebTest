@@ -108,6 +108,9 @@ $(function() {
         // It's hack vs  hack
         equalHeight = function() { return; };
     }
+    if($('body').hasClass('_home')) {
+        $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks.html');
+    }
 
 })
 
