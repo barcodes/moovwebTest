@@ -20,7 +20,6 @@ $('body') {
 		$('//table[@class="carttable"]') {
 			name('div')
 			remove('./thead')
-			remove('./tfoot')
 			$('./tbody/tr') {
 				name('div')
 				attribute('class', 'productrow')
@@ -61,6 +60,8 @@ $('body') {
 				}
 				insert('div', style:"clear:both")
 			}
+			#remove('./tfoot')
+			remove('.//div[@class="formactions"]')
 		}
 		$('//table[@class="cartfooter"]') {
 			remove('//select[@id="shippingMethodID"]/option')

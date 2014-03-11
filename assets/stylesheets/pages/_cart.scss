@@ -53,6 +53,10 @@
                         margin-bottom: 20px;
                         border-bottom: 1px solid    
                     }
+                    .orderdiscount, .couponcode, .coupondetail, .errormessage {
+                        float: none;
+                        clear: both;
+                    }
                     .productrow {
                         padding: 10px 0px;
                         border-bottom: 2px solid #ddd;
@@ -179,6 +183,24 @@
                                     margin-right: 5px;
                                 }
                             }
+                        }
+                    }
+                    .orderdiscount {
+                        span {
+                            width: auto;
+                            float: none;
+                        }
+                    }
+                    .coupondetail {
+
+                    }
+                    .couponcode {
+                        float: none;
+                        margin: 5px;
+                        text-align: left;
+
+                        input {
+                            margin-right: 5px;
                         }
                     }
                 }

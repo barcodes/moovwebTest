@@ -1,9 +1,15 @@
 #container {
     width: auto;
     min-width: 0;
-    padding: 6px;
+    padding: 0px;
     @include box-sizing(border-box);
 
+}
+#main {
+    margin: 0px 6px;
+    .headerslot {
+        margin: 0px -6px;
+    }
 }
 #cboxOverlay {
     display: none !important;
@@ -27,7 +33,7 @@
 
 .headerslot .headerslotcontent .bottombannercontainer {
     text-align: center;
-    margin-bottom: 5px;
+    margin: 0px 5px;
     span {
         color: #e57f7f;
         font-weight: bold;

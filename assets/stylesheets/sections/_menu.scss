@@ -33,17 +33,25 @@
                     padding: 0px;
                     height: auto;
                     > a {
-                        color: #ccc;
+                        margin: 0px;
+                        color: #ddd;
+                        font-weight: bold;
                         background-color: #333;
-                        border-bottom: 1px solid #000;
+                        border-bottom: 1px solid #111;
+                        border-top: 1px solid #444;
                         i {
                            color: #555;
                         }
                     }
                 }
+                &#pesalecategory {
+                    > a {
+                        color: red;
+                    }
+                }
             }
             &#primaryNavigationList {
-                border-top: 2px solid #000 !important;
+                border-top: 1px solid #000 !important;
             }
             &:hover {
                 .topLevelMenu {
@@ -60,8 +68,10 @@
             > li {
                 a, div.hasThirdLevel {
                     color: #969696;
-                    margin: 3px 0;
-                    background-color: #F0F0F0;
+                    margin: 0;
+                    background-color: #f3f3f3;
+                    border-bottom: 1px solid #e3e3e3;
+                    border-top: 1px solid #f9f9f9;
                     font-size: 16px;
                     padding: 12px 6px !important;
                     &.hasThirdLevelMobile {
@@ -78,7 +88,9 @@
                 > div > ul {
                     li {
                         a {
-                            text-indent: 10px;
+                            text-indent: 14px;
+                            font-size: 14px;
+                            color: #777;
                         }
                     }
                     li:first-of-type a {
@@ -120,13 +132,13 @@
     .headercustomerinfo {
         a {
             display: block;
-            color: #ccc;
+            color: #eee;
             background-color: #333;
-            border-bottom: 1px solid #000;
-            color: #969696;
-            margin: 3px 0;
-            font-size: 16px;
+            border-bottom: 1px solid #111;
+            border-top: 1px solid #444;
+            margin: 0;
             font-weight: bold;
+            font-size: 16px;
             padding: 12px 6px !important;
             text-transform: uppercase;
 
@@ -145,8 +157,9 @@
     .categorywrapper-section-header {
         background-color: #444;
         color: #999;
-        font-size: 16px;
-        padding: 12px 6px !important;
+        font-size: 14px;
+        padding: 8px 6px !important;
         margin: 0;
+        font-weight: bold;
     }
 }

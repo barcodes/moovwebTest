@@ -4,6 +4,7 @@
     border-bottom: 0;
     margin-top: 0px;
     #ftwrapper {
+        margin: 0px 6px;
         height: auto;
         clear: both;
         div {
@@ -40,7 +41,7 @@
                 width: 100%;
                 background-color: #F0F0F0;
                 color: #969696;
-                margin: 3px 0;
+                margin: 1px 0;
                 font-size: 13px;
                 @include box-sizing(border-box);
 

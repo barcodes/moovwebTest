@@ -9,6 +9,10 @@
     }
     #main, #content {
         height: 282px;
+        margin: 0px;
+        .headerslot {
+            margin: 0px;
+        }
     }
     #banners-container {
         a {

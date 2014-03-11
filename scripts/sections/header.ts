@@ -48,10 +48,10 @@ $("//div[@id='header']") {
         $('*') {
             wrap('div')
         }
-        $('.//div[3]') {
+        $('./div[3]') {
             attributes(onclick: 'javascript:location.href="'+fetch("//a[@class='linkminicart']/@href")+'"')
         }
-        $('.//div[1]') {
+        $('./div[1]') {
             attributes(id: "_menu-button", data-ur-toggler-component: "button")
         }
 
