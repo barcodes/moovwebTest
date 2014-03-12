@@ -107,25 +107,39 @@
         display: none;
     }
     .sitesearch {
+        background-color: #333;
+        height: 37px;
+        padding: 5px;
+        text-align: left;
         margin: 0px;
-        height: 35px;
 
         fieldset {
-            width:281px !important;
-            height: 35px;
+            width: auto !important;
+            height: auto;
 
             input {
                 border: none;
-                padding: 0px;
-                width: 236px !important;
-                height: 35px;
-                line-height: 35px;
-                font-size: 16px;
+                box-sizing: border-box;
+                font-size: 13px;
+                height: 37px;
+                line-height: 37px;
+                padding: 10px;
+                vertical-align: top;
+                width: 229px !important;
             }
             button[type="submit"] {
-                height: 35px !important;
+                background-color: #ccc;
+                background-image: none;
+                border: 2px solid white;
+                color: #666;
+                float: none;
+                font-size: 23px;
+                height: 37px !important;
                 width: 40px !important;
-                background-size: cover;
+
+                .fa {
+                    margin-left: 2px;
+                }
             }
         }
     }

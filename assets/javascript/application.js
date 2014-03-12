@@ -40,6 +40,16 @@ $(function() {
         app.quickView.show = function() { return; }
     }
 
+    if($('body').hasClass('_product')) {
+        setTimeout(function() {
+            $('#_bag-button').bind('DOMSubtreeModified', function(e) {
+                if (e.target.innerHTML.length > 0) {
+                    document.location.href = $(this).attr('href');
+                }
+            });
+        }, 2500);        
+    }
+
     if($('body').hasClass('_cart')) {
 
         checkForShippingOptionsInterval = setInterval(function() {
@@ -97,9 +107,12 @@ $(function() {
         openPosition: '280px',
         beforeOpen: function() {
             html.css('overflow', 'hidden');
+            $('#header').css('position', 'absolute');
+            $('body').scrollTop(0);
         },
         afterClose: function() {
             html.css('overflow', 'auto');
+            $('#header').css('position', 'fixed');
         }
     });
     jPM.on();
