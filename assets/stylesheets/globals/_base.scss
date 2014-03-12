@@ -12,6 +12,7 @@
 input[type="text"], input[type="password"], input[type="tel"],
 select, textarea {
     @include box-sizing(border-box);
+    height:auto !important;
     width:100% !important;
     font-size:14px !important;
     line-height:normal !important;
@@ -23,10 +24,11 @@ select, textarea {
     position:static;
     margin:45px 0px 0px !important;
 
-    #content {
+    #content, #rightcolumn {
         width:auto !important;
         float:none;
         padding:0px 6px;
+        margin:0px;
 
         .headerslot {
             margin: 0px -6px 6px;

@@ -2,12 +2,17 @@
 
     #container {
         #main {
+            padding-bottom:20px;
+
             .checkoutprogressindicator > div {
                 float: none;
                 display: block;
             }
+
             .checkoutshipping {
+                margin-bottom:15px;
                 border: none;
+
                 .formfield {
                     width: 100%;
 
@@ -32,14 +37,51 @@
                         }
                     }
                 }
+
+                #shippingmethodform .shippingmethods .shippingmethod {
+                    padding:0px 6px 10px;
+
+                    > .label {
+                        display:none;
+                    }
+
+                    > .value input {
+                        margin-right:5px;
+                    }
+                }
+
+                .formactions {
+                    .continuecheckoutbutton {
+                        padding:20px 0px 0px;
+
+                        #btnContinue, #btnContinuetop {
+                            background:none !important;
+                            padding:0px;
+                            height:auto;
+
+                            span {
+                                display:block;
+                                padding:12px 15px;
+                            }
+                        }
+                    }
+                }
+
             }
             #rightcolumn {
                 width: 100%;
                 margin-top: 0px;
+                float:none;
 
                 .checkoutminicart {
                     height: auto;
                     max-height: 10000px !important;
+
+                    .minicartquantityvalue {
+                        width:auto !important;
+                        font-size:inherit !important;
+                        padding:0px !important;
+                    }
                 }
             }
         }
