@@ -1,15 +1,15 @@
 #footer {
-    position: relative;
-    top: 45px;
     height: auto;
     border-top: 14px solid #000;
     border-bottom: 0;
-    margin-top: 0px;
-    margin-bottom: 25px;
+    margin-top: 45px;
+    padding: 0px 6px;
+
     #ftwrapper {
         margin: 0px 6px;
         height: auto;
         clear: both;
+
         div {
             max-width: 100%;
             @include box-sizing(border-box);
@@ -99,21 +99,28 @@
 
     }
 }
-.copytxt-inner {
-    text-align: center;
-    > div {
-        display: inline-block;
-        vertical-align: middle;
 
-        &.stellaServiceFooter {
-            margin-left: 10px;
-        }
-        span {
-            display: none !important;
-        }
-        img {
-            height: 45px;
-            widows: auto;
+#copytxt {
+    height:auto;
+    padding-top:0px;
+    margin-top:0px;
+
+    .copytxt-inner {
+        text-align: center;
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+
+            &.stellaServiceFooter {
+                margin-left: 10px;
+            }
+            span {
+                display: none !important;
+            }
+            img {
+                height: 45px;
+                widows: auto;
+            }
         }
     }
 }

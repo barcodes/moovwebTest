@@ -40,6 +40,8 @@
                     }
                 }
                 .cart {
+                    width:auto !important;
+
                     h2 {
                         height: 40px;
                         font-size: 20px;
@@ -49,7 +51,7 @@
                         font-family: 'TradeGothicLTStdBold', Helvetica, Arial, sans-serif;
                         text-transform: uppercase;
                         margin-bottom: 20px;
-                        border-bottom: 1px solid    
+                        border-bottom: 1px solid #000;
                     }
                     .orderdiscount, .couponcode, .coupondetail, .errormessage {
                         float: none;

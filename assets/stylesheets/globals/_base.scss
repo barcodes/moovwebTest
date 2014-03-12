@@ -3,13 +3,32 @@
     min-width: 0;
     padding: 0px;
     @include box-sizing(border-box);
-
 }
+
+.formfield {
+    margin-bottom:10px;
+}
+
+input, select, textarea {
+    @include box-sizing(border-box);
+    width:100% !important;
+    font-size:14px !important;
+    line-height:normal !important;
+    padding:6px !important;
+}
+
+
 #main {
     top: 45px;
     margin: 0px 6px;
-    .headerslot {
-        margin: 0px -6px 6px;
+
+    #content {
+        width:auto;
+        float:none;
+
+        .headerslot {
+            margin: 0px -6px 6px;
+        }
     }
 }
 #cboxOverlay {

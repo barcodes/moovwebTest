@@ -1,10 +1,11 @@
 ._customer-service {
-
     #container {
         #main {
             margin-top: 0px;
+
             #content {
                 width: 100%;
+
                 .contactus {
                     width: 100%; 
 
@@ -32,13 +33,18 @@
                             height: auto;
                         }
                     }
+
                     form {
-                        width: 100%;
+                        width:auto;
+
                         * {
-                            width: 100%;
+                            @include box-sizing(border-box);
+                            width:100%;
                         }
+
                         .formfield {
                             width: 100%;
+                            margin-bottom:10px;
 
                             .label {
                                 display: block;
@@ -46,13 +52,20 @@
                                 float: none;
                                 clear: both;
                                 text-align: left;
+                                font-size:14px;
+                                line-height:normal;
                             }
                             .value {
                                 width:100%;
+                                font-size:14px !important;
+                                line-height:normal !important;
 
-                                select, input {
+                                select, input, textarea {
                                     width: 100%;
-                                    height: 25px;
+                                    height:auto;
+                                    font-size:14px;
+                                    line-height:normal;
+                                    padding:6px;
                                 }
                             }
                             .checkbox {
@@ -65,6 +78,13 @@
                                 width: 10px;
                                 float: left;
                             }
+                        }
+
+                        .formactions #sendBtn {
+                            height:auto;
+                            padding:6px 12px;
+                            font-size:14px !important;
+                            line-height:normal;
                         }
                     }
                 }

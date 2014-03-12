@@ -59,7 +59,6 @@ $("body") {
                 %contentid {
                     replace("#", "")
                 }
-                log(%contentid)
                 $("a") {
                     attributes(data-ur-toggler-component: "button")
                     insert("i", class: "fa fa-plus-circle")
@@ -67,6 +66,14 @@ $("body") {
                 }
                 move_here("//div[@id='" + %contentid + "']") {
                     attributes(data-ur-toggler-component: "content")
+                }
+
+                $('./div[@id="pdpContactTab"]//tr[last()]/td/p[contains(text(), "1.800")]') {
+                    %foo = text()
+                    %foo {
+                        replace('.', '-')
+                    }
+                    inner_wrap('a', href:'tel:' + %foo)
                 }
             }
         }

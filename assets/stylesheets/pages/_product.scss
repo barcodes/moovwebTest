@@ -112,17 +112,19 @@
 
                     span {
                         display: inline-block;
+                        vertical-align:middle;
                         padding: 0;
                     }
                     input {
-                        width: 50%;
+                        width: 50% !important;
                         display: inline-block;
                         float: none;
-                        padding: 3px 0px;
+                        padding: 3px 0px !important;
                         margin: 0;
-                        font-size: 15px;
+                        font-size: 15px !important;
                         color: #999;
                         font-weight: bold;
+                        height:30px;
                     }
                 }
                 .addtocartbutton {
@@ -166,6 +168,11 @@
                 border: 1px solid #dbdbdb;
                 table {
                     margin: 0 !important;
+
+                    a[href^="tel:"], a[href^="mailto:"] {
+                        font-size:12px;
+                        color:#666;
+                    }
                 }
             }
             margin-bottom: 2px;
