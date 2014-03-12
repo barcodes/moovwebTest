@@ -41,11 +41,13 @@ $(function() {
     }
 
     if($('body').hasClass('_product')) {
-        $('#_bag-button').bind('DOMSubtreeModified', function(e) {
-            if (e.target.innerHTML.length > 0) {
-                document.location.href = $(this).attr('href');
-            }
-        });        
+        setTimeout(function() {
+            $('#_bag-button').bind('DOMSubtreeModified', function(e) {
+                if (e.target.innerHTML.length > 0) {
+                    document.location.href = $(this).attr('href');
+                }
+            });
+        }, 2500);        
     }
 
     if($('body').hasClass('_cart')) {
