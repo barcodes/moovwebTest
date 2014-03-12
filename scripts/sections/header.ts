@@ -2,6 +2,9 @@ $("//div[@id='header']") {
     name("header")
     add_class("_header")
 
+    # This is temporary. Will remove, once we support multiple domains needed for this.
+    remove('.//span[@id="userlanguage"]')
+
     remove('./div[@class="headerbanner"]')
 
     $("//li[contains(@class, 'topLevelMenu')]") {
