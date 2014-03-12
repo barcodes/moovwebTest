@@ -40,6 +40,14 @@ $(function() {
         app.quickView.show = function() { return; }
     }
 
+    if($('body').hasClass('_product')) {
+        $('#_bag-button').bind('DOMSubtreeModified', function(e) {
+            if (e.target.innerHTML.length > 0) {
+                document.location.href = $(this).attr('href');
+            }
+        });        
+    }
+
     if($('body').hasClass('_cart')) {
 
         checkForShippingOptionsInterval = setInterval(function() {
