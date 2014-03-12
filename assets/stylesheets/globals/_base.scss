@@ -9,7 +9,8 @@
     margin-bottom:10px;
 }
 
-input[type="text"], select, textarea {
+input[type="text"], input[type="password"], input[type="tel"],
+select, textarea {
     @include box-sizing(border-box);
     width:100% !important;
     font-size:14px !important;
@@ -23,7 +24,7 @@ input[type="text"], select, textarea {
     margin:45px 0px 0px !important;
 
     #content {
-        width:auto;
+        width:auto !important;
         float:none;
         padding:0px 6px;
 

@@ -39,6 +39,7 @@ $("//div[@id='footer']") {
                     }
                 }
                 remove('div[@class="_footer-group-link"]/a[contains(@href,"careers")]')
+                remove('div[@class="_footer-group-link"]/a[contains(@href,"InternationalParcelTracking")]')
             }
         }
         insert_top("a", "VIEW DESKTOP SITE") {

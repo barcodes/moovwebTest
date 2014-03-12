@@ -20,7 +20,16 @@
                         float: none;
                         border: none;
                         clear: both;
-                        padding: 0px;
+                        padding: 0px 0px 40px;
+                        height:auto !important;
+
+                        .contentasset {
+                            margin-bottom:0px;
+                        }
+
+                        form .createaccountbutton {
+                            margin-top:0px;
+                        }
                     }
 
                     .logincustomers {
@@ -53,34 +62,54 @@
                     }
 
                     .check-order {
-                        width: 100% !important;
+                        width: auto !important;
+                        height:auto !important;
                         padding: 0px;
+                        margin:0px !important;
 
-                        .formactions {
-                            display: block;
-                            margin: 10px 0px;
-                            padding-top: 10px;
-                            clear: both;
-                            text-align: left;
-                        }
-                        .formfield {
-                            margin: 0px;
+                        .checkorder {
+                            padding:0px;
 
-                            .label {
-                                display: block;
-                                float: none;
-                                clear: both;
-                                text-align: left;
-                            }
+                            #dwfrm_ordertrack {
+                                padding:0px !important;
 
-                            .value {
-                                width: 100%;
-
-                                input {
-                                    width: 100%;
+                                .formactions {
+                                    margin:0px;
+                                    padding:0px;
                                 }
                             }
 
+                            .formactions {
+                                display: block;
+                                margin: 10px 0px;
+                                padding-top: 10px;
+                                clear: both;
+                                text-align: left;
+                            }
+                            .formfield {
+                                margin: 0px 0px 10px;
+
+                                .label {
+                                    display: block;
+                                    float: none;
+                                    clear: both;
+                                    text-align: left;
+                                }
+
+                                .value {
+                                    width: 100%;
+                                    float:none;
+
+                                    input {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            #check-order-in-login .formactions {
+                                padding-top:5px;
+                                margin:0px;
+                            }
                         }
                     }
 
