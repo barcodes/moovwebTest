@@ -27,16 +27,28 @@
                         }
                     }
                     .formcheckout {
-                        .botcheckoutbutton {
+                        .topcheckoutbutton, .botcheckoutbutton {
                             margin-top:0px;
 
                             button {
-                                margin-top: 10px;
+                                background:none !important;
+                                margin-top:12px;
+                                padding:0px;
+                                height:auto;
+
+                                span {
+                                    display:block;
+                                    padding:10px 12px;
+                                }
                             }
                         }
                     }
                     .paypalcheckout {
                         float: left;
+
+                        button.textbutton {
+                            margin-right:0px;
+                        }
                     }
                 }
                 .cart {
@@ -175,6 +187,7 @@
                             .calculator {
                                 div.label {
                                     text-align:left;
+                                    margin-bottom:5px;
                                 }
 
                                 fieldset {
@@ -185,7 +198,7 @@
                                     display: block;
                                     clear:both;
                                     text-align: left;
-                                    padding:10px 8px;
+                                    padding:12px 10px;
                                     margin: 3px auto;
                                     @include border-radius(5px);
                                     border: 1px solid #e2e2e2;
@@ -201,6 +214,16 @@
 
                         strong .ordertotals {
                             padding:0px 10px;
+                            float:none;
+
+                            .ordertotalstable td {
+                                width:auto;
+
+                                span.label {
+                                    width:auto;
+                                    float:none;
+                                }
+                            }
                         }
                     }
 
@@ -222,6 +245,7 @@
 
                         span.label {
                             margin-top:0px;
+                            line-height:30px;
                         }
 
                         input {
@@ -240,17 +264,34 @@
                         }
                     }
                 }
-                .flexslider {
-                    margin: 0 auto;
-                    width: 200px;
-                    height: auto;
-                }
 
-                .flexslider .slides img {
-                    width: 200px;
-                    height: auto;
-                }
+                .productrelateditems {
+                    width:auto !important;
+                    margin:0px 0px 45px !important;
+                    padding:0px !important;
+                    float:none !important;
 
+                    h2 {
+                        font-size:16px;
+                        line-height:normal;
+                        padding-top:10px;
+                    }
+
+                    .flexslider {
+                        margin: 0 auto;
+                        width: 200px;
+                        height: auto;
+
+                        .flex-control-nav {
+                            bottom:-30px;
+                        }
+                    }
+
+                    .flexslider .slides img {
+                        width: 200px;
+                        height: auto;
+                    }
+                }
             }
             .headerslot, .contentasset, .breadcrumb {
                 display: none;
