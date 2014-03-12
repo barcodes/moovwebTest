@@ -112,6 +112,8 @@ $(function() {
         $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks.html');
     }
 
+    $('div.productdetailcolumn.productimages').remove();
+
 })
 
 $(function setupSortAndRefine() {

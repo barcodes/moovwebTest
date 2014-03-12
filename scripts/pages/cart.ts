@@ -82,6 +82,13 @@ $('body') {
 		attributes(class: 'loginbox')
 	}
 
+	$('//div[@class="checkoutlogin"]') {
+		move('./div[@class="loginbox"]', '.', 'top')
+		$('./div[@class="loginbox"]') {
+			insert_top('div', class: 'clear')
+		}
+	}
+
 	$$('.productrelateditems') {
 		#remove()
 		$('./div[@id="cart_rr"]') {
