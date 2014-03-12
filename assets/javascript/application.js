@@ -30,6 +30,10 @@ $(function() {
 
     setTimeout(override_functions, 1500);
 
+    $('#_full-site-link').click(function() {
+        document.cookie = 'mw_mobile_site=false' + '; domain=.perryellis.com; path=/';
+    });
+
     $("#_flexslider").on('click', '#_slider-prev', function() {
         $(this).parents("#_flexslider").find(".flexslider").flexslider("prev");
     }).on('click', '#_slider-next', function() {

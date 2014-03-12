@@ -17,7 +17,6 @@ $("//div[@id='footer']") {
             }
         }
     }
-    #Create View Desktop Site link
 
     $(".//div[@id='ftwrapper']") {
         $(".//div[@class='ftgroup']") {
@@ -42,7 +41,7 @@ $("//div[@id='footer']") {
                 remove('div[@class="_footer-group-link"]/a[contains(@href,"InternationalParcelTracking")]')
             }
         }
-        insert_top("a", "VIEW DESKTOP SITE") {
+        insert_top("a", "VIEW DESKTOP SITE", id:'_full-site-link') {
             attributes(data-mw-footer-item: "VIEW DESKTOP SITE", href:"#", class: "_footer-group-button")
             insert("i", class: "fa fa-chevron-right")
         }
