@@ -100,6 +100,46 @@ $("//div[@id='header']") {
             }
         }
 
+        $('.//li[@id="pefeatures"]') {
+            attributes(class: 'topLevelMenu sublevel')
+        }
+
+        $('.//li[a[contains(@href,"the-slim-shop")]]') {
+            $('')
+            attributes(class: 'test', data-ur-set: 'toggler', data-ur-state: 'enabled')
+            remove('./a')
+            insert('div') {
+                text('THE SLIM SHOP')
+                attributes(class: 'hasThirdLevel', style: 'display:none')
+            }
+            insert('a') {
+                attributes(class: 'hasThirdLevelMobile', style: 'display: inline', href: 'javascript:void(0);', data-ur-toggler-component: 'button', data-ur-state: 'disabled')
+                text('THE SLIM SHOP')
+                insert('i', class: 'fa fa-chevron-right')
+            }
+            insert('div') {
+                attributes(data-ur-toggler-component: 'content', data-ur-state: 'disabled')
+                insert('div', class: 'subcategories') {
+                    insert('a', href: '/the-slim-shop/slim-tops/') {
+                        text('Slim Fit Shirts')
+                        insert('i', class: 'fa fa-chevron-right')
+                    }
+                }
+                insert('div', class: 'subcategories') {
+                    insert('a', href: '/the-slim-shop/slim-bottoms/') {
+                        text('Slim Fit Pants')
+                        insert('i', class: 'fa fa-chevron-right')
+                    }
+                }
+                insert('div', class: 'subcategories') {
+                    insert('a', href: '/the-slim-shop/slim-suits/') {
+                        text('Slim Fit Suits')
+                        insert('i', class: 'fa fa-chevron-right')
+                    }
+                }
+            }
+        }
+
         remove('.//li[@id="pepress"]')
         remove('.//li[@id="peblog"]')
         remove('//div[@class="headersearchwrapper"]/@style')

@@ -107,12 +107,12 @@ $(function() {
         openPosition: '280px',
         beforeOpen: function() {
             html.css('overflow', 'hidden');
-            $('#header').css('position', 'absolute');
+            $('#header').css('position', 'absolute').css('top', '-45px');
             $('body').scrollTop(0);
         },
         afterClose: function() {
             html.css('overflow', 'auto');
-            $('#header').css('position', 'fixed');
+            $('#header').removeAttr('style');
         }
     });
     jPM.on();
