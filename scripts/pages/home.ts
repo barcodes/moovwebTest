@@ -62,6 +62,10 @@ $("body") {
         }
     }
 
+    $('//div[@id="banners-container"]') {
+        insert('div', id: 'category-grid')
+    }
+
     remove("//div[@class='home-slot-bottom']")
     remove("//div[@class='extended-text']")
 }
