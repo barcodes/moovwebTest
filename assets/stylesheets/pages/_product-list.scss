@@ -316,18 +316,28 @@
         }
 
         .pagination li {
-            font-size: 10px;
-            width: 28px;
-            height: 24px;
+            font-size:12px;
+            width:auto;
+            height:auto;
+            padding:8px 12px;
+            line-height:normal;
         }
 
         .pagination li.firstlast {
-            height: 29px;
-            line-height: 35px;
+            display:inline-block;
+            vertical-align:top;
+            margin:0px 0px 0px 5px !important;
+            padding:0px;
 
-            margin: 2px 0 !important;
-            padding-top: 9px;
+            a {
+                display:block;
 
+                span {
+                    display:block;
+                    line-height:normal;
+                    font-size:26px !important;
+                }
+            }
         }
     }
 }

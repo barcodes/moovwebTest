@@ -19,15 +19,20 @@ input[type="text"], select, textarea {
 
 
 #main {
-    top: 45px;
-    margin: 0px 6px;
+    position:static;
+    margin:45px 0px 0px !important;
 
     #content {
         width:auto;
         float:none;
+        padding:0px 10px;
 
         .headerslot {
-            margin: 0px -6px 6px;
+            margin: 0px -10px 6px;
+        }
+
+        .contentslot {
+            width:auto !important;
         }
     }
 }

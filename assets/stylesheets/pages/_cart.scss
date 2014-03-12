@@ -41,166 +41,202 @@
                 }
                 .cart {
                     width:auto !important;
+                    float:none;
 
                     h2 {
-                        height: 40px;
                         font-size: 20px;
-                        color: #000000;
+                        color: #000;
                         text-align: left;
                         line-height: 40px;
                         font-family: 'TradeGothicLTStdBold', Helvetica, Arial, sans-serif;
                         text-transform: uppercase;
-                        margin-bottom: 20px;
                         border-bottom: 1px solid #000;
+                        margin-bottom:10px;
+                        padding:0px 10px;
                     }
+
                     .orderdiscount, .couponcode, .coupondetail, .errormessage {
                         float: none;
                         clear: both;
                     }
-                    .productrow {
-                        padding: 10px 0px;
-                        border-bottom: 2px solid #ddd;
 
-                        div.imagecolumn {
-                            float: left;
-                            width: 80px;
-                            margin-right: 15px;
+                    .carttable {
+                        .productrow {
+                            padding: 10px 0px;
+                            border-bottom: 2px solid #ddd;
 
-                            a>img {
-                                max-width: 100%;
-                            }
-                        }
-                        div.name {
-                            a {
-                                font-size: 14px;
-                                font-weight: bold;
-                            }
-                        }
-                        div.productattributes {
-                            span {
-                                float: none !important;
-                            }
-                            .attribute {
-                                .label, .value {
-                                    font-size: 12px !important;
-                                }
-                            }
-                        }
-                        div.stockstate {
-                            padding-top: 0px;
-                            margin-right: 5px;
-                            float: left;
-                        }
-                        div#quantityDIV {     
-                            clear: both;
-                            margin-left: 95px;
-                            padding-top: 10px;
-
-                            button[class="removetextbutton"] {
-                                display: table-cell;
-                                margin-right: 20px;
-                                vertical-align: middle;
+                            div.imagecolumn {
                                 float: left;
+                                width: 80px;
+                                margin-right: 15px;
 
-                                i {
-                                    color: #333;
-                                    font-size: 30px;
+                                a>img {
+                                    max-width: 100%;
                                 }
                             }
-                            .addtowishlist {
-                                margin: 10px 0px;
-                                font-weight: bold;
+                            div.name {
+                                a {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
                             }
-                            div.quantitycolumn {
-                                display: table;
-                                height: 30px;
-
-
-                                a[class*=_row-qty] {
-                                    -webkit-appearance: none;
-                                    display: table-cell;
-                                    vertical-align: middle;
-                                    background-color: #e9e9e9;
-                                    //@include linear-gradient(#FFFFFF, #E9E9E9);
-                                    border: 1px solid #E2E2E2;
-                                    padding: 2px 9px;
-                                    color: #1D1D1D;
-
-                                    &:active {
-                                        @include linear-gradient(#FFFFFF, #FFFFFF);
-                                        color: #000;
+                            div.productattributes {
+                                span {
+                                    float: none !important;
+                                }
+                                .attribute {
+                                    .label, .value {
+                                        font-size: 12px !important;
                                     }
                                 }
+                            }
+                            div.stockstate {
+                                padding-top: 0px;
+                                margin-right: 5px;
+                                float: left;
+                            }
+                            div#quantityDIV {     
+                                clear: both;
+                                margin-left: 95px;
+                                padding-top: 10px;
 
-                                input.cartquantity {
+                                button[class="removetextbutton"] {
                                     display: table-cell;
+                                    margin-right: 20px;
                                     vertical-align: middle;
-                                    width: 40px !important;
+                                    float: left;
+
+                                    i {
+                                        color: #333;
+                                        font-size: 30px;
+                                    }
+                                }
+                                .addtowishlist {
+                                    margin: 10px 0px;
+                                    font-weight: bold;
+                                }
+                                div.quantitycolumn {
+                                    display: table;
                                     height: 30px;
-                                    margin: 0 4px !important;
-                                    border: 1px solid #E2E2E2 !important;
-                                    border-radius: 0px;
-                                    padding: 0 !important;
-                                    text-align: center;
 
-                                    &::-webkit-inner-spin-button,
-                                    &::-webkit-outer-spin-button {
+
+                                    a[class*=_row-qty] {
                                         -webkit-appearance: none;
-                                        margin: 0;
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        background-color: #e9e9e9;
+                                        //@include linear-gradient(#FFFFFF, #E9E9E9);
+                                        border: 1px solid #E2E2E2;
+                                        padding: 2px 9px;
+                                        color: #1D1D1D;
+
+                                        &:active {
+                                            @include linear-gradient(#FFFFFF, #FFFFFF);
+                                            color: #000;
+                                        }
+                                    }
+
+                                    input.cartquantity {
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        width: 40px !important;
+                                        height: 30px;
+                                        margin: 0 4px !important;
+                                        border: 1px solid #E2E2E2 !important;
+                                        border-radius: 0px;
+                                        padding: 0 !important;
+                                        text-align: center;
+
+                                        &::-webkit-inner-spin-button,
+                                        &::-webkit-outer-spin-button {
+                                            -webkit-appearance: none;
+                                            margin: 0;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        div.quantitycolumndetails {
-                            display: none;
-                        }
-                        div.itemtotalcolumn {
-                            margin: 10px 0px 0px 95px;
-                            .itemtotals {
-                                float: none;
-                            }
-                        }
-                    }
-                    .estimation {
-                        float: none;
-                        
-                        .calculator {
-                            fieldset {
+                            div.quantitycolumndetails {
                                 display: none;
                             }
-                            .shippingLabel {
-                                display: block;
-                                clear:both;
-                                text-align: left;
-                                padding: 10px 3px;
-                                margin: 3px auto;
-                                @include border-radius(5px);
-                                border: 1px solid #e2e2e2;
-                                background-color: #e9e9e9;
-
-                                input {
-                                    float: left;
-                                    margin-right: 5px;
+                            div.itemtotalcolumn {
+                                margin: 10px 0px 0px 95px;
+                                .itemtotals {
+                                    float: none;
                                 }
                             }
                         }
                     }
+
+                    .cartfooter .cartordertotals {
+                        .estimation {
+                            float: none;
+                            padding:0px 10px;
+                            
+                            .calculator {
+                                div.label {
+                                    text-align:left;
+                                }
+
+                                fieldset {
+                                    display: none;
+                                }
+
+                                .shippingLabel {
+                                    display: block;
+                                    clear:both;
+                                    text-align: left;
+                                    padding:10px 8px;
+                                    margin: 3px auto;
+                                    @include border-radius(5px);
+                                    border: 1px solid #e2e2e2;
+                                    background-color: #e9e9e9;
+
+                                    input {
+                                        float: left;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        strong .ordertotals {
+                            padding:0px 10px;
+                        }
+                    }
+
                     .orderdiscount {
                         span {
                             width: auto;
                             float: none;
                         }
                     }
+
                     .coupondetail {
 
                     }
+
                     .couponcode {
                         float: none;
                         margin: 5px;
                         text-align: left;
 
+                        span.label {
+                            margin-top:0px;
+                        }
+
                         input {
                             margin-right: 5px;
+                            margin-top:0px;
+                            width:58% !important;
+                        }
+
+                        button {
+                            height:auto;
+                            line-height:30px;
+
+                            span {
+                                display:block;
+                            }
                         }
                     }
                 }
