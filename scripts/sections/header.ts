@@ -76,6 +76,9 @@ $("//div[@id='header']") {
 
         move('//div[@class="headersearchwrapper"]', '.', 'top') 
         $('.//div[@class="headersearchwrapper"]') {
+            $('.//button[@name="simplesearch"]') {
+                insert('i', class:'fa fa-search')
+            }
             $('.//input[@id="searchinput"]') {
                 %placeholder = fetch('@value')
                 attributes(placeholder: %placeholder)
