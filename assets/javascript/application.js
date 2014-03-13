@@ -156,7 +156,7 @@ $(function setupSortAndRefine() {
         // width of image requested from server, only used for quality:
         imageWidth = 800,
         // size of zoomed image compared to flexslider size:
-        zoomRatio = 2;
+        zoomMultiplier = 3;
     $('.swatchesdisplay a.swatch').on('click', removeZoomer);
 
     function init() {
@@ -193,7 +193,7 @@ $(function setupSortAndRefine() {
                 // contain refuses to work
                 // contain: 'invert'
             })
-            .panzoom('zoom', 3, {focal: event})
+            .panzoom('zoom', zoomMultiplier, {focal: event})
             .on('panzoomend', function(event, panzoom, matrix, changed) {
                 if (matrix[4] < -w) {
                     matrix[4] = -w;
