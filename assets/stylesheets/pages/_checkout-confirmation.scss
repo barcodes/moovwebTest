@@ -1,7 +1,17 @@
 ._checkout-confirmation {
-
     #container {
         #main {
+            .headerslot {
+                display:block;
+
+                .headerslotcontent {
+                    height:15px;
+
+                    .bottombannercontainer a {
+                        display:none;
+                    }
+                }
+            }
 
             .orderpaymentdetails {
                 > div {

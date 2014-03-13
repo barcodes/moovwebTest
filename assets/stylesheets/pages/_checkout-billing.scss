@@ -1,7 +1,18 @@
 ._checkout-billing {
-
     #container {
         #main {
+            .headerslot {
+                display:block;
+
+                .headerslotcontent {
+                    height:15px;
+
+                    .bottombannercontainer a {
+                        display:none;
+                    }
+                }
+            }
+
             .checkoutprogressindicator > div {
                 float: none;
                 display: block;

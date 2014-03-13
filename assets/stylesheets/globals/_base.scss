@@ -34,6 +34,35 @@ html {
 
                 .headerslot {
                     margin: 0px -6px 6px;
+
+                    .headerslotcontent {
+                        background-color: #222;
+                        padding:6px;
+
+                        .bottombannercontainer {
+                            text-align: center;
+                            margin: 0px 5px;
+
+                            span {
+                                color: #e57f7f;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                font-family: arial !important;
+                            }
+
+                            a.fancybox {
+                                display: none;
+                                text-transform: capitalize;
+                                text-decoration: underline;
+                            }
+
+                            a, a span {
+                                display:block;
+                                color: #fff;
+                                width:auto;
+                            }
+                        }
+                    }
                 }
 
                 .contentslot {
@@ -61,32 +90,10 @@ html {
             }
         }
 
-        .headerslot .headerslotcontent .bottombannercontainer {
-            text-align: center;
-            margin: 0px 5px;
-            span {
-                color: #e57f7f;
-                font-weight: bold;
-                text-transform: uppercase;
-                font-family: arial !important;
-            }
-            a.fancybox {
-                display: none;
-                text-transform: capitalize;
-                text-decoration: underline;
-            }
-            a, a span {
-                color: #fff;
-            }
-            padding-bottom: 6px;
-        }
-        .headerslotcontent {
-            background-color: #222;
-            padding-top: 5px;
-        }
         .custinfo {
             display: none;
         }
+
         #jPanelMenu-menu {
             background-color: #333;
             overflow-y: auto !important;

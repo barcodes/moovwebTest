@@ -101,6 +101,7 @@ header#header._header {
                             width: auto;
 
                             input {
+                                @include appearance(none);
                                 margin: 0px 5px;
                                 height: 26px !important;
                                 line-height: 26px;

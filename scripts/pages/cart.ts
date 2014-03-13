@@ -1,6 +1,13 @@
 $('body') {
 	add_class('_cart')
 
+	%test = $('.//button[@value="Guest Checkout"]')
+	match_not(%test, '0') {
+		$('/html/body') {
+			add_class('_checkout-login')
+		}
+	}
+
 	insert_top("style", type: "text/css") {
         inject(read("../../assets/stylesheets/flexslider.css"))
         text() {
@@ -72,7 +79,6 @@ $('body') {
 		}
 	}
 
-	#remove('//div[@class="actions"][1]')
 	$('//div[@class="actions"]') {
 		remove('span[@name="dwfrm_cart_continueShopping"]')
 		remove('.//div/@style')
@@ -90,12 +96,19 @@ $('body') {
 	}
 
 	$$('.productrelateditems') {
-		#remove()
 		$('./div[@id="cart_rr"]') {
 			attributes(class: 'flexslider')
 
 			$('./ul') {
 				attributes(class: 'slides')
+
+				$('.//img') {
+					attr('src') {
+						value() {
+							replace('?sw=100', '?sw=200')
+						}
+					}
+				}
 			}
 		}
 	}

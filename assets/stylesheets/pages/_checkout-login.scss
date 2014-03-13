@@ -1,0 +1,30 @@
+._checkout-login {
+    #container #main #content {
+        .headerslot .headerslotcontent {
+            height:15px;
+
+            .bottombannercontainer a {
+                display:none;
+            }
+        }
+
+        .checkoutloginhome {
+            button.mediumbutton {
+                height:auto;
+                padding:8px 12px;
+
+                span {
+                    margin:0px;
+                }
+            }
+
+            .loginContent {
+                margin-top:20px;
+
+                .logincustomers .formactions {
+                    margin-top:20px;
+                }
+            }
+        }
+    }
+}

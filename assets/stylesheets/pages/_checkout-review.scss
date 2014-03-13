@@ -2,6 +2,18 @@
 
     #container {
         #main {
+            .headerslot {
+                display:block;
+
+                .headerslotcontent {
+                    height:15px;
+
+                    .bottombannercontainer a {
+                        display:none;
+                    }
+                }
+            }
+
             .checkoutprogressindicator {
                 margin-bottom:10px;
 

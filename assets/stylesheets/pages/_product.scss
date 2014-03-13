@@ -235,6 +235,7 @@
 
         button {
             @include border-radius(5px);
+            @include appearance(none);
             position: absolute;
             z-index: 5;
             bottom: 30%;
