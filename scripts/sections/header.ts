@@ -56,9 +56,8 @@ $("//div[@id='header']") {
             attributes(onclick: 'javascript:location.href="'+fetch("//a[@class='linkminicart']/@href")+'"')
         }
         $('./div[1]') {
-            attributes(id: "_menu-button", data-ur-toggler-component: "button")
+            attribute('id', '_menu-button')
         }
-
     }
 
     $("//div[@class='categorywrapper']") {
@@ -84,7 +83,7 @@ $("//div[@id='header']") {
             }
             $('.//input[@id="searchinput"]') {
                 %placeholder = fetch('@value')
-                attributes(placeholder: %placeholder)
+                attributes(placeholder: %placeholder, required: 'required')
                 remove('@class')
                 remove('@value')
             }
@@ -109,12 +108,12 @@ $("//div[@id='header']") {
             attributes(class: 'test', data-ur-set: 'toggler', data-ur-state: 'enabled')
             remove('./a')
             insert('div') {
-                text('THE SLIM SHOP')
+                text('The Slim Shop')
                 attributes(class: 'hasThirdLevel', style: 'display:none')
             }
-            insert('a') {
-                attributes(class: 'hasThirdLevelMobile', style: 'display: inline', href: 'javascript:void(0);', data-ur-toggler-component: 'button', data-ur-state: 'disabled')
-                text('THE SLIM SHOP')
+            insert('a', href: 'javascript:void(0);', class: 'hasThirdLevelMobile') {
+                attributes(style: 'display:inline', data-ur-toggler-component: 'button', data-ur-state: 'disabled')
+                text('The Slim Shop')
                 insert('i', class: 'fa fa-chevron-right')
             }
             insert('div') {

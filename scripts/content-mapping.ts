@@ -1,100 +1,63 @@
-match($("//div[@class='productlisting']")) {
-    not("0") {
-        @import pages/product-list.ts
-    }
+match_not($("//div[@class='productlisting']"), '0') {
+    @import pages/product-list.ts
 }
-match($("//div[@id='pdpMain']")) {
-    not("0") {
-        @import pages/product.ts
-    }
+match_not($("//div[@id='search']/div[@class='nohits']"), '0') {
+    @import pages/product-list.ts
 }
-match($("//div[@class='contentassetpage']")) {
-    not('0') {
-        @import pages/generic_content.ts
-    }
+match_not($("//div[@id='pdpMain']"), '0') {
+    @import pages/product.ts
 }
-match($("//div[@class='accountlogin']")) {
-    not('0') {
-        @import pages/account_login.ts
-    }
+match_not($("//div[@class='contentassetpage']"), '0') {
+    @import pages/generic_content.ts
 }
-match($("//div[@class='checkoutshipping']")) {
-    not('0') {
-        @import pages/checkout_shipping.ts
-    }
+match_not($("//div[@class='accountlogin']"), '0') {
+    @import pages/account_login.ts
 }
-match($("//div[@class='checkoutbilling']")) {
-    not('0') {
-        @import pages/checkout_billing.ts
-    }
+match_not($("//div[@class='checkoutshipping']"), '0') {
+    @import pages/checkout_shipping.ts
 }
-match($("//div[@class='checkoutplaceorder']")) {
-    not('0') {
-        @import pages/checkout_review.ts
-    }
+match_not($("//div[@class='checkoutbilling']"), '0') {
+    @import pages/checkout_billing.ts
 }
-match($('//div[@class="orderconfirmation"]')) {
-    not('0') {
-        @import pages/checkout_confirmation.ts
-    }
+match_not($("//div[@class='checkoutplaceorder']"), '0') {
+    @import pages/checkout_review.ts
 }
-match($("//div[@class='accountoverview']")) {
-    not('0') {
-        @import pages/account_overview.ts
-    }
+match_not($('//div[@class="orderconfirmation"]'), '0') {
+    @import pages/checkout_confirmation.ts
 }
-match($("//div[@class='accounteditaddress']")) {
-    not('0') {
-        @import pages/account_addresses.ts
-    }
+match_not($("//div[@class='accountoverview']"), '0') {
+    @import pages/account_overview.ts
 }
-match($("//div[@class='giftcertpurchase']")) {
-    not('0') {
-        @import pages/gc_purchase.ts
-    }
+match_not($("//div[@class='accounteditaddress']"), '0') {
+    @import pages/account_addresses.ts
 }
-match($("//div[@class='registrationform']")) {
-    not('0') {
-        @import pages/account-information.ts
-    }
+match_not($("//div[@class='giftcertpurchase']"), '0') {
+    @import pages/gc_purchase.ts
 }
-match($("//div[@class='accountpaymentinstruments']")) {
-    not('0') {
-        @import pages/account-payment-methods.ts
-    }
+match_not($("//div[@class='registrationform']"), '0') {
+    @import pages/account-information.ts
 }
-match($('//div[@class="orders"]')) {
-    not("0") {
-        @import pages/account-orders.ts
-    }
+match_not($("//div[@class='accountpaymentinstruments']"), '0') {
+    @import pages/account-payment-methods.ts
 }
-match($("//form[contains(@action,'CustomerService-ContactUs')]")) {
-    not('0') {
-        @import pages/customer-service.ts
-    }
+match_not($('//div[@class="orders"]'), '0') {
+    @import pages/account-orders.ts
 }
-match($('//div[@id="store-locator-div"]')) {
-    not("0") {
-        @import pages/store-locator.ts
-    }
+match_not($("//form[contains(@action,'CustomerService-ContactUs')]"), '0') {
+    @import pages/customer-service.ts
 }
-match($('//div[@class="orderdetails"]')) {
-    not('0') {
-        @import pages/account-order.ts
-    }
+match_not($('//div[@id="store-locator-div"]'), '0') {
+    @import pages/store-locator.ts
 }
-match($('//div[@id="loyalty-container"]')) {
-    not('0') {
-        @import pages/supreme-perks.ts
-    }
+match_not($('//div[@class="orderdetails"]'), '0') {
+    @import pages/account-order.ts
 }
-match($('//div[@class="wishlistlogin"]')) {
-    not('0') {
-        @import pages/account_login.ts
-    }
+match_not($('//div[@id="loyalty-container"]'), '0') {
+    @import pages/supreme-perks.ts
 }
-match($('//div[@class="wishlist"]')) {
-    not('0') {
-        @import pages/supreme-perks.ts
-    }
+match_not($('//div[@class="wishlistlogin"]'), '0') {
+    @import pages/account_login.ts
+}
+match_not($('//div[@class="wishlist"]'), '0') {
+    @import pages/supreme-perks.ts
 }

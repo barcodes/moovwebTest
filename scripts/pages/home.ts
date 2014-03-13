@@ -64,6 +64,10 @@ $("body") {
 
     $('//div[@id="banners-container"]') {
         insert('div', id: 'category-grid')
+
+        $('.//img') {
+            perf.optimize_image()
+        }
     }
 
     remove("//div[@class='home-slot-bottom']")

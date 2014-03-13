@@ -120,10 +120,10 @@
             input {
                 border: none;
                 box-sizing: border-box;
-                font-size: 13px;
-                height: 37px;
-                line-height: 37px;
-                padding: 10px;
+                font-size: 13px !important;
+                height: 37px !important;
+                line-height: normal !important;
+                padding: 10px !important;
                 vertical-align: top;
                 width: 229px !important;
             }
