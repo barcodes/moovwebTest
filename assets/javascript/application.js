@@ -160,6 +160,9 @@ $(function setupSortAndRefine() {
     $('.swatchesdisplay a.swatch').on('click', removeZoomer);
 
     function init() {
+        if (! $('body').hasClass('_product')) {
+            return;
+        }
         removeZoomer();
         wrapper = $('#_flexslider');
         slider = $('.flexslider');
