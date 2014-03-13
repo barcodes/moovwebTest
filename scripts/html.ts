@@ -17,6 +17,7 @@ $("/html") {
         insert('link', href:'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel:'stylesheet', type:'text/css')
         insert("script", type: "text/javascript", src: asset("javascript/application.js"))
         insert('script', type: 'text/javascript', src: asset('javascript/jquery.jpanelmenu.min.js'))
+        insert('script', src: asset('javascript/jquery.panzoom.min.js'))
     }
 
     @import sections/header.ts
