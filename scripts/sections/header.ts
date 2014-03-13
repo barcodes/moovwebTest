@@ -97,6 +97,14 @@ $("//div[@id='header']") {
             $('a') {
                 insert_bottom('i', class: 'fa fa-chevron-right')
             }
+            $('./a[@class="username"]') {
+                move('../span[@class="welcomemessage"]','.','top')
+                $('./span[@class="welcomemessage"]') {
+                    text() {
+                        replace(':', ' ')
+                    }
+                }
+            }
         }
 
         $('.//li[@id="pefeatures"]') {

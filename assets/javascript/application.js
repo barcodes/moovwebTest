@@ -49,8 +49,7 @@ $(function() {
         setTimeout(function() {
             $('#_bag-button').bind('DOMSubtreeModified', function(e) {
                 if (e.target.innerHTML.length > 0) {
-                    var basketURL = $(this).attr('href');
-                    document.location.href = basketURL;
+                    document.location.href = '/basket';
                 }
             });
         }, 2500);        
