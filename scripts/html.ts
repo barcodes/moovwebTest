@@ -8,6 +8,8 @@ $("/html") {
     absolutize_srcs()
     absolutize('.//link', 'href')
 
+    move_css_to_head()
+
     clean_mobile_meta_tags()
     remove_html_comments()
 
