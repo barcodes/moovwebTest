@@ -19,9 +19,9 @@
 
     }
     #_flexslider {
-        position: relative;
-        min-height: 276px;
-        margin-bottom: 40px;
+        position:relative;
+        min-height:276px;
+        margin-bottom:40px;
         
         i {
             position: absolute;
@@ -39,7 +39,11 @@
             @include box-shadow(none);
         }
 
+        .flex-control-nav {
+            bottom:-25px;
+        }
     }
+
     .productdetail .productinfo {
         width: auto;
         float: none !important;
