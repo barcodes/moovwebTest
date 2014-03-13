@@ -9,6 +9,7 @@ var fs_opts = {
 function do_slider() {
     if(typeof(jQuery.flexslider) == 'function') {
         jQuery('.flexslider').flexslider(fs_opts);
+        _init_panZoom();
     }
 }
 
@@ -143,6 +144,99 @@ $(function setupSortAndRefine() {
     });
 });
 
+(function(window) {
+    if (! $.cssProps.transform) {
+        $.cssProps.transform = '-webkit-transform';
+    }
+    var wrapper,
+        slider,
+        images,
+        zoomedImage,
+        zoomer,
+        button,
+        // width of image requested from server, only used for quality:
+        imageWidth = 800,
+        // size of zoomed image compared to flexslider size:
+        zoomMultiplier = 3;
+    $('.swatchesdisplay a.swatch').on('click', removeZoomer);
+
+    function init() {
+        if (! $('body').hasClass('_product')) {
+            return;
+        }
+        removeZoomer();
+        wrapper = $('#_flexslider');
+        slider = $('.flexslider');
+        images = $('.flexslider li img');
+        zoomer = $('<div/>', {
+            id: '_product-zoom'
+        });
+        button = $('<button/>', {
+            text: 'Zoom Out'
+        });
+        zoomer.appendTo(wrapper);
+        button.appendTo(zoomer);
+        images.on('click', createImage);
+        button.on('click', removeImage);
+        // possible memory leak: when flexslider is destroyed, we can't remove this
+        $('#_flexslider .flex-control-nav a').on('click', removeImage);
+    }
+
+    function createImage(event) {
+        slider.flexslider('stop');
+        zoomer.show();
+        var oldImg = $(this),
+            w = zoomer.outerWidth(),
+            h = zoomer.outerHeight();
+        zoomedImage = $('<img/>', {
+            src: oldImg.attr('src').replace(/sw=\d+/, 'sw=' + imageWidth)
+        });
+        zoomedImage
+            .appendTo(zoomer)
+            .panzoom({
+                // contain refuses to work
+                // contain: 'invert'
+            })
+            .panzoom('zoom', zoomMultiplier, {focal: event})
+            .on('panzoomend', function(event, panzoom, matrix, changed) {
+                if (matrix[4] < -w) {
+                    matrix[4] = -w;
+                } else if (matrix[4] > w) {
+                    matrix[4] = w;
+                }
+                if (matrix[5] < -h) {
+                    matrix[5] = -h;
+                } else if (matrix[5] > h) {
+                    matrix[5] = h;
+                }
+                zoomedImage.panzoom('setMatrix', matrix);
+            });
+    }
+
+    function removeImage() {
+        if (! zoomedImage) {
+            return;
+        }
+        zoomedImage.panzoom('destroy');
+        zoomedImage.remove();
+        zoomedImage = null;
+        zoomer.hide();
+    }
+
+    function removeZoomer() {
+        if (! zoomer) {
+            return;
+        }
+        images.off('click');
+        button.off('click');
+        removeImage();
+        zoomer.remove();
+        zoomer = null;
+    }
+
+    window._init_panZoom = init;
+})(window);
+
 function override_functions() {
     if(app.ProductCache != null) {
         app.ProductCache.showImages = function(selectedVal, vals) {
@@ -154,6 +248,7 @@ function override_functions() {
                         $(".flexslider ul").append("<li><img src='" + this + "'/></li>");
                     });
                     $('.flexslider').flexslider(fs_opts);
+                    _init_panZoom();
                 }
             });
         }
