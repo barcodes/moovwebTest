@@ -202,6 +202,7 @@
     #content {
         margin-top: 0px;
         width: 100%;
+
         .productlisting {
             width: auto;
             text-align: center;
@@ -336,6 +337,54 @@
                     display:block;
                     line-height:normal;
                     font-size:26px !important;
+                }
+            }
+        }
+
+        #search .nohits {
+            .noresults-help, .nohitssearch {
+                padding:10px 0px;
+                margin:0px;
+
+                form fieldset {
+                    > * {
+                        display:inline-block;
+                        vertical-align:middle;
+                    }
+                    input {
+                        width:43% !important;
+                    }
+                    button {
+                        height:auto;
+                        padding:8px 12px;
+                        margin-left:5px;
+
+                        span {
+                            display:block;
+                            margin:0px;
+                        }
+                    }
+                }
+            }
+
+            .noresultbottom {
+                .errorLeft {
+                    float:none;
+                    width:auto;
+                    padding:0px;
+                    height:auto;
+
+                    .contentasset {
+                        margin:0px;
+
+                        p {
+                            margin:10px;
+                        }
+                    }
+                }
+
+                .nohitsfooter {
+                    display:none;
                 }
             }
         }

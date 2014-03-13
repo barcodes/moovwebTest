@@ -2,11 +2,15 @@
 
     #container {
         #main {
-            .checkoutprogressindicator > div {
-                float: none;
-                display: block;
-                border:1px solid #717171;
-                margin:0px;
+            .checkoutprogressindicator {
+                margin-bottom:10px;
+
+                > div {
+                    float: none;
+                    display: block;
+                    border:1px solid #717171;
+                    margin:0px;
+                }
             }
             .checkoutplaceorder {
                 border: none;
@@ -15,6 +19,18 @@
                     th {
                         border-top: 1px solid #717171;
                         background-color: #eee                
+                    }
+                }
+
+                .placeordertable {
+                    @include box-sizing(border-box);
+                    width:100%;
+                    margin:0px;
+
+                    tr.tablerow {
+                        > td {
+                            padding:0px;
+                        }
                     }
                 }
             }
