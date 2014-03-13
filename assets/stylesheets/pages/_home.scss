@@ -5,12 +5,16 @@
         padding: 0px;
     }
 
-    #main, #content {
-        height: auto;
-        margin: 0px;
+    #main {
+        height:auto;
 
-        .headerslot {
-            margin: 0px;
+        #content {
+            height:auto;
+            padding:0px !important;
+
+            .headerslot {
+                margin: 0px;
+            }
         }
     }
     #banners-container {
