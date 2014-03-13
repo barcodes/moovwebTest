@@ -13,11 +13,26 @@
                 }
             }
 
-            .checkoutprogressindicator > div {
-                float: none;
-                display: block;
+            .checkoutprogressindicator {
+                @include box-sizing(border-box);
+                display:table;
+                width:100%;
                 border:1px solid #717171;
-                margin:0px;
+                margin-bottom:10px;
+
+                > div {
+                    float: none;
+                    display:table-cell;
+                    vertical-align:middle;
+                    border:0px;
+                    border-right:1px solid #717171;
+                    margin:0px;
+                    padding:6px 12px;
+                }
+
+                > div:last-child {
+                    border-right:0px;
+                }
             }
 
             .checkoutbilling {

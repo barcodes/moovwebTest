@@ -1,5 +1,11 @@
-$('//body') {
+$('./body') {
     add_class('_checkout-review')
+
+    $('.//div[@class="checkoutprogressindicator"]') {
+        $('./div[contains(@class, "step3")]//span[@class="value"]') {
+            text('Review')
+        }
+    }
 
     $('.//div[@class="checkoutplaceorder"]') {
         $('./table[@class="placeordertableheader"]') {
