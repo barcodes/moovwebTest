@@ -9,6 +9,7 @@ var fs_opts = {
 function do_slider() {
     if(typeof(jQuery.flexslider) == 'function') {
         jQuery('.flexslider').flexslider(fs_opts);
+        _init_panZoom();
     }
 }
 
