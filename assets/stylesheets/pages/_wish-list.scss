@@ -1,0 +1,101 @@
+._wish-list {
+    #container {
+        #main {
+            margin-top: 0px;
+            margin-bottom: 50px; 
+            
+            #content {
+                width: 100%;
+                .wishlistsearchform {
+                    .formfield {
+                        width: 100%;
+                        height: auto; 
+
+                        .label {
+                            display: block;
+                            float: none;
+                            clear: both;
+                            text-align: left;
+                        }
+                        .value {
+                            width:100%;
+
+                            input {
+                                width: 100%;
+                                height: 24px !important;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                    .formactions {
+                        padding-top: 5px;
+                        clear: both;
+                        display: block;
+                    }
+                }
+                .wishlistsharing {
+                    .wishlistprivatepublic {
+                        margin-bottom: 10px;
+                    }
+                }
+                .wishlistproducts {
+                    > div:nth-child(2n) {
+                        background-color: #efefef;
+                    }
+                    .review-row {
+                        margin: 5px 0px;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid #ccc;
+                        .imagecolumn {
+                            width: 100px;
+                            margin: 5px;
+                            float: left;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .detailscolumn {
+                            float: left;
+                        }
+                        .availabilityInfo {
+                            clear: both;
+                        }
+                        .iteminfo {
+                            > div {
+                                float: none;
+                                text-align: left;
+
+                                .label {
+                                    display: block;
+                                    margin-bottom: 5px;
+                                    text-align: left;
+                                    float: none;
+                                    clear: both;
+                                }
+                                .value {
+                                    display: block;
+                                    text-align: left;
+                                    float: none;
+                                    clear: both;
+                                }
+                                button.addToCart {
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ui-dialog {
+        width: 100% !important;
+        left: 0px !important;
+
+        .formfields {
+            width: 100%;
+            padding: 5px 0px;
+            margin: 0px;
+        }
+    }
+}

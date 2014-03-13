@@ -49,7 +49,8 @@ $(function() {
         setTimeout(function() {
             $('#_bag-button').bind('DOMSubtreeModified', function(e) {
                 if (e.target.innerHTML.length > 0) {
-                    document.location.href = $(this).attr('href');
+                    var basketURL = $(this).attr('href');
+                    document.location.href = basketURL;
                 }
             });
         }, 2500);        

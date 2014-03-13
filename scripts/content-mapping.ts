@@ -61,3 +61,12 @@ match_not($('//div[@class="wishlistlogin"]'), '0') {
 match_not($('//div[@class="wishlist"]'), '0') {
     @import pages/supreme-perks.ts
 }
+match_not($('//div[@class="wishlistlogin"]'), '0') {
+    @import pages/wish-list-login.ts
+}
+match_not($('//div[@class="wishlistsearchresult"]'), '0') {
+    @import pages/wish-list-search-results.ts
+}
+match_not($('//div[@class="wishlistitems"]'), '0') {
+    @import pages/wish-list.ts
+}
