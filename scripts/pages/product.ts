@@ -60,7 +60,7 @@ $("body") {
                     replace("#", "")
                 }
                 $("a") {
-                    attributes(data-ur-toggler-component: "button")
+                    attributes(data-ur-toggler-component: "button", href: 'javascript:void(0);')
                     insert("i", class: "fa fa-plus-circle")
                     insert("i", class: "fa fa-minus-circle")
                 }
