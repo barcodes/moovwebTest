@@ -9,4 +9,7 @@ match($path) {
     with(/\/home_blocks\/hp-blocks(_.*)?\.html/i) {
         set_upstream_host('www.burkesdesign.com')
     }
+    with(/\/reviews.djs/i) {
+        set_upstream_host('www.perryellis.com')
+    }
 }
