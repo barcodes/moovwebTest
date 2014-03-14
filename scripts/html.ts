@@ -10,7 +10,6 @@ $("/html") {
 
     clean_mobile_meta_tags()
     remove_html_comments()
-    remove_comments()
 
     add_assets()
 
@@ -26,7 +25,4 @@ $("/html") {
     @import sections/footer.ts
 
     @import modules/remove-responsive.ts
-
-    move_css_to_head()
-    move_css_above_scripts()
 }
