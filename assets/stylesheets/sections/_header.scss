@@ -4,6 +4,11 @@ header#header._header {
     position: fixed;
     top:0px;
 
+    &.menu-open-header-mod {
+        position:absolute;
+        margin-top:-47px;
+    }
+
     .headerbottom {
         height: auto;
         border-bottom: 1px solid black;

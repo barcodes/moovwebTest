@@ -10,4 +10,3 @@ match($path) {
         set_upstream_host('www.burkesdesign.com')
     }
 }
-

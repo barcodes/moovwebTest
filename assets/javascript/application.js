@@ -11,22 +11,8 @@ function do_slider() {
     }
 }
 
-/*var searchHideAfterDelay = function() {
-	var hideSearchInterval = setInterval(function() {
-		if(!$('#searchinput').is(':focus')) {
-			$('.headersearchwrapper').slideUp();
-			clearInterval(hideSearchInterval);
-		}
-	}, 5000);
-}*/
-
 $(function() {
     setTimeout(do_slider, 500);
-
-    /*$('#_search-toggle').bind('click', function() {
-    	$('.headersearchwrapper').slideDown(null,searchHideAfterDelay());
-    });*/
-
     setTimeout(override_functions, 1500);
 
     $('#_full-site-link').click(function() {
@@ -100,25 +86,27 @@ $(function() {
 
     }
 
-    $('body script').remove();
-    $('body').append('<div id="menu_container" style="display:none;"></div>');
-    $('#menu_container').append($('.categorywrapper').show().detach());
-    var html = jQuery('html');
-    var jPM = $.jPanelMenu({
-        menu: '#menu_container',
-        trigger: '#_menu-button',
-        openPosition: '280px',
-        beforeOpen: function() {
-            html.css('overflow', 'hidden');
-            $('#header').css('position', 'absolute').css('top', '-45px');
-            $('body').scrollTop(0);
-        },
-        afterClose: function() {
-            html.css('overflow', 'auto');
-            $('#header').removeAttr('style');
-        }
-    });
-    jPM.on();
+    if($('#menu_container').length < 1) {
+        $('body script').remove();
+        $('body').append('<div id="menu_container" style="display:none;"></div>');
+        $('#menu_container').append($('.categorywrapper').show().detach());
+        var html = jQuery('html');
+        var jPM = $.jPanelMenu({
+            menu: '#menu_container',
+            trigger: '#_menu-button',
+            openPosition: '280px',
+            beforeOpen: function() {
+                html.css('overflow', 'hidden');
+                $('#header').addClass('menu-open-header-mod');
+                $('body').scrollTop(0);
+            },
+            afterClose: function() {
+                html.css('overflow', 'auto');
+                $('#header').removeClass('menu-open-header-mod');
+            }
+        });
+        jPM.on();
+    }
 
     if($('body').hasClass('_cart')) {
         // It's hack vs  hack
