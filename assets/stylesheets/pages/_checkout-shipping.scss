@@ -87,10 +87,13 @@
                             background:none !important;
                             padding:0px;
                             height:auto;
+                            width:100%;
+                            text-align:center;
 
                             span {
                                 display:block;
-                                padding:12px 15px;
+                                padding:10px 12px;
+                                margin:0px;
                             }
                         }
                     }
@@ -102,14 +105,18 @@
                 margin-top: 0px;
                 float:none;
 
-                .checkoutminicart {
-                    height: auto;
-                    max-height: 10000px !important;
+                .checkoutminisummary {
+                    border-color:#000;
 
-                    .minicartquantityvalue {
-                        width:auto !important;
-                        font-size:inherit !important;
-                        padding:0px !important;
+                    .checkoutminicart {
+                        height: auto;
+                        max-height: 10000px !important;
+
+                        .minicartquantityvalue {
+                            width:auto !important;
+                            font-size:inherit !important;
+                            padding:0px !important;
+                        }
                     }
                 }
             }

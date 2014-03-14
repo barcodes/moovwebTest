@@ -61,22 +61,26 @@
 
         .detailsblock {
             border-color: #e8e8e8;
+
             &._slider-container, &.mainattributes {
                 border-width: 0;
             }
         }
 
+        #pdpATCDivpdpMain {
+            border:0px;
+        }
 
         .swatches:not(.color) {
             .swatchanchor {
                 padding: 10px 8px;
-                border-color: #999999;
+                border-color: #000;
 
                 @include border-radius(0px);
             }
             .selected {
                 .swatchanchor {
-                    background-color: #999999;
+                    background-color: #000;
                     color: #ffffff;
                 }
             }

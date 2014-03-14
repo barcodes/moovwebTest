@@ -7,4 +7,20 @@ $('./body') {
             text('Review')
         }
     }
+
+    $('.//input[@id="dwfrm_billing_billingAddress_addressFields_zip"]') {
+        attribute('type', 'tel')
+    }
+    $('.//input[@id="dwfrm_billing_billingAddress_addressFields_phone"]') {
+        attribute('type', 'tel')
+    }
+    $('.//input[@id="dwfrm_billing_billingAddress_email_emailAddress"]') {
+        attribute('type', 'email')
+    }
+    $('.//input[@id="dwfrm_billing_paymentMethods_creditCard_number"]') {
+        attribute('type', 'number')
+    }
+    $('.//input[@id="dwfrm_billing_paymentMethods_creditCard_cvn"]') {
+        attribute('type', 'number')
+    }
 }

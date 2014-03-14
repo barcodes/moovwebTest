@@ -11,8 +11,8 @@ html {
             margin-bottom:10px;
         }
 
-        input[type="text"], input[type="password"], input[type="tel"],
-        select, textarea {
+        input[type="text"], input[type="email"], input[type="password"],
+        input[type="tel"], select, textarea {
             @include box-sizing(border-box);
             height:auto !important;
             width:100% !important;
@@ -21,6 +21,13 @@ html {
             padding:6px !important;
         }
 
+        input, input[type=text], input[type="password"] {
+            background-color: white;
+            border: 1px solid #CCCCCC;
+            padding: 1px;
+            vertical-align: middle;
+            z-index: -1;
+        }
 
         #main {
             position:static;
