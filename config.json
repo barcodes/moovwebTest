@@ -1,6 +1,7 @@
 {
 	"host_map": [
 		"$.perryellis.com => www.perryellis.com",
+		"$.es-us.perryellis.com => es-us.perryellis.com",
 		"$.perryellis.com => perryellis.com"
 	]
 }

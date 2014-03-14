@@ -3,7 +3,7 @@ $("//div[@id='header']") {
     add_class("_header")
 
     # This is temporary. Will remove, once we support multiple domains needed for this.
-    remove('.//span[@id="userlanguage"]')
+    //remove('.//span[@id="userlanguage"]')
 
     remove('./div[@class="headerbanner"]')
 
@@ -94,6 +94,9 @@ $("//div[@id='header']") {
         move('//div[@class="headercustomerinfo"]','.', 'bottom')
 
         $('div[@class="headercustomerinfo"]') {
+            move('./span[@id="userlanguage"]/a', '.', 'bottom')
+            remove('./span[@id="userlanguage"]')
+            remove('./span[@id="f1flag"]')
             $('a') {
                 insert_bottom('i', class: 'fa fa-chevron-right')
             }
