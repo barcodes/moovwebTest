@@ -121,8 +121,9 @@
             height: auto;
 
             input {
+                @include appearance(none);
+                @include box-sizing(border-box);
                 border: none;
-                box-sizing: border-box;
                 font-size: 13px !important;
                 height: 37px !important;
                 line-height: normal !important;
