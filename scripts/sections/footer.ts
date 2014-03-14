@@ -80,6 +80,9 @@ $("//div[@id='footer']") {
         }
     }
     remove(".//div[@id='ftcontent'] | .//div[@class='ftextra'] | .//div[@class='ftgroup']")
+    insert_after('a', id: "_scroll-to-top", style: 'display: inline') {
+        insert('i', class: 'fa fa-angle-double-up')
+    }
 }
 $("//div[@class='copytxt-inner']") {
     remove(".//@style")

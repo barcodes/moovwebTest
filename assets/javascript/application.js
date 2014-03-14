@@ -93,7 +93,7 @@ $(function() {
         var html = jQuery('html');
         var jPM = $.jPanelMenu({
             menu: '#menu_container',
-            trigger: '#_menu-button',
+            trigger: '.menu-button',
             openPosition: '280px',
             beforeOpen: function() {
                 html.css('overflow', 'hidden');
@@ -121,6 +121,23 @@ $(function() {
     }
 
     $('div.productdetailcolumn.productimages').remove();
+
+    var scrollToTopOffset = 450;
+    var scrollToTopDuration = 500;
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > scrollToTopOffset) {
+            $('#_scroll-to-top').fadeIn(scrollToTopDuration);
+        } else {
+            $('#_scroll-to-top').fadeOut(scrollToTopDuration);
+        }
+    });
+
+    $('#_scroll-to-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, scrollToTopDuration);
+        return false;
+    }).hide();
 
 })
 
