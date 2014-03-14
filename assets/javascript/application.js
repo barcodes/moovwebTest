@@ -1,8 +1,6 @@
 var fs_opts = {
     animation:"slide",
-    //direction: "horizontal",
     directionNav:false,
-    //controlNav:false,
     useCSS:false
 };
 
@@ -127,7 +125,11 @@ $(function() {
         equalHeight = function() { return; };
     }
     if($('body').hasClass('_home')) {
-        $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks.html');
+        if( document.location.href.indexOf('.es-us.') != -1 ) {
+            $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks_es.html');
+        } else {
+            $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks.html');
+        }
     }
 
     $('div.productdetailcolumn.productimages').remove();
