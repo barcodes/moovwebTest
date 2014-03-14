@@ -35,5 +35,4 @@
     log("--> STATUS: " + $status + " assuming its an error code pages/error.ts")
     @import pages/error.ts
   }
-
 }

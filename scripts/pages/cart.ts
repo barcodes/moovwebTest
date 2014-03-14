@@ -54,6 +54,10 @@ $('body') {
 					insert('a', class:'_row-qty-plus') {
 						insert('i', class:'fa fa-plus')
 					}
+
+					$('.//input[@class="cartquantity"]') {
+						attribute('type', 'number')
+					}
 				}
 				$('.//div[@id="quantityDIV"]') {
 					%qtyDIV = this()

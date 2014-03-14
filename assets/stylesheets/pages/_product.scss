@@ -1,19 +1,22 @@
 ._product {
     h1.productname {
         margin: 5px 0px 0px;
-    }.productinfopricing {
-        margin: 0px 0px 5px;
+    }
 
-        .productid {
-            display: none;
-        }
+    .productid {
+        float:none !important;
+        margin-bottom:5px !important;
+    }
+
+    .productinfopricing {
+        margin: 0px 0px 5px;
 
         :nth-child(1) {
             width: 100% !important;
             float: none !important;
 
             .salesprice, .standardprice {
-                font-size: 14px;
+                font-size: 18px;
             }
         }
 
@@ -66,7 +69,7 @@
 
         .swatches:not(.color) {
             .swatchanchor {
-                padding: 10px;
+                padding: 10px 8px;
                 border-color: #999999;
 
                 @include border-radius(0px);
@@ -78,15 +81,20 @@
                 }
             }
         }
-        .swatches.color
-        {
-           border-bottom: 1px solid #e8e8e8;
+
+        .swatchesdisplay > li {
+            margin-right:6px;
+        }
+
+        .swatches.color {
+            border-bottom: 1px solid #e8e8e8;
+
             li {
                 width: 30px !important;
                 height: 30px !important;
                 border-radius: 15px !important;
-                a.swatchanchor
-                {
+
+                a.swatchanchor {
                     width: 30px !important;
                     height: 30px !important;
                     @include box-sizing(border-box);

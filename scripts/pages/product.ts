@@ -36,12 +36,20 @@ $("body") {
                         }
                     }
                 }
-                move('../div[@class="OneLinkHide"]','.','before')
-                move('..//div[@class="promotion"]','.','after')
+                move('../div[@class="OneLinkHide"]', '.', 'before')
+                move('..//div[@class="promotion"]', '.', 'after')
             }
             $("..") {
                 add_class("_slider-container")
             }
+        }
+
+        $('.//div[contains(@class, "detailsblock")][not(contains(@class, "_slider-container"))][1]') {
+            move_here('//div[@class="itemNo productid"]', 'top')
+        }
+
+        $('.//input[@class="quantityinput"]') {
+            attribute('type', 'number')
         }
     }
 
