@@ -6,7 +6,7 @@
 # }
 
 match($path) {
-    with(/\/home_blocks\/hp-blocks\.html/i) {
+    with(/\/home_blocks\/hp-blocks(_.*)?\.html/i) {
         set_upstream_host('www.burkesdesign.com')
     }
 }
