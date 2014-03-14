@@ -261,7 +261,8 @@ function _updateMobileCart() {
     var $cartTotal = $(".linkminicart").text();
     var total = 0;
     //$(".minicartquantityvalue").each(function() { total += parseInt(this.value); });
-    total = $($('.minicarttotal')[0]).find('a').html().match(/^(\d+,?)+/)[0];
+    total = $($('.minicarttotal')[0]).find('a').html();
+    total = total ? total.match(/^(\d+,?)+/)[0] : 0;
     if(total > 0) {
         $("#_bag-button").append("<span class='_cart-count'>" + total + "</span>");
     }
