@@ -41,8 +41,17 @@ $("//div[@id='footer']") {
                 remove('div[@class="_footer-group-link"]/a[contains(@href,"InternationalParcelTracking")]')
             }
         }
-        insert_top("a", "VIEW DESKTOP SITE", id:'_full-site-link') {
-            attributes(data-mw-footer-item: "VIEW DESKTOP SITE", href:"#", class: "_footer-group-button")
+        insert_bottom("a", id:'_full-site-link') {
+            $redirectLink = 'http://www.perryellis.com'
+            $redirectVerbiage = 'VIEW DESKTOP SITE'
+            match($host) {
+                with(/es-us/) {
+                    $redirectLink = 'http://es-us.perryellis.com'
+                    $redirectVerbiage = 'VER SITIO PARA ESCRITORIO'
+                }
+            }
+            attributes(data-mw-footer-item: $redirectVerbiage, href: $redirectLink, class: "_footer-group-button")
+            text($redirectVerbiage)
             insert("i", class: "fa fa-chevron-right")
         }
         move_here("div/div[@data-mw-footer-item='POLICIES']","top")
