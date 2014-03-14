@@ -93,7 +93,7 @@ $(function() {
         var html = jQuery('html');
         var jPM = $.jPanelMenu({
             menu: '#menu_container',
-            trigger: '#_menu-button',
+            trigger: '.menu-button',
             openPosition: '280px',
             beforeOpen: function() {
                 html.css('overflow', 'hidden');

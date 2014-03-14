@@ -64,6 +64,9 @@ $("body") {
 
     $('//div[@id="banners-container"]') {
         insert('div', id: 'category-grid')
+        insert('div', class: 'menu-button', id: '_home-show-categories-btn') {
+            insert('span','View All Categories')
+        }
 
         $('.//img') {
             perf.optimize_image()

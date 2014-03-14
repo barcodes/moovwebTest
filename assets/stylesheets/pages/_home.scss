@@ -15,6 +15,22 @@
             .headerslot {
                 margin: 0px;
             }
+
+            #_home-show-categories-btn {
+                background-color: #000;
+                margin: 0px 3px;
+                height: 45px;
+                text-align: center;
+
+                span {
+                    color: #eee;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 45px;
+                    text-transform: uppercase;
+                }
+            }
+
         }
     }
     #banners-container {
