@@ -126,9 +126,9 @@ $(function() {
     }
     if($('body').hasClass('_home')) {
         if( document.location.href.indexOf('.es-us.') != -1 ) {
-            $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks_es.html');
+            $('#category-grid').load('/home_blocks/hp-blocks_es.html');
         } else {
-            $('#category-grid').load('http://www.burkesdesign.com/home_blocks/hp-blocks.html');
+            $('#category-grid').load('/home_blocks/hp-blocks.html');
         }
     }
 
