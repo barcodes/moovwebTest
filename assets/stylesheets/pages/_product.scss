@@ -242,22 +242,24 @@
             width: 100%;
             position: absolute;
         }
-
-        button {
-            @include border-radius(5px);
-            @include appearance(none);
-            position: absolute;
-            z-index: 5;
-            bottom: 30%;
-            width: 160px;
-            margin-left: -80px;
-            left: 50%;
-            border:2px solid #666;
-            color:#fff;
-            padding:8px;
-            background-color:#000;
-            line-height:normal;
-            font-size:14px;
-        }
+    }
+    button._product-zoom {
+        @include border-radius(5px);
+        @include appearance(none);
+        position: absolute;
+        z-index: 5;
+        bottom: 30%;
+        width: 160px;
+        margin-left: -80px;
+        left: 50%;
+        border:2px solid #666;
+        color:#fff;
+        padding:8px;
+        background-color:#000;
+        line-height:normal;
+        font-size:14px;
+    }
+    button._product-zoom-in {
+        pointer-events: none;
     }
 }

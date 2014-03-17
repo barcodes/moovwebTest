@@ -160,12 +160,16 @@ $(function setupSortAndRefine() {
         images,
         zoomedImage,
         zoomer,
-        button,
+        zoomInButton,
+        zoomOutButton,
+        zoomInHasShown = false,
         zoomOutHasShown = false,
+        showButtonsOnSwatchChange = true,
         // width of image requested from server, only used for quality:
         imageWidth = 800,
         // size of zoomed image compared to flexslider size:
         zoomMultiplier = 3,
+        zoomInText = 'Tap to Zoom In',
         zoomOutText = 'Tap to Zoom Out',
         buttonDisplayDuration = 2500;
     $('.swatchesdisplay a.swatch').on('click', removeZoomer);
@@ -181,12 +185,30 @@ $(function setupSortAndRefine() {
         zoomer = $('<div/>', {
             id: '_product-zoom'
         });
-        if (! zoomOutHasShown) {
-            button = $('<button/>', {
-                text: zoomOutText
+        if (showButtonsOnSwatchChange) {
+            zoomInHasShown = false;
+            zoomOutHasShown = false;
+        }
+        if (! zoomInHasShown && ! $('._product-zoom-in', wrapper).length) {
+            zoomInButton = $('<button/>', {
+                'text': zoomInText,
+                'class': '_product-zoom _product-zoom-in'
             });
-            button.appendTo(zoomer);
-            button.on('click', removeImage);
+            zoomInButton
+                .show()
+                .on('click', removeImage)
+                .appendTo(wrapper);
+            setTimeout(function() {
+                zoomInButton.fadeOut();
+            }, buttonDisplayDuration);
+        }
+        if (! zoomOutHasShown) {
+            zoomOutButton = $('<button/>', {
+                'text': zoomOutText,
+                'class': '_product-zoom'
+            });
+            zoomOutButton.appendTo(zoomer);
+            zoomOutButton.on('click', removeImage);
         }
         zoomer.appendTo(wrapper);
         images.on('click', createImage);
@@ -199,7 +221,7 @@ $(function setupSortAndRefine() {
         if (! zoomOutHasShown) {
             zoomOutHasShown = true;
             setTimeout(function() {
-                button.fadeOut();
+                zoomOutButton.fadeOut();
             }, buttonDisplayDuration);
         }
         zoomer.show();
@@ -250,8 +272,12 @@ $(function setupSortAndRefine() {
             return;
         }
         images.off('click');
-        if (button) {
-            button.off('click');
+        if (zoomInButton) {
+            zoomInButton.remove();
+            zoomInButton = null;
+        }
+        if (zoomOutButton) {
+            zoomOutButton.off('click');
         }
         removeImage();
         zoomer.remove();
