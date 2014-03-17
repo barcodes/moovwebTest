@@ -69,7 +69,7 @@ $("./body") {
 
     $(".//div[@id='productresultarea']") {
         remove("@style")
-        remove(".//div[@class='searchresultsfooter']/div[@class='pagination']")
+        remove("//div[@class='searchresultsfooter']/div[@class='pagination']")
         move_here("//div[@class='pagination']", "after")
 
         remove('./div/div[@class="clear"]')
