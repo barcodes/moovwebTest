@@ -12,6 +12,15 @@ function do_slider() {
 }
 
 $(function() {
+
+    if($('body').hasClass('_home')) {
+        if( document.location.href.indexOf('.es-us.') != -1 ) {
+            $('#category-grid').load('/home_blocks/hp-blocks_es.html');
+        } else {
+            $('#category-grid').load('/home_blocks/hp-blocks.html');
+        }
+    }
+    
     setTimeout(do_slider, 500);
     setTimeout(override_functions, 1500);
 
@@ -111,13 +120,6 @@ $(function() {
     if($('body').hasClass('_cart')) {
         // It's hack vs  hack
         equalHeight = function() { return; };
-    }
-    if($('body').hasClass('_home')) {
-        if( document.location.href.indexOf('.es-us.') != -1 ) {
-            $('#category-grid').load('/home_blocks/hp-blocks_es.html');
-        } else {
-            $('#category-grid').load('/home_blocks/hp-blocks.html');
-        }
     }
 
     $('div.productdetailcolumn.productimages').remove();

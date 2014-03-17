@@ -6,6 +6,7 @@ $("//div[@id='header']") {
     //remove('.//span[@id="userlanguage"]')
 
     remove('./div[@class="headerbanner"]')
+    remove('.//div[@class="OneLinkPoweredBy"]')
 
     $("//li[contains(@class, 'topLevelMenu')]") {
         attributes(data-ur-set:'toggler')
