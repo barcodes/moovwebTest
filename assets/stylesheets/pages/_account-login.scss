@@ -20,7 +20,7 @@
                         float: none;
                         border: none;
                         clear: both;
-                        padding: 0px 0px 40px;
+                        padding: 0px 0px 20px;
                         height:auto !important;
 
                         .contentasset {
@@ -29,6 +29,18 @@
 
                         form .createaccountbutton {
                             margin-top:0px;
+                            width:100%;
+                            float:none !important;
+
+                            button {
+                                padding:10px 12px;
+                                height:auto;
+                                width:100%;
+
+                                span {
+                                    margin:0px;
+                                }
+                            }
                         }
                     }
 
@@ -37,12 +49,14 @@
                             margin: 0px;
                             .formfield {
                                 width: 100%;
+                                margin-bottom:10px;
 
                                 .label {
                                     display: block;
                                     float: none;
                                     clear: both;
                                     text-align: left;
+                                    margin-bottom:2px;
                                 }
                                 .value {
                                     width:100%;
@@ -54,9 +68,22 @@
                             }
                             .formactions {
                                 margin: 0px !important;
+
+                                button {
+                                    padding:10px 12px;
+                                    height:auto;
+
+                                    span {
+                                        margin:0px;
+                                    }
+                                }
                             }
                             .rememberme {
                                 margin: 0px 0px 10px;
+
+                                input {
+                                    margin-right:5px;
+                                }
                             }
                         }
                     }
@@ -85,6 +112,16 @@
                                 padding-top: 10px;
                                 clear: both;
                                 text-align: left;
+
+                                button {
+                                    padding:10px 12px;
+                                    height:auto;
+                                    width:100%;
+
+                                    span {
+                                        margin:0px;
+                                    }
+                                }
                             }
                             .formfield {
                                 margin: 0px 0px 10px;
@@ -113,6 +150,9 @@
                         }
                     }
 
+                    #check-order-in-login {
+                        margin-top:40px !important;
+                    }
                 }
             }
         }

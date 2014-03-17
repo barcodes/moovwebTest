@@ -165,11 +165,18 @@ $(function setupSortAndRefine() {
         images,
         zoomedImage,
         zoomer,
-        button,
+        zoomInButton,
+        zoomOutButton,
+        zoomInHasShown = false,
+        zoomOutHasShown = false,
+        showButtonsOnSwatchChange = true,
         // width of image requested from server, only used for quality:
         imageWidth = 800,
         // size of zoomed image compared to flexslider size:
-        zoomMultiplier = 3;
+        zoomMultiplier = 3,
+        zoomInText = 'Tap to Zoom In',
+        zoomOutText = 'Tap to Zoom Out',
+        buttonDisplayDuration = 2500;
     $('.swatchesdisplay a.swatch').on('click', removeZoomer);
 
     function init() {
@@ -183,19 +190,45 @@ $(function setupSortAndRefine() {
         zoomer = $('<div/>', {
             id: '_product-zoom'
         });
-        button = $('<button/>', {
-            text: 'Zoom Out'
-        });
+        if (showButtonsOnSwatchChange) {
+            zoomInHasShown = false;
+            zoomOutHasShown = false;
+        }
+        if (! zoomInHasShown && ! $('._product-zoom-in', wrapper).length) {
+            zoomInButton = $('<button/>', {
+                'text': zoomInText,
+                'class': '_product-zoom _product-zoom-in'
+            });
+            zoomInButton
+                .show()
+                .on('click', removeImage)
+                .appendTo(wrapper);
+            setTimeout(function() {
+                zoomInButton.fadeOut();
+            }, buttonDisplayDuration);
+        }
+        if (! zoomOutHasShown) {
+            zoomOutButton = $('<button/>', {
+                'text': zoomOutText,
+                'class': '_product-zoom'
+            });
+            zoomOutButton.appendTo(zoomer);
+            zoomOutButton.on('click', removeImage);
+        }
         zoomer.appendTo(wrapper);
-        button.appendTo(zoomer);
         images.on('click', createImage);
-        button.on('click', removeImage);
         // possible memory leak: when flexslider is destroyed, we can't remove this
         $('#_flexslider .flex-control-nav a').on('click', removeImage);
     }
 
     function createImage(event) {
         slider.flexslider('stop');
+        if (! zoomOutHasShown) {
+            zoomOutHasShown = true;
+            setTimeout(function() {
+                zoomOutButton.fadeOut();
+            }, buttonDisplayDuration);
+        }
         zoomer.show();
         var oldImg = $(this),
             w = zoomer.outerWidth(),
@@ -211,17 +244,21 @@ $(function setupSortAndRefine() {
             })
             .panzoom('zoom', zoomMultiplier, {focal: event})
             .on('panzoomend', function(event, panzoom, matrix, changed) {
-                if (matrix[4] < -w) {
-                    matrix[4] = -w;
-                } else if (matrix[4] > w) {
-                    matrix[4] = w;
+                if (changed) {
+                    if (matrix[4] < -w) {
+                        matrix[4] = -w;
+                    } else if (matrix[4] > w) {
+                        matrix[4] = w;
+                    }
+                    if (matrix[5] < -h) {
+                        matrix[5] = -h;
+                    } else if (matrix[5] > h) {
+                        matrix[5] = h;
+                    }
+                    zoomedImage.panzoom('setMatrix', matrix);
+                } else {
+                    removeImage();
                 }
-                if (matrix[5] < -h) {
-                    matrix[5] = -h;
-                } else if (matrix[5] > h) {
-                    matrix[5] = h;
-                }
-                zoomedImage.panzoom('setMatrix', matrix);
             });
     }
 
@@ -240,7 +277,13 @@ $(function setupSortAndRefine() {
             return;
         }
         images.off('click');
-        button.off('click');
+        if (zoomInButton) {
+            zoomInButton.remove();
+            zoomInButton = null;
+        }
+        if (zoomOutButton) {
+            zoomOutButton.off('click');
+        }
         removeImage();
         zoomer.remove();
         zoomer = null;

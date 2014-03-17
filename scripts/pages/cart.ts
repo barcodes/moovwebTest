@@ -97,6 +97,14 @@ $('body') {
 		$('./div[@class="loginbox"]') {
 			insert_top('div', class: 'clear')
 		}
+
+		$('./div[@class="loginContent"]//input[@id="dwfrm_login_username"]') {
+			attribute('type', 'email')
+		}
+
+		$('./div[@class="loginContent"]//input[@id="dwfrm_login_password"]') {
+			attribute('type', 'password')
+		}
 	}
 
 	$$('.productrelateditems') {

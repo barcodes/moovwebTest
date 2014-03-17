@@ -1,6 +1,8 @@
 ._checkout-billing {
     #container {
         #main {
+            margin-bottom:20px !important;
+
             .headerslot {
                 display:block;
 
@@ -66,16 +68,18 @@
                 }
 
                 .continuecheckoutbuttontop, .continuecheckoutbutton {
-                    padding:20px 0px 0px;
+                    padding:20px 0px;
 
                     #btnContinue, #btnContinuetop {
                         background:none !important;
                         padding:0px;
                         height:auto;
+                        width:100%;
+                        text-align:center;
 
                         span {
                             display:block;
-                            padding:12px 15px;
+                            padding:10px 12px;
                         }
                     }
                 }

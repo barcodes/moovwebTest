@@ -7,4 +7,11 @@ $('./body') {
             text('Review')
         }
     }
+
+    $('.//input[@id="dwfrm_singleshipping_shippingAddress_addressFields_zip"]') {
+        attribute('type', 'tel')
+    }
+    $('.//input[@id="dwfrm_singleshipping_shippingAddress_addressFields_phone"]') {
+        attribute('type', 'tel')
+    }
 }
