@@ -161,10 +161,13 @@ $(function setupSortAndRefine() {
         zoomedImage,
         zoomer,
         button,
+        zoomOutHasShown = false,
         // width of image requested from server, only used for quality:
         imageWidth = 800,
         // size of zoomed image compared to flexslider size:
-        zoomMultiplier = 3;
+        zoomMultiplier = 3,
+        zoomOutText = 'Tap to Zoom Out',
+        buttonDisplayDuration = 2500;
     $('.swatchesdisplay a.swatch').on('click', removeZoomer);
 
     function init() {
@@ -178,19 +181,27 @@ $(function setupSortAndRefine() {
         zoomer = $('<div/>', {
             id: '_product-zoom'
         });
-        button = $('<button/>', {
-            text: 'Zoom Out'
-        });
+        if (! zoomOutHasShown) {
+            button = $('<button/>', {
+                text: zoomOutText
+            });
+            button.appendTo(zoomer);
+            button.on('click', removeImage);
+        }
         zoomer.appendTo(wrapper);
-        button.appendTo(zoomer);
         images.on('click', createImage);
-        button.on('click', removeImage);
         // possible memory leak: when flexslider is destroyed, we can't remove this
         $('#_flexslider .flex-control-nav a').on('click', removeImage);
     }
 
     function createImage(event) {
         slider.flexslider('stop');
+        if (! zoomOutHasShown) {
+            zoomOutHasShown = true;
+            setTimeout(function() {
+                button.fadeOut();
+            }, buttonDisplayDuration);
+        }
         zoomer.show();
         var oldImg = $(this),
             w = zoomer.outerWidth(),
@@ -206,17 +217,21 @@ $(function setupSortAndRefine() {
             })
             .panzoom('zoom', zoomMultiplier, {focal: event})
             .on('panzoomend', function(event, panzoom, matrix, changed) {
-                if (matrix[4] < -w) {
-                    matrix[4] = -w;
-                } else if (matrix[4] > w) {
-                    matrix[4] = w;
+                if (changed) {
+                    if (matrix[4] < -w) {
+                        matrix[4] = -w;
+                    } else if (matrix[4] > w) {
+                        matrix[4] = w;
+                    }
+                    if (matrix[5] < -h) {
+                        matrix[5] = -h;
+                    } else if (matrix[5] > h) {
+                        matrix[5] = h;
+                    }
+                    zoomedImage.panzoom('setMatrix', matrix);
+                } else {
+                    removeImage();
                 }
-                if (matrix[5] < -h) {
-                    matrix[5] = -h;
-                } else if (matrix[5] > h) {
-                    matrix[5] = h;
-                }
-                zoomedImage.panzoom('setMatrix', matrix);
             });
     }
 
@@ -235,7 +250,9 @@ $(function setupSortAndRefine() {
             return;
         }
         images.off('click');
-        button.off('click');
+        if (button) {
+            button.off('click');
+        }
         removeImage();
         zoomer.remove();
         zoomer = null;
