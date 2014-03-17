@@ -96,7 +96,7 @@ $("//div[@id='header']") {
         $('div[@class="headercustomerinfo"]') {
             move('./span[@id="userlanguage"]/a', '.', 'bottom')
             remove('./span[@id="userlanguage"]')
-            remove('./span[@id="f1flag"]')
+            move('./span[@id="f1flag"]', '.', 'bottom')
             $('a') {
                 insert_bottom('i', class: 'fa fa-chevron-right')
             }

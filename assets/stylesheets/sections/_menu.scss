@@ -172,6 +172,11 @@ body[data-menu-position="open"] {
         a:hover {
             text-decoration: none;
         }
+        a#f1contextchooser {
+            img {
+                margin-left: 5px;
+            }
+        }
         .divider {
             display: none;
         }
