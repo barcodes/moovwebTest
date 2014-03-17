@@ -139,6 +139,11 @@ $(function() {
         return false;
     }).hide();
 
+    $('a[id="f1contextchooser"]').bind('click', function() {
+        event.preventDefault();
+        app.dialog.openContextChooser('/on/demandware.store/Sites-perryellis-Site/default/FiftyOne-ShowContextChooser?p=','International Shipping');
+    });
+
 })
 
 $(function setupSortAndRefine() {
