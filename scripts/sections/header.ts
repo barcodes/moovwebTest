@@ -8,18 +8,22 @@ $("//div[@id='header']") {
     remove('./div[@class="headerbanner"]')
     remove('.//div[@class="OneLinkPoweredBy"]')
 
+    $('.//ul[@id="primaryNavigationList"]') {
+        attributes(data-ur-set:'tabs', data-ur-closeable:'true')
+    }
+
     $("//li[contains(@class, 'topLevelMenu')]") {
-        attributes(data-ur-set:'toggler')
+        %id = fetch('./@id')
 
         $("a") {
-            attributes(data-ur-toggler-component: 'button', href: 'javascript:void(0);')
+            attributes(data-ur-tabs-component: 'button', data-ur-tab-id: %id, href: 'javascript:void(0);')
             $(". | ../div//a") {
                 insert("i", class:"fa fa-chevron-right")
             }
         }
 
         $("div[not(contains(@class, 'hasThirdLevel')) and not(contains(@class, 'subcategories'))]") {
-            attributes(data-ur-toggler-component: 'content')
+            attributes(data-ur-tabs-component: 'content', data-ur-tab-id: %id)
             remove("@class")
         }
     }
@@ -64,13 +68,16 @@ $("//div[@id='header']") {
     $("//div[@class='categorywrapper']") {
 
         $(".//li[@class='test']/a[@class='hasThirdLevelMobile']/..") {
-            attributes(data-ur-set: "toggler")
-
-            $("a[@class='hasThirdLevelMobile']") {
-                attributes(data-ur-toggler-component: "button", href: "javascript:void(0)")
+            %subid = fetch('../@class') + '-' + index()
+            $("..") {
+                attributes(data-ur-set: "tabs", data-ur-closeable:"true")
             }
 
-            insert("div", data-ur-toggler-component: "content") {
+            $("a[@class='hasThirdLevelMobile']") {
+                attributes(data-ur-tabs-component: "button", data-ur-tab-id: %subid, href: "javascript:void(0)")
+            }
+
+            insert("div", data-ur-tabs-component: "content", data-ur-tab-id: %subid) {
                 move_here("../div[@class='subcategories']")
             }
         }
