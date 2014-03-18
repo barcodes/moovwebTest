@@ -56,7 +56,7 @@ $('body') {
 					}
 
 					$('.//input[@class="cartquantity"]') {
-						attribute('type', 'number')
+						attribute('type', 'tel')
 					}
 				}
 				$('.//div[@id="quantityDIV"]') {

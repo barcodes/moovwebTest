@@ -52,7 +52,7 @@ $("body") {
         }
 
         $('.//input[@class="quantityinput"]') {
-            attribute('type', 'number')
+            attribute('type', 'tel')
         }
     }
 
