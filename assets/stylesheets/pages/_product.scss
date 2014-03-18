@@ -104,6 +104,17 @@
             }
         }
 
+        .groupactions {
+            float: none;
+
+            button.addtocartbutton {
+                border-radius: 5px;
+                height: 40px;
+                padding: 10px 0;
+                width: 100%;
+            }
+        }
+
         .swatchesdisplay > li {
             margin-right:6px;
         }
