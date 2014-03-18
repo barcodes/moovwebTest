@@ -81,6 +81,7 @@ $(function() {
             }
         },1000);
 
+        $('.cartquantity').bind('change', {delta: 0}, updateQuantity);
         $('._row-qty-plus').bind('click', {delta: 1}, updateQuantity);
         $('._row-qty-minus').bind('click', {delta: -1}, updateQuantity);
 
