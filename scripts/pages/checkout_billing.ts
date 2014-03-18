@@ -23,4 +23,9 @@ $('./body') {
     $('.//input[@id="dwfrm_billing_paymentMethods_creditCard_cvn"]') {
         attribute('type', 'number')
     }
+    $('.//div[@class="checkbox"]') {
+        insert_bottom('div', class: 'clear')
+    }
 }
+
+
