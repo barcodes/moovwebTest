@@ -51,8 +51,13 @@ $("body") {
             move_here('//div[@class="itemNo productid"]', 'top')
         }
 
-        $('.//input[@class="quantityinput"]') {
-            attribute('type', 'tel')
+        $('//div[@class="quanity"]') {
+            $('./span[@class="label"]') {
+                text('Qty:')
+            }
+            $('./input[@class="quantityinput"]') {
+                attribute('type', 'tel')
+            }
         }
     }
 
