@@ -51,10 +51,10 @@ $(function() {
     if($('body').hasClass('_cart')) {
 
         checkForShippingOptionsInterval = setInterval(function() {
-            options = $('#shippingMethodID').children();
+            var options = $('#shippingMethodID').children();
             if(options.length > 0) {
                 options.each( function() {
-                    self = $(this);
+                    var self = $(this);
                     var option = $('<label for="'+self.attr('value')+'_new" class="shippingLabel">'
                         + '<input type="radio" name="shippingOption" '
                         + 'id="'+self.attr('value')+'_new" value="'+self.attr('value')+'">'
@@ -62,14 +62,13 @@ $(function() {
                         + '</label>');
                     option.insertBefore($('.calculator > fieldset'));
                     option.find('input').bind('change', function() {
-                        self = $(this);
-                        value = self.val();
+                        var value = $(this).val();
                         $('#shippingMethodID').val(value);
                         $('.calculator > fieldset button').click();
                     });
                 });
                 $('.shippingLabel :first').attr('checked', true);
-                label = $('.calculator > fieldset > div :first').removeAttr().detach();
+                var label = $('.calculator > fieldset > div :first').removeAttr().detach();
                 $('.calculator').prepend(label);
                 clearInterval(checkForShippingOptionsInterval);
             }
@@ -79,10 +78,10 @@ $(function() {
         $('._row-qty-minus').bind('click', {delta: -1}, updateQuantity);
 
         function updateQuantity(event) {
-            var delta = event.data.delta;
-            self = $(this);
-            input = self.parent().find('.cartquantity');
-            value = parseInt(input.val()) + delta;
+            var delta = event.data.delta,
+                self = $(this),
+                input = self.parent().find('.cartquantity'),
+                value = parseInt(input.val()) + delta;
             if (value < 1) {
                 value = 1;
             }
