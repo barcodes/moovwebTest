@@ -55,18 +55,6 @@
                     width:auto !important;
                     float:none;
 
-                    > .actions:last-child {
-                        text-align:center;
-
-                        form.formcheckout {
-                            display:none;
-                        }
-
-                        form.paypalcheckout {
-                            float:none;
-                        }
-                    }
-
                     h2 {
                         font-size: 20px;
                         color: #000;
