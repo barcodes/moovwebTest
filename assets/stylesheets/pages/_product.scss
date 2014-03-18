@@ -200,11 +200,15 @@
             div[data-ur-toggler-component=content] {
                 padding: 10px 6px;
                 border: 1px solid #dbdbdb;
+                p, p a, li, font, h2 b {
+                    font-size: 14px;
+                    line-height: 1.3;
+                }
                 table {
                     margin: 0 !important;
 
                     a[href^="tel:"], a[href^="mailto:"] {
-                        font-size:12px;
+                        font-size:14px;
                         color:#666;
                     }
                 }
