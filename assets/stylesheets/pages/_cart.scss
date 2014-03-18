@@ -87,7 +87,25 @@
                     .carttable {
                         .productrow {
                             padding: 10px 0px;
+                            position: relative;
                             border-bottom: 1px solid #d0d0d0;
+
+                            ._loader {
+                                background-color: rgba(255, 255, 255, .7);
+                                height: 100%;
+                                left: 0;
+                                position: absolute;
+                                text-align: center;
+                                top: 0;
+                                width: 100%;
+
+                                .fa {
+                                    font-size: 30px;
+                                    margin-top: -1.5em;
+                                    position: relative;
+                                    top: 40%;
+                                }
+                            }
 
                             div.imagecolumn {
                                 float: left;

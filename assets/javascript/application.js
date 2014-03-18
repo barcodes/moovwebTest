@@ -81,12 +81,17 @@ $(function() {
             var delta = event.data.delta,
                 self = $(this),
                 input = self.parent().find('.cartquantity'),
-                value = parseInt(input.val()) + delta;
+                value = parseInt(input.val()) + delta,
+                row = self.parents('.productrow');
             if (value < 1) {
                 value = 1;
             }
             input.val(value);
-            self.parents('.productrow').find('.updatetextbutton').click();
+            $('<div/>', {
+                'class': '_loader',
+                'html': '<i class="fa fa-spinner fa-spin"></i>'
+            }).appendTo(row);
+            row.find('.updatetextbutton').click();
         }
     }
 
