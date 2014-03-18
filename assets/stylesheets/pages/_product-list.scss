@@ -132,6 +132,7 @@
                         }
                         a {
                             background-position: 12px center;
+                            color: black;
                             display: block;
                             margin: 0;
                             padding: 12.5px 0 12px 32px !important;
@@ -168,11 +169,15 @@
                             margin: 0 2px 2px 0;
                             a {
                                 background-image: none;
-                                border: 1px solid #999;
+                                border: 1px solid black;
                                 font-size: 14px;
                                 padding: 10px 0 !important;
                                 text-align: center;
                                 width: 69px;
+                            }
+                            &.selected a {
+                                background-color: black;
+                                color: white;
                             }
                         }
                     }
