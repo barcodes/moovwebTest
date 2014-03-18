@@ -55,18 +55,6 @@
                     width:auto !important;
                     float:none;
 
-                    > .actions:last-child {
-                        text-align:center;
-
-                        form.formcheckout {
-                            display:none;
-                        }
-
-                        form.paypalcheckout {
-                            float:none;
-                        }
-                    }
-
                     h2 {
                         font-size: 20px;
                         color: #000;
@@ -154,8 +142,8 @@
                                     }
                                 }
                                 .addtowishlist {
+                                    color: #666;
                                     margin: 10px 0px;
-                                    font-weight: bold;
                                 }
                                 div.quantitycolumn {
                                     display: table;
@@ -210,6 +198,10 @@
 
                                 .itemtotals {
                                     float: none;
+
+                                    .promo {
+                                        display: none;
+                                    }
                                 }
                             }
                         }
@@ -220,41 +212,7 @@
 
                         .cartordertotals {
                             .estimation {
-                                float: none;
-                                padding:0px 10px;
-                                
-                                .calculator {
-                                    div.label {
-                                        text-align:left;
-                                        margin-bottom:5px;
-                                    }
-
-                                    fieldset {
-                                        display: none;
-                                    }
-
-                                    .shippingLabel {
-                                        display: block;
-                                        clear:both;
-                                        text-align: left;
-                                        padding:12px 10px;
-                                        margin: 3px auto;
-                                        @include border-radius(5px);
-                                        border: 1px solid #e2e2e2;
-                                        background-color: #e9e9e9;
-
-                                        input {
-                                            display:inline-block;
-                                            vertical-align:top;
-                                            margin-right: 5px;
-                                        }
-
-                                        span {
-                                            display:inline-block;
-                                            vertical-align:top;
-                                        }
-                                    }
-                                }
+                                display: none;
                             }
 
                             strong .ordertotals {
@@ -295,9 +253,11 @@
                         }
 
                         input {
+                            border-radius: 0;
                             margin-right: 5px;
                             margin-top:0px;
-                            width:55% !important;
+                            -webkit-appearance: none;
+                            width: 162px !important;
                         }
 
                         button {
