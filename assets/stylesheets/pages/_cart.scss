@@ -15,6 +15,15 @@
                 .actions {
                     margin: 0px;
 
+                    span[name="dwfrm_cart_continueShopping"] {
+                        display: block;
+
+                        > span {
+                            display: block;
+                            float: none !important;
+                            text-align: left;
+                        }
+                    }
                     .cartpaymentoptions {
                         width: 100%;
                         
