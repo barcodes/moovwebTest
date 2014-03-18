@@ -51,8 +51,8 @@
                     text-align: left;
                     text-decoration: none;
                     margin: 10px 0px;
-                    padding:5px;
-                    @include border-radius(5px);
+                    padding:10px;
+                    @include border-radius(0);
                     border: 1px solid #222;
                     background-color: #000;                  
                     color: fff;
@@ -157,7 +157,7 @@
 
                             span {
                                 display:block;
-                                padding:10px 12px;
+                                padding:14px 12px;
                                 margin:0px;
                             }
                         }
