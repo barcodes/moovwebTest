@@ -228,7 +228,18 @@
             margin-bottom: 2px;
         }
     }
-    .productactions, .productrelateditems, .productreview {
+    .productrelateditems {
+        border: none;
+        margin-top: 5px;
+
+        .carousel li {
+            margin-right: 0px;
+        }
+        .recommendations_cross-sell li {
+            width: 50% !important;
+        }
+    }
+    .productactions, .productreview {
         display: none;
     }
     #BVRRRatingSummaryLinkWriteID {
