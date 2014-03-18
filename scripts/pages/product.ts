@@ -42,6 +42,9 @@ $("body") {
             $("..") {
                 add_class("_slider-container")
             }
+            insert_after("div", "Bag", class: "_configure") {
+                insert_at("top", "i", class: "fa fa-plus-circle")
+            }
         }
 
         $('.//div[contains(@class, "detailsblock")][not(contains(@class, "_slider-container"))][1]') {

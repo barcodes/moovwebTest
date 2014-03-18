@@ -21,6 +21,24 @@
         }
 
     }
+
+    ._configure {
+        background-color: #cc0000;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 50px;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        .fa {
+            padding-right: 5px;
+        }
+    }
+
     #_flexslider {
         position:relative;
         min-height:276px;

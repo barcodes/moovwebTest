@@ -46,6 +46,13 @@ $(function() {
                 }
             });
         }, 2500);        
+
+        $('._configure').click(function() {
+            var dest = $('.swatches, .availability').offset().top - $('#header').outerHeight();
+            $('html, body').animate({
+                scrollTop: dest
+            }, 400);
+        });
     }
 
     if($('body').hasClass('_cart')) {
