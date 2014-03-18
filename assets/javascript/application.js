@@ -75,24 +75,20 @@ $(function() {
             }
         },1000);
 
-        $('._row-qty-plus').bind('click', function() {
-            self = $(this);
-            input = self.parent().find('.cartquantity');
-            value = parseInt(input.val());
-            input.val(value+1);
-            self.parents('.productrow').find('.updatetextbutton').click();
-        });
+        $('._row-qty-plus').bind('click', {delta: 1}, updateQuantity);
+        $('._row-qty-minus').bind('click', {delta: -1}, updateQuantity);
 
-        $('._row-qty-minus').bind('click', function() {
+        function updateQuantity(event) {
+            var delta = event.data.delta;
             self = $(this);
             input = self.parent().find('.cartquantity');
-            value = parseInt(input.val());
-            if( value > 1 ) {
-                input.val(value-1);
+            value = parseInt(input.val()) + delta;
+            if (value < 1) {
+                value = 1;
             }
+            input.val(value);
             self.parents('.productrow').find('.updatetextbutton').click();
-        });
-
+        }
     }
 
     if($('#menu_container').length < 1) {
