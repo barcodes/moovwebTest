@@ -65,7 +65,6 @@ $("//div[@id='footer']") {
                 attributes(data-mw-usage: "email-button")
                 move(this(), %footer, position("bottom"))
             }
-            remove()
         }
 
         move_here("//div[@class='txtCopyright']")
@@ -88,7 +87,21 @@ $("//div[@id='footer']") {
             }
         }
     }
-    remove(".//div[@id='ftcontent'] | .//div[@class='ftextra'] | .//div[@class='ftgroup']")
+
+    remove(".//div[@id='ftcontent'] | .//div[@class='ftgroup']")
+
+    $('//a[@data-mw-usage="email-button"]') {
+        attributes(data-ur-toggler-component: 'button', href: 'javascript:void(0);')
+        wrap('div') {
+            attributes(data-ur-set: 'toggler', id: '_footer-email-set')
+            move_here('//div[@class="emailSignup"]') {
+                attributes(data-ur-toggler-component: 'content')
+            }
+        }
+    }
+
+    remove('//div[@class="ftextra"]')
+
     insert_after('a', id: "_scroll-to-top", style: 'display: inline') {
         insert('i', class: 'fa fa-angle-double-up')
     }
