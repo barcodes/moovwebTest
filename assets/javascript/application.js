@@ -234,8 +234,7 @@ $(function setupSortAndRefine() {
         // would appear selected, but were not in actuality.
         $('.selected a').each( function () {
             var self = $(this);
-            //if(self.attr('style')) return; 
-            // Don't click color swatches, if exists.
+            if(self.attr('style')) return; // Don't click color swatches, if exists.
             self.click();
         });
 
