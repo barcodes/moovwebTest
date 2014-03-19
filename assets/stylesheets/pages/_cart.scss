@@ -21,7 +21,13 @@
                         > span {
                             display: block;
                             float: none !important;
+                            margin-bottom: 5px;
                             text-align: left;
+
+                            a {
+                                font-size: 14px;
+                                padding: 5px 5px 5px 0;
+                            }
                         }
                     }
                     .cartpaymentoptions {
