@@ -1,4 +1,12 @@
 ._gc-purchase {
+
+    button {
+        background-color: black;
+        border: none;
+        color: #fff;
+        padding: 12px;
+    }
+
     .giftcertpurchase {
         width: 100%;
 
@@ -34,8 +42,29 @@
                 }
             }
 
+            .giftcertificateamounttable {
+                input {
+                    margin: 0px -3px;
+                }
+                .amountlabel {
+                    font-size: 1em;
+                    margin: 0px 3px 0px 0px;
+                }
+                #AddToBasketButton {
+                    white-space: nowrap;
+                }
+            }
+
+            .giftcheckbalance {
+
+                .contentasset p img {
+                    width: 100%;
+                }
+
+            }
+
             .giftcheckbalanceform {
-                padding-bottom:20px;
+                padding-bottom: 20px;
 
                 form {
                     .value {
@@ -54,7 +83,6 @@
 
                         font-size:12px;
                         line-height:normal;
-                        padding:6px;
 
                         span {
                             padding:0px;
