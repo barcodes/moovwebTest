@@ -26,6 +26,10 @@ $('./body') {
     $('.//div[@class="checkbox"]') {
         insert_bottom('div', class: 'clear')
     }
+    $('//div[@class="formfield giftcertfield"]') {
+        wrap_together('./*[@class="label" or @class="value" or @type="submit"]', 'div', class:'_code_input')
+        wrap_together('./*[not(@class="_code_input")]', 'div')
+    }
 }
 
 

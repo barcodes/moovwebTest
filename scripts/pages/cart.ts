@@ -73,6 +73,9 @@ $('body') {
 			}
 			#remove('./tfoot')
 			remove('.//div[@class="formactions"]')
+			$('.//div[@class="couponcode"]/input') {
+				wrap('span', class: '_input')
+			}
 		}
 		$('//table[@class="cartfooter"]') {
 			remove('//select[@id="shippingMethodID"]/option')
