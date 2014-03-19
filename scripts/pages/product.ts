@@ -97,5 +97,6 @@ $("body") {
         text() {
             replace('isMobileDevice ? "mobile" : ""', 'isMobileDevice ? "" : ""')
         }
+        move_to('/html/body')
     }
 }
