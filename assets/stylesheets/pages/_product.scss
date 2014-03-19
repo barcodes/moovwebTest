@@ -91,8 +91,9 @@
 
         .swatches:not(.color) {
             .swatchanchor {
-                padding: 10px 8px;
+                padding: 10px 0;
                 border-color: #000;
+                width: 53px;
 
                 @include border-radius(0px);
             }
