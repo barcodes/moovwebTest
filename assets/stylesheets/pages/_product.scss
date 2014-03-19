@@ -183,49 +183,52 @@
                 }
             }
         }
-        div[data-ur-set=toggler] {
-            a[data-ur-toggler-component=button] {
-                display: block;
-                padding: 12px 10px;
-                font-size: 18px;
-                font-weight: bold;
-                color: #555;
-                background-color: #dbdbdb;
-                i {
-                    font-size: 30px;
-                    float: right;
-                    margin-top: -5px;
-                    color: #c5c5c5;
-                }
-                i.fa-minus-circle {
-                    display: none;
-                }
-                &[data-ur-state=enabled] {
-                    i.fa-plus-circle {
-                        display: none;
+        div[data-ur-set=tabs] {
+            > div {
+                margin-bottom: 2px;
+
+                a[data-ur-tabs-component=button] {
+                    display: block;
+                    padding: 12px 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #555;
+                    background-color: #dbdbdb;
+                    i {
+                        font-size: 30px;
+                        float: right;
+                        margin-top: -5px;
+                        color: #c5c5c5;
                     }
                     i.fa-minus-circle {
-                        display: block;
+                        display: none;
+                    }
+                    &[data-ur-state=enabled] {
+                        i.fa-plus-circle {
+                            display: none;
+                        }
+                        i.fa-minus-circle {
+                            display: block;
+                        }
                     }
                 }
-            }
-            div[data-ur-toggler-component=content] {
-                padding: 10px 6px;
-                border: 1px solid #dbdbdb;
-                p, p a, li, font, h2 b {
-                    font-size: 14px;
-                    line-height: 1.3;
-                }
-                table {
-                    margin: 0 !important;
+                div[data-ur-tabs-component=content] {
+                    padding: 10px 6px;
+                    border: 1px solid #dbdbdb;
+                    p, p a, li, font, h2 b {
+                        font-size: 14px;
+                        line-height: 1.3;
+                    }
+                    table {
+                        margin: 0 !important;
 
-                    a[href^="tel:"], a[href^="mailto:"] {
-                        font-size:14px;
-                        color:#666;
+                        a[href^="tel:"], a[href^="mailto:"] {
+                            font-size:14px;
+                            color:#666;
+                        }
                     }
                 }
             }
-            margin-bottom: 2px;
         }
     }
     .productrelateditems {
