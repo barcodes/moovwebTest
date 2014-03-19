@@ -122,7 +122,9 @@ $(function() {
                 $('#header').removeClass('menu-open-header-mod');
             }
         });
-        jPM.on();
+        setTimeout( function() {
+            jPM.on();
+        }, 2000);
     }
 
     if($('body').hasClass('_cart')) {
