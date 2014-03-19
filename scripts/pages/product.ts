@@ -65,20 +65,20 @@ $("body") {
         attributes(id: "_mw_was_pdpTabsDiv", class: "_mw_was_product_tabs")
         $("ul") {
             name("div")
+            attributes(data-ur-set: "tabs")
             $("li") {
                 name("div")
-                attributes(data-ur-set: "toggler")
                 %contentid = fetch("a/@href")
                 %contentid {
                     replace("#", "")
                 }
                 $("a") {
-                    attributes(data-ur-toggler-component: "button", href: 'javascript:void(0);')
+                    attributes(data-ur-tabs-component: "button", href: 'javascript:void(0);', data-ur-tab-id: %contentid)
                     insert("i", class: "fa fa-plus-circle")
                     insert("i", class: "fa fa-minus-circle")
                 }
                 move_here("//div[@id='" + %contentid + "']") {
-                    attributes(data-ur-toggler-component: "content")
+                    attributes(data-ur-tabs-component: "content", data-ur-tab-id: %contentid)
                 }
 
                 $('./div[@id="pdpContactTab"]//tr[last()]/td/p[contains(text(), "1.800")]') {

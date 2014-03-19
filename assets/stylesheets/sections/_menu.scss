@@ -70,8 +70,8 @@ body[data-menu-position="open"] {
         }
         ul {
             > li {
-                a, div.hasThirdLevel {
-                    color: #969696;
+                a, a:visited, div.hasThirdLevel {
+                    color: #777;
                     margin: 0;
                     background-color: #f3f3f3;
                     border-bottom: 1px solid #e3e3e3;
@@ -82,22 +82,21 @@ body[data-menu-position="open"] {
                         display: block !important;
                     }
                     @include box-sizing(border-box);
-                    &:visited {
-                        color: #969696;
-                    }
                     i {
                         float: right;
                     }
                 }
                 > div > ul {
                     li {
-                        a {
+                        a, a:visited {
+                            text-transform: uppercase;
                             padding-left:14px !important;
                             font-size: 14px;
                             color: #777;
                         }
                         div.subcategories a {
                             padding-left:28px !important;
+                            text-transform: none;
                         }
                     }
                     li:first-of-type a {
