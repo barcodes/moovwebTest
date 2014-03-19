@@ -110,25 +110,36 @@
             }
 
             #couponsform .formfield.giftcertfield {
-                .label, .value {
-                    float:none;
-                    width:auto;
-                    display:inline-block;
-                    vertical-align:middle;
-                }
+                div._code_input {
+                    display: table;
+                    margin-bottom: 10px;
+                    width: 100%;
 
-                .value {
-                    width:65%;
-                }
+                    > * {
+                        display: table-cell;
+                        width: auto;
+                    }
 
-                button {
-                    display:inline-block;
-                    vertical-align:middle;
-                    padding:12px 10px;
-                    height:auto;
+                    .value {
+                        padding: 0 6px;
 
-                    span {
-                        display:block;
+                        input {
+                            min-width: 191px;
+                        }
+                        .errormessage {
+                            max-width: 191px;
+                            white-space: normal;
+                        }
+                    }
+                    button {
+                        display:inline-block;
+                        vertical-align:middle;
+                        padding:12px 10px;
+                        height:auto;
+
+                        span {
+                            display:block;
+                        }
                     }
                 }
 
