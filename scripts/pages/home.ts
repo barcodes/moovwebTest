@@ -63,10 +63,19 @@ $("body") {
     }
 
     $('//div[@id="banners-container"]') {
-        insert('div', id: 'category-grid')
-        insert('div', class: 'menu-button', id: '_home-show-categories-btn') {
+        attributes(class: 'flexslider')
+        insert('ul', class: 'slides') {
+            move('../div', '.') 
+            $('./div') {
+                name('li')
+            }
+        }
+        insert_after('div', class: 'menu-button', id: '_home-show-categories-btn') {
             insert('span','View All Categories')
         }
+        insert_after('div', id: 'category-grid')
+        insert_after('div', class: 'clear')
+        insert('div', class: 'clear')
 
         $('.//img') {
             perf.optimize_image()

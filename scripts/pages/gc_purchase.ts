@@ -4,4 +4,9 @@ $('//body') {
         remove('div[@class="breadcrumb"]')
         remove('div[@id="leftcolumn"]')
     }
+    $('//table[@class="giftcertificateamounttable"]/tr') {
+        insert_bottom('td') {
+            move('..//button[@id="AddToBasketButton"]', '.')
+        }
+    }
 }
