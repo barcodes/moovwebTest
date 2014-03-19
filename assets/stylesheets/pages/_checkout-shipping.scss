@@ -167,21 +167,28 @@
             }
             #rightcolumn {
                 width: 100%;
-                margin-top: 0px;
+                margin-top: 30px;
                 float:none;
 
                 .checkoutminisummary {
-                    border-color:#000;
+                    border-color: #666;
+                    margin-bottom: 10px;
 
+                    .checkoutsummaryheader {
+                        background-color: #666;
+                    }
                     .checkoutminicart {
                         height: auto;
-                        max-height: 10000px !important;
+                        max-height: none !important;
 
                         .minicartquantityvalue {
                             width:auto !important;
                             font-size:inherit !important;
                             padding:0px !important;
                         }
+                    }
+                    .checkoutordertotals {
+                        border-top-color: #666;
                     }
                 }
             }

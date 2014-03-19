@@ -152,9 +152,19 @@
                 width: 100%;
                 margin-top: 0px;
 
-                .checkoutminicart {
-                    height: auto;
-                    max-height: 10000px !important;
+                .checkoutminisummary {
+                    border-color: #666;
+
+                    .checkoutsummaryheader {
+                        background-color: #666;
+                    }
+                    .checkoutminicart {
+                        height: auto;
+                        max-height: none !important;
+                    }
+                    .checkoutordertotals {
+                        border-top-color: #666;
+                    }
                 }
             }
         }
