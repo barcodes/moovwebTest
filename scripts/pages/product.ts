@@ -79,6 +79,7 @@ $("body") {
                 }
                 move_here("//div[@id='" + %contentid + "']") {
                     attributes(data-ur-tabs-component: "content", data-ur-tab-id: %contentid)
+                    remove('./a[@class="printpage"]')
                 }
 
                 $('./div[@id="pdpContactTab"]//tr[last()]/td/p[contains(text(), "1.800")]') {
