@@ -92,12 +92,14 @@ body[data-menu-position="open"] {
                 > div > ul {
                     li {
                         a {
+                            text-transform: uppercase;
                             padding-left:14px !important;
                             font-size: 14px;
                             color: #777;
                         }
                         div.subcategories a {
                             padding-left:28px !important;
+                            text-transform: none;
                         }
                     }
                     li:first-of-type a {
