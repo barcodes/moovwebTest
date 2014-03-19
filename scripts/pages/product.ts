@@ -93,4 +93,9 @@ $("body") {
         }
 
     }
+    $('//script[contains(text(), "getRRDisplayCode")]') {
+        text() {
+            replace('isMobileDevice ? "mobile" : ""', 'isMobileDevice ? "" : ""')
+        }
+    }
 }
