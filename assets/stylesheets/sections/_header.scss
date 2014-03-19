@@ -85,12 +85,14 @@ header#header._header {
                 top: 4px;
                 background: #cc0000;
                 color: #fff;
-                padding: 3px 3px 3px 3px;
+                padding: 3px 0 0 0;
+                width: 18px;
+                height: 15px;
 
                 font-size: 10px;
                 font-weight: bold;
 
-                @include border-radius(2px);
+                @include border-radius(9px);
             }
         }
 
