@@ -91,7 +91,8 @@ $('body') {
 	$('//div[@class="actions"]') {
 		remove('.//div/@style')
 	}
-	remove('//div[@class="actions"][2]/span[@name="dwfrm_cart_continueShopping"]')
+	remove('.//div[@class="actions"][1]/span[@name="dwfrm_cart_continueShopping"]')
+	move('.//span[@name="dwfrm_cart_continueShopping"]', './/div[contains(@class, "cart ")]', 'after')
 
 	$('//div[contains(@class, "logincreate")]') {
 		attributes(class: 'loginbox')
