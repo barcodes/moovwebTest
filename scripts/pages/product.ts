@@ -3,7 +3,6 @@ $("body") {
     remove("//div[contains(@class, 'contentslotproductdetail')]")
     remove("//div[contains(@class, 'socialmedia')]")
     remove("//div[@id='breadcrumb']")
-    remove("//div[@class='productnavigation']")
 
     insert_top("style", type: "text/css") {
         inject(read("../../assets/stylesheets/flexslider.css"))
@@ -58,6 +57,34 @@ $("body") {
             $('./input[@class="quantityinput"]') {
                 attribute('type', 'tel')
             }
+        }
+
+        $('.//div[@id="pdpATCDivpdpMain"]') {
+            insert_after('div', id: '_checkout-btn-container', style: 'display: none;') {
+                insert('span') {
+                    text('Added To Bag')
+                    insert_top('i', class: 'fa fa-check')
+                }
+                insert('a', href: '/basket/', class: "checkout-btn", 'Check Out')
+                insert('div', class: 'clear')
+            }
+        }
+    }
+
+    move('//div[@class="productnavigation"]', '//div[@id="divFiftyOneWelcomeMatParams"]', 'after')
+    $('//div[@class="productnavigation"]') {
+        remove('.//img')
+        $('./div[@class="productprevious"]/a/span') {
+            text() {
+                replace('«', '')
+            }
+            insert_top('i', class: 'fa fa-chevron-circle-left')
+        }
+        $('./div[@class="productnext"]/a/span') {
+            text() {
+                replace('»', '')
+            }
+            insert('i', class: 'fa fa-chevron-circle-right')
         }
     }
 

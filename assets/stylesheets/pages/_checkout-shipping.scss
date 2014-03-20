@@ -5,15 +5,7 @@
             padding-bottom:20px;
 
             .headerslot {
-                display:block;
-
-                .headerslotcontent {
-                    height:15px;
-
-                    .bottombannercontainer a {
-                        display:none;
-                    }
-                }
+                display: none !important;
             }
 
             .checkoutprogressindicator {

@@ -1,6 +1,6 @@
 ._product {
 
-    #BVRRRatingSummaryLinkWriteFirstID {
+    .headerslot, #BVRRRatingSummaryLinkWriteFirstID {
         display: none;
     }
 
@@ -25,6 +25,35 @@
             }
         }
 
+    }
+
+    .productnavigation {
+        position: relative;
+        top: 45px;
+        padding: 10px 0px;
+        display: table;
+        background-color: #f2f2f2;
+        width: 100%;
+
+        div {
+            display: table-cell;
+
+            a {
+                margin: 0px 10px;
+                text-decoration: none;
+
+                span {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #999;
+                }
+            }
+
+            &.productnext {
+                text-align: right;
+            }
+        }
     }
 
     ._configure {
@@ -92,6 +121,37 @@
 
         #pdpATCDivpdpMain {
             border:0px;
+        }
+
+        #_checkout-btn-container {
+            display: table;
+            width: 100%;
+            margin: 5px 0px;
+            border: 1px solid #ddd;
+            @include border-radius(3px);
+
+            span {
+                display: table-cell;
+                padding-left: 5px;
+                vertical-align: middle;
+                font-size: 14px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                float: right;
+                margin: 5px;
+                padding: 12px 12px;
+                background-color: #ccc;
+                @include border-radius(3px);
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: bold;
+                color: #555;
+            }
         }
 
         .swatches:not(.color) {
