@@ -20,9 +20,12 @@ $(function() {
             $('#category-grid').load('/home_blocks/hp-blocks.html');
         }
     }
-    
-    setTimeout(do_slider, 500);
-    setTimeout(override_functions, 1500);
+
+    if ($('body').hasClass('_product-list')) {
+        setTimeout(override_functions, 1500);
+    } else {
+        setTimeout(do_slider, 500);
+    }
 
     $('#_full-site-link').click(function() {
         document.cookie = 'mw_mobile_site=false' + '; domain=.perryellis.com; path=/';
