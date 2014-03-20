@@ -30,6 +30,12 @@ html {
             vertical-align: middle;
             z-index: -1;
         }
+        input[type="text"], input[type="email"], input[type="password"],
+        input[type="tel"], input[type="number"] {
+            &:focus {
+                border-color: black;
+            }
+        }
 
         #main {
             position:static;
