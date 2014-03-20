@@ -58,7 +58,7 @@ $("//div[@id='header']") {
             wrap('div')
         }
         $('./div[3]') {
-            attributes(onclick: 'javascript:location.href="'+fetch("//a[@class='linkminicart']/@href")+'"')
+            attributes(onclick: 'javascript:location.href="/basket/"')
         }
         $('./div[1]') {
             attributes(id: '_menu-button', class: 'menu-button')

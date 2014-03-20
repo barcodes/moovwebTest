@@ -5,6 +5,11 @@ match($path) {
             @import pages/fifty-one.ts
         }
     }
+    with(/\/on\/demandware\.store\/Sites-perryellis-Site\/default\/COShipping-UpdateShippingMethodList/i) {
+        html_fragment() {
+            @import pages/shipping-methods.ts
+        }
+    }
     else() {
         match(inferred_content_type()) {
             with(/html/) {

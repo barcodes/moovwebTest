@@ -1,4 +1,33 @@
 ._checkout-billing {
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display:none;
+    }
+
+    input[type="radio"] + span:before,
+    input[type="checkbox"] + span:before {
+      font-family: 'FontAwesome';
+      padding: 0px 5px;
+      font-size: 20px;
+    }
+
+    input[type="radio"] + span:before {
+      content: "\f10c"; /* circle-blank */
+    }
+
+    input[type="radio"]:checked + span:before {
+      content: "\f111"; /* circle */
+    }
+
+    input[type="checkbox"] + span:before {
+      content: "\f096"; /* check-empty */
+    }
+
+    input[type="checkbox"]:checked + span:before {
+      content: "\f046"; /* check */
+    }
+
     #container {
         #main {
             margin-bottom:20px !important;
@@ -41,6 +70,11 @@
                         float: none;
                         clear: both;
                         text-align: left;
+
+                        .requiredindicator {
+                            float: left;
+                            margin: 2px 5px 0px 0px;
+                        }
                     }
 
                     .value {
@@ -68,7 +102,7 @@
                         }
 
                         label {
-                            margin: -25px 0px 0px 30px;
+                            margin: 5px 0px 0px;
                         }
                     }
                 }

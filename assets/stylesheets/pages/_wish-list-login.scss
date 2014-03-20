@@ -60,6 +60,11 @@
                                     float: none;
                                     clear: both;
                                     text-align: left;
+
+                                    .requiredindicator {
+                                        float: left;
+                                        margin: 2px 5px 0px 0px;
+                                    }
                                 }
                                 .value {
                                     width:100%;
