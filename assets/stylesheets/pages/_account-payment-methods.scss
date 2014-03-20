@@ -1,16 +1,36 @@
 ._account-payment-methods {
+    .accountpaymentinstruments {
+        a {
+            font-size: 14px;
+        }
+    }
+
     .ui-dialog {
         width: 100% !important;
         left: 0px !important;
         top: 50px !important;
 
         .formfield {
+            .month,
+            .year {
+                .label {
+                    clear: both;
+                }
+                .label,
+                .value {
+                    padding-top: 8px;
+                }
+            }
             .label {
                 display: block;
                 width: auto;
                 margin: 0;
                 text-align: left;
             }
+        }
+        .actions button {
+            height: auto;
+            padding: 12px 20px;
         }
     }
 }

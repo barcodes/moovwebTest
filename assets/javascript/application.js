@@ -116,7 +116,7 @@ $(function() {
         $('body').append('<div id="menu_container" style="display:none;"></div>');
         $('#menu_container').append($('.categorywrapper').show().detach());
         var html = jQuery('html');
-        var jPM = $.jPanelMenu({
+        var jPM = window._jPM = $.jPanelMenu({
             menu: '#menu_container',
             trigger: '.menu-button',
             openPosition: '280px',
@@ -159,6 +159,7 @@ $(function() {
 
     $('a[id="f1contextchooser"]').bind('click', function() {
         event.preventDefault();
+        window._jPM.close();
         app.dialog.openContextChooser('/on/demandware.store/Sites-perryellis-Site/default/FiftyOne-ShowContextChooser?p=','International Shipping');
     });
 
