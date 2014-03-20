@@ -1,5 +1,33 @@
 ._checkout-shipping {
 
+    input[type="radio"],
+    input[type="checkbox"] {
+      display:none;
+    }
+
+    input[type="radio"] + span:before,
+    input[type="checkbox"] + span:before {
+      font-family: 'FontAwesome';
+      padding: 0px 5px;
+      font-size: 20px;
+    }
+
+    input[type="radio"] + span:before {
+      content: "\f10c"; /* circle-blank */
+    }
+
+    input[type="radio"]:checked + span:before {
+      content: "\f111"; /* circle */
+    }
+
+    input[type="checkbox"] + span:before {
+      content: "\f096"; /* check-empty */
+    }
+
+    input[type="checkbox"]:checked + span:before {
+      content: "\f046"; /* check */
+    }
+
     #container {
         #main {
             padding-bottom:20px;
@@ -70,7 +98,6 @@
                             background-color: #e9e9e9;
 
                             input {
-                                display:inline-block;
                                 vertical-align:top;
                                 margin: 5px;
                             }
@@ -92,6 +119,11 @@
                         float: none;
                         clear: both;
                         text-align: left;
+
+                        .requiredindicator {
+                            float: left;
+                            margin: 2px 5px 0px 0px;
+                        }
                     }
                     .value {
                         width:100%;
@@ -100,6 +132,7 @@
                             width: 100%;
                         }
                     }
+
                     .checkbox {
                         width: 100%;
                         display: block;

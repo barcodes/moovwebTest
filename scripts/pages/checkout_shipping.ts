@@ -15,6 +15,13 @@ $('./body') {
         attribute('type', 'tel')
     }
 
+    $('.//div[@class="checkbox"]') {
+        $('./label') {
+            inner_wrap('span')
+            move('../input', '.', 'top')
+        }
+    }
+
     $('//div[@class="txtCopyright"]') {
         add_class('_minimal-footer')
         move_to('//div[@id="copytxt"]', 'top')
