@@ -1,6 +1,6 @@
 ._product {
 
-    #BVRRRatingSummaryLinkWriteFirstID {
+    .headerslot, #BVRRRatingSummaryLinkWriteFirstID {
         display: none;
     }
 
@@ -92,6 +92,37 @@
 
         #pdpATCDivpdpMain {
             border:0px;
+        }
+
+        #_checkout-btn-container {
+            display: table;
+            width: 100%;
+            margin: 5px 0px;
+            border: 1px solid #ddd;
+            @include border-radius(3px);
+
+            span {
+                display: table-cell;
+                padding-left: 5px;
+                vertical-align: middle;
+                font-size: 14px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                float: right;
+                margin: 5px;
+                padding: 12px 12px;
+                background-color: #ccc;
+                @include border-radius(3px);
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: bold;
+                color: #555;
+            }
         }
 
         .swatches:not(.color) {

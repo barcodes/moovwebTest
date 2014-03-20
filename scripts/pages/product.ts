@@ -59,6 +59,17 @@ $("body") {
                 attribute('type', 'tel')
             }
         }
+
+        $('.//div[@id="pdpATCDivpdpMain"]') {
+            insert_after('div', id: '_checkout-btn-container', style: 'display: none;') {
+                insert('span') {
+                    text('Added To Bag')
+                    insert_top('i', class: 'fa fa-check')
+                }
+                insert('a', href: '/basket/', class: "checkout-btn", 'Check Out')
+                insert('div', class: 'clear')
+            }
+        }
     }
 
     $("//div[@id='pdpTabsDiv']") {
