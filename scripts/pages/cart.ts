@@ -129,4 +129,8 @@ $('body') {
 	}
 
 	remove('//div[@id="cartbackmsg"]')
+	$('//div[@class="txtCopyright"]') {
+		add_class('_minimal-footer')
+		move_to('//div[@id="copytxt"]', 'top')
+	}
 }

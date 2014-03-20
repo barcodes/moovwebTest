@@ -49,4 +49,9 @@ $('./body') {
 
         remove('./div[@id="rightcolumn"]/div[@class="checkoutminisummary"]')
     }
+
+    $('//div[@class="txtCopyright"]') {
+        add_class('_minimal-footer')
+        move_to('//div[@id="copytxt"]', 'top')
+    }
 }
