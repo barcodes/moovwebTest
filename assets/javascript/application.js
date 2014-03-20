@@ -260,9 +260,11 @@ $(function setupSortAndRefine() {
                 // contain refuses to work
                 // contain: 'invert'
             })
-            .panzoom('zoom', zoomMultiplier, {focal: event});
-        w = zoomedImage.outerWidth();
-        h = zoomedImage.outerHeight();
+            .panzoom('zoom', zoomMultiplier, {focal: event})
+            .on('load', function() {
+                w = zoomedImage.outerWidth();
+                h = zoomedImage.outerHeight();
+            });
         zoomedImage.on('panzoomend', function(event, panzoom, matrix, changed) {
             if (changed) {
                 if (matrix[4] < -w) {
