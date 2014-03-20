@@ -9,6 +9,19 @@ function do_slider() {
         jQuery('.flexslider').flexslider(fs_opts);
         _init_panZoom();
     }
+
+    app.quickView.show = function(){}
+
+    var origAddMiniCart = app.minicart.add;
+    app.minicart.add =  function(progressImageSrc, postdata, callback) {
+        origAddMiniCart(progressImageSrc, postdata, function() {
+            _updateMobileCart();
+            callback();
+        })
+    }
+
+    _updateMobileCart();
+    
 }
 
 $(function() {
