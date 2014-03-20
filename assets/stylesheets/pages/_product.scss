@@ -123,6 +123,29 @@
             border:0px;
         }
 
+        #_promotion-details-container {
+            margin: 5px 0px;
+
+            #tooltipviewdetails {
+                text-align: center;
+                font-weight: bold;
+                font-size: 16px;
+                margin: 5px 0px;
+
+                i {
+                    margin: 5px 5px 0px 0px;
+                }
+            }   
+
+            .tooltip-body {
+                .tooltipcontainer {
+                    text-align: left;
+                    border: none;
+                    font-size: 1em;
+                }
+            }
+        }
+
         #_checkout-btn-container {
             display: table;
             width: 100%;
@@ -325,6 +348,9 @@
         width:100%;
         margin: 0px;
     }
+    .BVRRReviewDisplayStyle5Footer {
+        margin-left: 0px;
+    }
     .BVRRReviewDisplayStyle5BodyContentPrimary {
         float: none;
         width:100%;
@@ -333,7 +359,8 @@
     .BVRRReviewDisplayStyle5BodyUser {
         float: none;
         width:100%;
-        margin: 0px;    
+        margin: 0px;
+        padding: 5px 0px; 
     }
     .BVRRBuyAgainContainer {
         clear: both;
