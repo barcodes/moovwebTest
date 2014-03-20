@@ -1,4 +1,14 @@
 ._product-list {
+    &._has-subcategories {
+        #_sort-refine {
+            display: none;
+        }
+        #pe_rBanner {
+            float: none;
+            border-bottom: 1px solid #d0d0d0;
+            margin-top: 15px;
+        }
+    }
     #pe_rBanner {
         width: auto;
         height: 35px;

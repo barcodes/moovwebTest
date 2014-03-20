@@ -1,5 +1,8 @@
 $("./body") {
     add_class("_product-list")
+    match_not($('//h2[contains(@class, "subcategory-header")]'), '0') {
+        add_class('_has-subcategories')
+    }
 
     remove(".//div[@id='mysitewide-banner']/@style")
     remove(".//script[contains(text(), 'productsPerRow = 3.0;')]")
