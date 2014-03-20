@@ -80,6 +80,12 @@
                 label {
                     text-align: center;
                 }
+
+                input {
+                    -webkit-appearance: none;
+                    border-radius: 0;
+                }
+
             }
         }
 

@@ -20,18 +20,33 @@
                 bottom: 5px;
             }
 
-            #_home-show-categories-btn {
-                background-color: #000;
-                margin: 0px 3px;
-                height: 45px;
-                text-align: center;
+            #_home-buttons {
+                display: table;
+                width: 100%;
+                border-spacing: 4px 0px;
 
-                span {
-                    color: #eee;
-                    font-weight: bold;
-                    font-size: 14px;
-                    line-height: 45px;
-                    text-transform: uppercase;
+                #_home-show-categories-btn, #_home-store-locator-btn {
+                    display: table-cell;
+                    background-color: #000;
+                    width: 50%;
+                    height: 45px;
+                    text-align: center;
+                    cursor: pointer;
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                    }
+
+                    span {
+                        color: #eee;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 45px;
+                        text-transform: uppercase;
+                    }
                 }
             }
 
