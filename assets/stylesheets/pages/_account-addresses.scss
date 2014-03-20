@@ -1,4 +1,18 @@
 ._account-addresses {
+    .account_addresses a {
+        font-size: 14px;
+    }
+    .accountaddress {
+        button {
+            height: auto;
+            margin: 10px 17px;
+            padding: 14px 43px;
+        }
+        a.deletelink {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
     .ui-dialog {
         width: 100% !important;
         left: 0px !important;
@@ -9,8 +23,13 @@
                 display: block;
                 width: auto;
                 margin: 0;
+                padding-left: 10px;
                 text-align: left;
             }
+        }
+        .actions button {
+            height: auto;
+            padding: 12px 20px;
         }
     }
 }
