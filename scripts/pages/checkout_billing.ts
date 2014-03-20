@@ -30,6 +30,11 @@ $('./body') {
         wrap_together('./*[@class="label" or @class="value" or @type="submit"]', 'div', class:'_code_input')
         wrap_together('./*[not(@class="_code_input")]', 'div')
     }
+
+    $('//div[@class="txtCopyright"]') {
+        add_class('_minimal-footer')
+        move_to('//div[@id="copytxt"]', 'top')
+    }
 }
 
 

@@ -14,4 +14,9 @@ $('./body') {
     $('.//input[@id="dwfrm_singleshipping_shippingAddress_addressFields_phone"]') {
         attribute('type', 'tel')
     }
+
+    $('//div[@class="txtCopyright"]') {
+        add_class('_minimal-footer')
+        move_to('//div[@id="copytxt"]', 'top')
+    }
 }
