@@ -127,4 +127,6 @@ $('body') {
 			}
 		}
 	}
+
+	remove('//div[@id="cartbackmsg"]')
 }
