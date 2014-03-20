@@ -1,0 +1,37 @@
+body._category-landing {
+    .search-breadcrumbs {
+        display: none;
+    }
+    div.categorylanding {
+        margin-top: 6px;
+        div.contentslot {
+            div {
+                width: auto !important;
+                float: none !important;
+            }
+            img {
+                height: auto;
+                width: 100%;
+            }
+            div.bottombannercontainer {
+                div:not(._image-group) {
+                    padding: 3px 0;
+                    a, a:link, a:visited, a:hover, a:active {
+                        background-color: #e8e8e8;
+                        display: block;
+                        padding: 12px 0;
+                        text-align: center;
+                        text-decoration: none;
+                        margin: 3px 0;
+                    }
+                }
+                div._image-group {
+                    display: table;
+                    span {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+    }
+}

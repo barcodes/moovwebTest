@@ -70,3 +70,6 @@ match_not($('//div[@class="wishlistsearchresult"]'), '0') {
 match_not($('//div[@class="wishlistitems"]'), '0') {
     @import pages/wish-list.ts
 }
+match_not($('//div[@class="categorylanding"]'), '0') {
+    @import pages/category-landing.ts
+}
