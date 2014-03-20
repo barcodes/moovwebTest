@@ -38,6 +38,21 @@ $("body") {
                 move('../div[@class="OneLinkHide"]', '.', 'before')
                 move('..//div[@class="promotion"]', '.', 'after')
             }
+            $('//div[@class="promotion"]') {
+                insert('div', id: "_promotion-details-container", data-ur-set: 'toggler') {
+                    move_here('..//a[@id="tooltipviewdetails"]') {
+                        name('div')
+                        attributes(data-ur-toggler-component: 'button')
+                        insert_top('i', class: 'fa fa-info-circle')
+                        move('./div[@class="tooltip-body"]', '.', 'after')
+                    }
+                    $('./div[@class="tooltip-body"]') {
+                        remove('@style')
+                        attributes(data-ur-toggler-component: 'content')
+                    }
+                }
+                remove('.//span[@class="formfieldtooltip"]')
+            }
             $("..") {
                 add_class("_slider-container")
             }
