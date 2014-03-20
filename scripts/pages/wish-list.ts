@@ -3,6 +3,10 @@ $('//body') {
     $('div[@id="container"]/div[@id="main"]') {
         remove('div[@class="breadcrumb"]')
         remove('div[@id="leftcolumn"]')
+
+        $('.//div[./button[@value="Find"]]') {
+            attributes(class: 'formactions fullwidth')
+        }
     }
     $('.//div[@class="wishlistproducts"]') {
         move_here('.//tr[@class="tablerow"]') {
