@@ -70,8 +70,15 @@ $("body") {
                 name('li')
             }
         }
-        insert_after('div', class: 'menu-button', id: '_home-show-categories-btn') {
-            insert('span','View All Categories')
+        insert_after('div', id: '_home-buttons') {
+            insert('div', class: 'menu-button', id: '_home-show-categories-btn') {
+                insert('span','All Categories')
+            }
+            insert('div', id: '_home-store-locator-btn') {
+                insert('a', href: '/storelocator/') {
+                    insert('span','Find A Store')
+                }
+            }
         }
         insert_after('div', id: 'category-grid')
         insert_after('div', class: 'clear')
