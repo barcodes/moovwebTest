@@ -40,15 +40,15 @@
                 padding: 15px 6px;
                 display: block;
                 width: 100%;
-                background-color: #F0F0F0;
-                color: #969696;
+                background-color: #ddd;
+                color: #666;
                 margin: 1px 0;
                 font-size: 13px;
                 @include box-sizing(border-box);
 
                 i {
                     float: right;
-                    color: #e0e0e0;
+                    color: #bbb;
                 }
             }
 

@@ -9,6 +9,9 @@
         }
         #main {
             #content {
+                .headerslot {
+                    display: none !important;
+                }
                 .breadcrumb {
                     display: none;
                 }
