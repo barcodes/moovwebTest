@@ -53,6 +53,14 @@ $(function() {
                 scrollTop: dest
             }, 400);
         });
+
+        setTimeout( function() {
+            $('.selected a').each( function () {
+                var self = $(this);
+                self.click();
+            });
+        }, 2000);
+
     }
 
     if($('body').hasClass('_cart')) {
@@ -229,14 +237,6 @@ $(function setupSortAndRefine() {
         images.on('click', createImage);
         // possible memory leak: when flexslider is destroyed, we can't remove this
         $('#_flexslider .flex-control-nav a').on('click', removeImage);
-
-        // Small hack to force a click on preselected options on some product pages. These
-        // would appear selected, but were not in actuality.
-        $('.selected a').each( function () {
-            var self = $(this);
-            if(self.attr('style')) return; // Don't click color swatches, if exists.
-            self.click();
-        });
 
     }
 
