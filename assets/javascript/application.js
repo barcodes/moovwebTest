@@ -241,6 +241,8 @@ $(function setupSortAndRefine() {
     }
 
     function createImage(event) {
+        var w, h,
+            oldImg = $(this);
         slider.flexslider('stop');
         if (! zoomOutHasShown) {
             zoomOutHasShown = true;
@@ -249,9 +251,6 @@ $(function setupSortAndRefine() {
             }, buttonDisplayDuration);
         }
         zoomer.show();
-        var oldImg = $(this),
-            w = zoomer.outerWidth(),
-            h = zoomer.outerHeight();
         zoomedImage = $('<img/>', {
             src: oldImg.attr('src').replace(/sw=\d+/, 'sw=' + imageWidth)
         });
@@ -261,24 +260,27 @@ $(function setupSortAndRefine() {
                 // contain refuses to work
                 // contain: 'invert'
             })
-            .panzoom('zoom', zoomMultiplier, {focal: event})
-            .on('panzoomend', function(event, panzoom, matrix, changed) {
-                if (changed) {
-                    if (matrix[4] < -w) {
-                        matrix[4] = -w;
-                    } else if (matrix[4] > w) {
-                        matrix[4] = w;
-                    }
-                    if (matrix[5] < -h) {
-                        matrix[5] = -h;
-                    } else if (matrix[5] > h) {
-                        matrix[5] = h;
-                    }
-                    zoomedImage.panzoom('setMatrix', matrix);
-                } else {
-                    removeImage();
+            .panzoom('zoom', zoomMultiplier, {focal: event});
+        w = zoomedImage.outerWidth();
+        h = zoomedImage.outerHeight();
+        zoomedImage.on('panzoomend', function(event, panzoom, matrix, changed) {
+            if (changed) {
+                if (matrix[4] < -w) {
+                    matrix[4] = -w;
+                } else if (matrix[4] > w) {
+                    matrix[4] = w;
                 }
-            });
+                // 60 from padding:
+                if (matrix[5] < -h - 60) {
+                    matrix[5] = -h - 60;
+                } else if (matrix[5] > h) {
+                    matrix[5] = h;
+                }
+                zoomedImage.panzoom('setMatrix', matrix);
+            } else {
+                removeImage();
+            }
+        });
     }
 
     function removeImage() {
