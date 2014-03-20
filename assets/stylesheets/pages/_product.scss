@@ -33,7 +33,7 @@
         color: white;
         cursor: pointer;
         font-size: 14px;
-        margin-top: 50px;
+        margin-top: 76px;
         padding: 10px;
         position: absolute;
         right: 0;
@@ -302,14 +302,14 @@
         @include appearance(none);
         position: absolute;
         z-index: 5;
-        bottom: 30%;
+        top: 240px;
         width: 160px;
         margin-left: -80px;
         left: 50%;
         border:2px solid #666;
         color:#fff;
         padding:8px;
-        background-color:#000;
+        background-color: rgba(0, 0, 0, .6);
         line-height:normal;
         font-size:14px;
     }
