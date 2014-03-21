@@ -9,6 +9,20 @@
                     margin: 5px 0px;
                     width: 100%;
 
+                    .content-page-header {
+                        color: #484848;
+                        background: #F0F0F0;
+                        padding: 12px;
+                        margin-bottom: 5px;
+                        
+                        p {
+                            margin: 0px !important;
+                            font-family: 'TradeGothicLTStdBold', Helvetica, Arial, sans-serif;
+                            font-size: 17px;
+                            font-weight: bold;
+                        }                    
+                    }
+
                     h1 {
                         font-size:18px;
                         margin-bottom:10px;
