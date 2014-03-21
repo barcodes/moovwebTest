@@ -8,6 +8,19 @@ $('body') {
         $('./div[@id="content"]/div[@class="contentassetpage"]/div') {
             remove('div/@style')
 
+            $('./div[./p[contains(@style,"padding-left:20px;")]]') {
+                attributes(class: 'content-page-header')
+                remove('./p/@style')
+            }
+            $('./p[contains(@style,"font-size:17px;")]') {
+                remove('@style')
+                wrap('div', class: 'content-page-header')
+            }
+
+            $('./p[text()==" "]') {
+                remove()
+            }
+
             $('.//img') {
                 remove('@width')
                 remove('@height')
