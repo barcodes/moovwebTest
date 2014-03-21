@@ -44,8 +44,10 @@ $(function() {
         setTimeout(function() {
             $('#_bag-button').bind('DOMSubtreeModified', function(e) {
                 if (e.target.innerHTML.length > 0) {
-                    $('#_checkout-btn-container').show();
-                    document.location.href = '#_flexslider';
+                    $('#_checkout-btn-container').show('fast', function() {
+                        console.log('foo');
+                        $('body').scrollTop($('#_checkout-btn-container').offset().top - 50);
+                    });
                 }
             });
         }, 2500);        
