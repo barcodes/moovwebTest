@@ -18,6 +18,9 @@
                         }
 
                         #find-button {
+                            @include appearance(none);
+                            border: 1px solid #ccc;
+                            @include border-radius(0);
                             margin:10px 0px 20px;
                             padding:6px 12px;
                         }
@@ -33,13 +36,33 @@
                         margin-bottom: 5px;
 
                         h3 {
+                            font-size: 14px;
                             font-weight: bold;
+                            &:not(:first-child) {
+                                margin-top: 12px;
+                            }
                         }
 
                         >div {
                             margin: 10px 0 0;
                             border-top: 1px solid #ddd;
                             padding-top: 5px;
+
+                            a, a:link, a:visited, a:hover, a:active {
+                                font-size: 14px;
+                                text-decoration: none;
+                            }
+                            > a {
+                                &:link, &:visited, &:hover, &:active {
+                                    background-color: black;
+                                    color: white;
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                    padding: 10px 0;
+                                    text-align: center;
+                                    width: 49%;
+                                }
+                            }
                         }
                     }
                 }
