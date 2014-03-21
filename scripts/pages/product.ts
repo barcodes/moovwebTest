@@ -115,7 +115,9 @@ $("body") {
                     replace("#", "")
                 }
                 $("a") {
-                    attributes(data-ur-tabs-component: "button", href: 'javascript:void(0);', data-ur-tab-id: %contentid)
+                    name('span')
+                    remove('./@href')
+                    attributes(data-ur-tabs-component: "button", data-ur-tab-id: %contentid)
                     insert("i", class: "fa fa-plus-circle")
                     insert("i", class: "fa fa-minus-circle")
                 }

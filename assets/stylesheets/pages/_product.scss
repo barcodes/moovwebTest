@@ -276,7 +276,7 @@
             > div {
                 margin-bottom: 2px;
 
-                a[data-ur-tabs-component=button] {
+                span[data-ur-tabs-component=button] {
                     display: block;
                     padding: 12px 10px;
                     font-size: 18px;
@@ -288,6 +288,9 @@
                         float: right;
                         margin-top: -5px;
                         color: #c5c5c5;
+                    }
+                    i.fa-plus-circle {
+                        pointer-events: none;
                     }
                     i.fa-minus-circle {
                         display: none;
