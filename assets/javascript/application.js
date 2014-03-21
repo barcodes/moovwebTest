@@ -365,3 +365,18 @@ function _updateMobileCart() {
         $("#_bag-button").append("<span class='_cart-count'>" + total + "</span>");
     }
 }
+
+$(function() {
+    if ($('body').hasClass('_store-locator')) {
+        console.log('setting up locator handlers')
+        var _oldGetStoreListHtml = window.getStoreListHtml,
+            matchTel = /Main Line: ([-\d]+)<br \/>/g;
+        window.getGoogleMapLinkHtml = function() { return ''; };
+        window.getStoreListHtml = function() {
+            return _oldGetStoreListHtml.apply(window, arguments)
+                .replace(matchTel, '<a href="tel:$1">Call</a>')
+                .replace(/\|/g, '')
+                .replace(/>Directions</g, '>Map<');
+        }
+    }
+});
