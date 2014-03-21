@@ -134,6 +134,20 @@ $("body") {
                     inner_wrap('a', href:'tel:' + %foo)
                 }
             }
+            insert('div') {
+                insert('span', data-ur-tabs-component: 'button', data-ur-tab-id: 'pdpReviewsTab') {
+                    insert('span', 'Customer Reviews')
+                    insert("i", class: "fa fa-plus-circle")
+                    insert("i", class: "fa fa-minus-circle")
+                } 
+                move('//div[@id="pdpReviewsTab"]', '.', 'bottom')
+                $('./div[@id="pdpReviewsTab"]') {
+                    attributes(data-ur-tabs-component: 'content', data-ur-tab-id: 'pdpReviewsTab')
+                    remove('@class')
+                    remove('@style')
+                    remove('.//div[contains(@class, "BVDIHeader")]')
+                }
+            }
         }
 
     }

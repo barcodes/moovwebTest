@@ -64,6 +64,12 @@ $(function() {
             });
         }, 2000);
 
+        $('#BVCustomerRatings').bind('click', function() {
+            $('span[data-ur-tab-id="pdpReviewsTab"]').click();
+            var reviewsVPos = $('span[data-ur-tab-id="pdpReviewsTab"]').offset().top;
+            $('body').scrollTop(reviewsVPos - 50);
+        });
+
     }
 
     if($('body').hasClass('_cart')) {
