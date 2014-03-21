@@ -62,6 +62,9 @@ $(function() {
                 var self = $(this);
                 self.click();
             });
+            if($('span[class="BVRRNumber"]').length == 0) {
+                $('span[data-ur-tab-id="pdpReviewsTab"]').parent().remove()
+            }
         }, 2000);
 
         $('#BVCustomerRatings').bind('click', function() {
