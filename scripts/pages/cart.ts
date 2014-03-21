@@ -111,6 +111,14 @@ $('body') {
 		$('./div[@class="loginContent"]//input[@id="dwfrm_login_password"]') {
 			attribute('type', 'password')
 		}
+
+	    $('.//div[@class="checkbox"]') {
+	        $('./label') {
+	            inner_wrap('span')
+	            move('../input', '.', 'top')
+	        }
+	    }
+		
 	}
 
 	$$('.productrelateditems') {

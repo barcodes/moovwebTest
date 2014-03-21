@@ -2,30 +2,34 @@
 
     input[type="radio"],
     input[type="checkbox"] {
-      display:none;
+        display:none;
     }
 
     input[type="radio"] + span:before,
     input[type="checkbox"] + span:before {
-      font-family: 'FontAwesome';
-      padding: 0px 5px;
-      font-size: 20px;
+        font-family: 'FontAwesome';
+        padding: 0px 5px;
+        font-size: 20px;
     }
 
     input[type="radio"] + span:before {
-      content: "\f10c"; /* circle-blank */
+        content: "\f10c";
     }
 
     input[type="radio"]:checked + span:before {
-      content: "\f111"; /* circle */
+        content: "\f111";
     }
 
     input[type="checkbox"] + span:before {
-      content: "\f096"; /* check-empty */
+        position: relative;
+        top: 3px;
+        content: "\f096";
     }
 
     input[type="checkbox"]:checked + span:before {
-      content: "\f046"; /* check */
+        position: relative;
+        top: 3px;
+        content: "\f046";
     }
 
     #container {
@@ -38,6 +42,8 @@
 
             .checkoutprogressindicator {
                 @include box-sizing(border-box);
+                position: relative;
+                top: 6px;
                 display:table;
                 width:100%;
                 border:1px solid #717171;
