@@ -65,6 +65,15 @@ $("//div[@id='footer']") {
                 attributes(data-mw-usage: "email-button")
                 move(this(), %footer, position("bottom"))
             }
+            $('fieldset') {
+                insert('div', class: 'email-signup-input-container') {
+                    move_here('../span[@class="field"]')
+                    move_here('../span[@class="button"]')
+                    $('span') {
+                        name('div')
+                    }
+                } 
+            }
         }
 
         move_here("//div[@class='txtCopyright']")
