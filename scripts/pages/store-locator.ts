@@ -6,4 +6,9 @@ $('//body') {
         remove('.//div[@class="breadcrumb"]')
         remove('.//div[@id="leftcolumn"]')
     }
+    $('.//script[contains(text(), "getStateName")]') {
+        text() {
+            replace(/getStateName\("[\w]+"\)/, 'getStateName("null")')
+        }
+    }
 }
