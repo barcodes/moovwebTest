@@ -9,6 +9,8 @@
 
             .checkoutprogressindicator {
                 @include box-sizing(border-box);
+                position: relative;
+                top: 6px;
                 display:table;
                 width:100%;
                 border:1px solid #717171;

@@ -37,7 +37,7 @@
         ._footer-group-content {
             a {
                 text-align: left;
-                padding: 15px 6px;
+                padding: 15px 5px 15px 15px;
                 display: block;
                 width: 100%;
                 background-color: #ddd;
@@ -64,6 +64,7 @@
             
             a[data-mw-usage=email-button] {
                 display: block;
+                padding: 8px 15px !important;
                 font-size: 15px;
                 font-weight: bold;
                 margin: 0 !important;
@@ -73,19 +74,44 @@
             }
 
             .emailSignup {
-                margin: 0px 0px 20px;
-                padding-top: 5px;
+                position: relative;
+                top: -15px;
+                margin: 0px 0px -15px 0px;
                 float: none;
+
+                .email-signup-input-container {
+                    position: relative;
+                    width: 100%;
+                    display: table;
+
+                    input, button {
+                        width: 100%;
+                        padding: 10px 0px 10px 3px;
+                        height: auto;
+                    }
+
+                    input[type=submit] {
+                        background-color: #222 !important;
+                    }
+
+                    input {
+                        -webkit-appearance: none;
+                        border-radius: 0;
+                    }
+
+                    > div {
+                        display: table-cell;
+                        padding: 5px;
+
+                        &.button {
+                            width: 25%;
+                        }
+                    }
+                }
 
                 label {
                     text-align: center;
                 }
-
-                input {
-                    -webkit-appearance: none;
-                    border-radius: 0;
-                }
-
             }
         }
 

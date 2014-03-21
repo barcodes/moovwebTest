@@ -1,4 +1,27 @@
 ._checkout-login {
+
+    input[type="checkbox"] {
+        display:none;
+    }
+
+    input[type="checkbox"] + span:before {
+        font-family: 'FontAwesome';
+        padding: 0px 5px;
+        font-size: 20px;
+    }
+
+    input[type="checkbox"] + span:before {
+        position: relative;
+        top: 3px;
+        content: "\f096";
+    }
+
+    input[type="checkbox"]:checked + span:before {
+        position: relative;
+        top: 3px;
+        content: "\f046";
+    }
+
     #container #main #content {
         .headerslot .headerslotcontent {
             height:15px;
@@ -25,6 +48,34 @@
                 .logincustomers .formactions {
                     margin-top:20px;
                 }
+
+                .rememberme {
+                    margin-left: 0px;
+
+                    .checkbox {
+                        width: 100%;
+                        display: block;
+                        clear:both;
+                        text-align: left;
+                        padding: 0px 0px 10px 0px;
+                        margin: 3px auto;
+                        @include border-radius(5px);
+                        border: 1px solid #e2e2e2;
+                        background-color: #e9e9e9;
+
+                        label {
+                            display: block;
+                            text-align: left;
+                            margin: 5px 0px 0px;
+                            width: 100%;
+
+                            span {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
