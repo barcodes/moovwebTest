@@ -7,5 +7,9 @@ $('//body') {
         $('.//div[./button[@value="Find"]]') {
             attributes(class: 'formactions fullwidth')
         }
+
+        $('.//div[@class="wishlistsearchresult"]') {
+            move('./div[@class="wishlistsearchform"]', '.', 'bottom')
+        }
     }
 }

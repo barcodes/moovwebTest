@@ -7,6 +7,11 @@ $('//body') {
         $('.//div[./button[@value="Find"]]') {
             attributes(class: 'formactions fullwidth')
         }
+
+        $('.//div[@class="wishlist"]') {
+            move('./div[@class="wishlistsearchform"]', '.', 'bottom')
+        }
+
     }
     $('.//div[@class="wishlistproducts"]') {
         move_here('.//tr[@class="tablerow"]') {
