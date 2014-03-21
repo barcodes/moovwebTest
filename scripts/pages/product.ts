@@ -107,7 +107,7 @@ $("body") {
         attributes(id: "_mw_was_pdpTabsDiv", class: "_mw_was_product_tabs")
         $("ul") {
             name("div")
-            attributes(data-ur-set: "tabs")
+            attributes(data-ur-set: "tabs", data-ur-closeable: "true")
             $("li") {
                 name("div")
                 %contentid = fetch("a/@href")
