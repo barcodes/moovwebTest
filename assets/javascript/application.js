@@ -126,14 +126,17 @@ $(function() {
     }
 
     if($('#menu_container').length < 1) {
-        $('body script').remove();
-        $('body').append('<div id="menu_container" style="display:none;"></div>');
-        $('#menu_container').append($('.categorywrapper').show().detach());
         var html = jQuery('html');
         var jPM = window._jPM = $.jPanelMenu({
             menu: '#menu_container',
             trigger: '.menu-button',
             openPosition: '280px',
+            animated: 'false',
+            beforeOn: function() {
+                $('body script').remove();
+                $('body').append('<div id="menu_container" style="display:none;"></div>');
+                $('#menu_container').append($('.categorywrapper').show().detach());
+            },
             beforeOpen: function() {
                 html.css('overflow', 'hidden');
                 $('#header').addClass('menu-open-header-mod');
