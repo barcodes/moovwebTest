@@ -70,7 +70,10 @@ $(function() {
         }, 2000);
 
         $('#BVCustomerRatings').bind('click', function() {
-            $('span[data-ur-tab-id="pdpReviewsTab"]').click();
+            $('#_mw_was_pdpTabsDiv > div > div').each(function() {
+                $(this).find('> span, > div').attr('data-ur-state','disabled');
+            });
+            $('#pdpReviewsTab, span[data-ur-tab-id="pdpReviewsTab"]').attr('data-ur-state','enabled');
             var reviewsVPos = $('span[data-ur-tab-id="pdpReviewsTab"]').offset().top;
             $('body').scrollTop(reviewsVPos - 50);
         });
@@ -131,7 +134,7 @@ $(function() {
             menu: '#menu_container',
             trigger: '.menu-button',
             openPosition: '280px',
-            animated: 'false',
+            animated: false,
             beforeOn: function() {
                 $('body script').remove();
                 $('body').append('<div id="menu_container" style="display:none;"></div>');
