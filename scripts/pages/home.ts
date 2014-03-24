@@ -82,6 +82,18 @@ $("body") {
         }
         insert_after('div', id: 'category-grid')
         insert_after('div', class: 'clear')
+        insert_after('div', id: '_home-search') {
+            copy_here('//div[@class="headersearchwrapper"]')
+            $('.//fieldset') {
+                remove('.//label')
+                $('./*') {
+                    wrap('div')
+                }
+                $('./div[2]') {
+                    attributes(class: 'home-search-button')
+                }
+            }
+        }
         insert('div', class: 'clear')
 
         $('.//img') {
