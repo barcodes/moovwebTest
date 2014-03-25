@@ -151,14 +151,13 @@
             display: table;
             width: 100%;
             margin: 5px 0px;
-            border: 1px solid #ddd;
-            @include border-radius(3px);
 
             span {
                 display: table-cell;
                 padding-left: 5px;
                 vertical-align: middle;
                 font-size: 14px;
+                color: #1f9223;
 
                 i {
                     margin-right: 5px;

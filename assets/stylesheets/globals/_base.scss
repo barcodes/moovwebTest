@@ -231,6 +231,9 @@ html {
                         }
 
                         .smallNote {
+                            display: inline-block;
+                            margin-top: 0px;
+                            position: relative;
                             width: 100% !important;
                             top: 0 !important;
                             left: 0 !important;

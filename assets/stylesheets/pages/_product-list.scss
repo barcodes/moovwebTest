@@ -197,6 +197,13 @@
         &._show-refine #searchrefinements,
         &._show-sort ul._sort-options {
             display: block;
+
+            ._selected:before {
+                font-family: 'FontAwesome';
+                padding: 0px 5px 0px 0px;
+                font-size: 20px;
+                content: "\f00c";
+            }
         }
         &._show-refine #_refine-button div,
         &._show-sort #_sort-button div {
