@@ -10,6 +10,9 @@ match($path) {
             @import pages/shipping-methods.ts
         }
     }
+    with(/\/home_blocks\/hp-blocks(_.*)?\.html/i) {
+        # Do nothing
+    }
     else() {
         match(inferred_content_type()) {
             with(/html/) {
