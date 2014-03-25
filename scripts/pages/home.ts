@@ -80,7 +80,17 @@ $("body") {
                 }
             }
         }
-        insert_after('div', id: 'category-grid')
+        insert_after('div', id: 'category-grid') {
+            move_here('//div[@id="homepage-blocks"]')
+            match($host) {
+                with(/es-us/) {
+                    remove('.//span[@class="lang-en"]')
+                }
+                else() {
+                    remove('.//span[@class="lang-es"]')
+                }
+            }
+        }
         insert_after('div', class: 'clear')
         insert_after('div', id: '_home-search') {
             copy_here('//div[@class="headersearchwrapper"]')

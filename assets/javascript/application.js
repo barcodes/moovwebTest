@@ -13,14 +13,6 @@ function do_slider() {
 
 $(function() {
 
-    if($('body').hasClass('_home')) {
-        if( document.location.href.indexOf('.es-us.') != -1 ) {
-            $('#category-grid').load('/home_blocks/hp-blocks_es.html');
-        } else {
-            $('#category-grid').load('/home_blocks/hp-blocks.html');
-        }
-    }
-
     setTimeout(override_functions, 1500);
     if (! $('body').hasClass('_product-list')) {
         setTimeout(do_slider, 500);
