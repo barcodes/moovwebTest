@@ -129,28 +129,13 @@ $(function() {
     }
 
     if($('#menu_container').length < 1) {
-        var html = jQuery('html');
-        var jPM = window._jPM = $.jPanelMenu({
-            menu: '#menu_container',
-            trigger: '.menu-button',
-            openPosition: '280px',
-            animated: false,
-            beforeOn: function() {
-                $('body script').remove();
-                $('body').append('<div id="menu_container" style="display:none;"></div>');
-                $('#menu_container').append($('.categorywrapper').show().detach());
-            },
-            beforeOpen: function() {
-                html.css('overflow', 'hidden');
-                $('#header').addClass('menu-open-header-mod');
-                $('body').scrollTop(0);
-            },
-            afterClose: function() {
-                html.css('overflow', 'auto');
-                $('#header').removeClass('menu-open-header-mod');
-            }
+        $('<aside style="display:block;"></aside>').insertAfter('#container');
+        $('body aside').append('<div id="mw-aside-scroller"></div>');
+        $('#mw-aside-scroller').append($('.categorywrapper').show().detach());
+
+        $('.menu-button').bind('click', function() {
+            $('body').toggleClass("mw-menu-open");
         });
-        jPM.on();
     }
 
     if($('body').hasClass('_cart')) {
@@ -179,9 +164,10 @@ $(function() {
 
     $('a[id="f1contextchooser"]').bind('click', function() {
         event.preventDefault();
-        window._jPM.close();
-        app.dialog.openContextChooser('/on/demandware.store/Sites-perryellis-Site/default/FiftyOne-ShowContextChooser?p=','International Shipping');
+        $('body').removeClass('mw-menu-open');
+        //app.dialog.openContextChooser('/on/demandware.store/Sites-perryellis-Site/default/FiftyOne-ShowContextChooser?p=','International Shipping');
     });
+
 
 })
 
@@ -364,6 +350,7 @@ function override_functions() {
     }
 
     _updateMobileCart();
+    $('aside').height($('html').height());
 }
 
 function _updateMobileCart() {

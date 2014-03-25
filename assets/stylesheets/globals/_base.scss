@@ -1,6 +1,56 @@
 html {
+
+    aside {
+        position: absolute;
+        z-index: 9500;
+        top: 0px;
+        width: 280px;
+        background-color: #333;
+    }
+
+    :not(.mw-menu-open) aside {
+        display: none !important;
+        opacity: 0;
+    }
+
+    .mw-menu-open aside {
+        display: block !important;
+        opacity: 1;
+    }
+
+    .mw-menu-open #main, .mw-menu-open footer, .mw-menu-open #copytxt {
+        position: relative !important;
+        z-index: 5000 !important;
+        left: 0px;
+        -webkit-transition: all .25s linear;
+        -webkit-transform: translate3d(280px, 0px, 0px);
+    }
+    .mw-menu-open .headerbgstrip {
+        z-index: 7500;
+        left: 0px;
+        -webkit-transition: all .25s linear;
+        -webkit-transform: translate3d(280px, 0px, 0px);
+    }
+
     body {
+
+        &.mw-menu-open {
+            overflow-x: hidden;
+        }
+
+        #main, #footer, #copytxt {
+            position: relative !important;
+            z-index: 8000;
+            background-color: #fff;
+        }
+
+        #footer {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
         #container {
+            margin-top: 47px;
             width: auto;
             min-width: 0;
             padding: 0px;
@@ -137,6 +187,7 @@ html {
             background-color: #000;
             opacity: .2;
             text-align: center;
+            z-index: 250000;
 
             i {
                 color: #fff;
@@ -146,12 +197,20 @@ html {
             }
         }
 
+        .ui-widget-overlay {
+            z-index: 10001 !important;
+            background-color: #fff;
+        }
+
         .ui-dialog {
+            z-index: 10002 !important;
             height: auto !important;
             left: 10px !important;
             right: 10px !important;
             top: 10px !important;
             width: auto !important;
+            border: 1px solid #fff;
+            @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.25));
 
             #dialogcontainer {
                 height: auto !important;
