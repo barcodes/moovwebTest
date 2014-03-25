@@ -356,9 +356,23 @@ function _updateMobileCart() {
     }
 }
 
+var geolocationObject;
+
+var doLocation = function(pos) {
+    geolocationObject = {
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude,
+        specialty: false
+    }
+};
+if( navigator.geolocation ) {
+    navigator.geolocation.getCurrentPosition(doLocation);
+}
+
 $(function() {
     if ($('body').hasClass('_store-locator')) {
-        console.log('setting up locator handlers')
+        console.log('setting up locator handlers');
+
         var _oldGetStoreListHtml = window.getStoreListHtml,
             matchTel = /Main Line: ([-\d]+)<br \/>/g;
         window.getGoogleMapLinkHtml = function() { return ''; };

@@ -8,7 +8,11 @@ $('//body') {
     }
     $('.//script[contains(text(), "getStateName")]') {
         text() {
-            replace(/getStateName\("[\w]+"\)/, 'getStateName("null")')
+            # replace(/getStateName\("[\w]+"\)/, 'getStateName("null")')
+            # replace(/country:\ "US"/, "country: 'null'")
+            # replace(/"38.0"/, '25.7')
+            # replace(/"-97.0"/, '-80.2')
+            replace(/var\ geolocationObject\ =[^;]*/, '')
         }
     }
 }
