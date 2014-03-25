@@ -22,13 +22,11 @@ html {
         position: relative !important;
         z-index: 5000 !important;
         left: 0px;
-        -webkit-transition: all .25s linear;
         -webkit-transform: translate3d(280px, 0px, 0px);
     }
     .mw-menu-open .headerbgstrip {
         z-index: 7500;
         left: 0px;
-        -webkit-transition: all .25s linear;
         -webkit-transform: translate3d(280px, 0px, 0px);
     }
 
