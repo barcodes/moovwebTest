@@ -120,6 +120,34 @@ $(function() {
         }
     }
 
+    if( $('body').hasClass('_checkout-login') 
+        || $('body').hasClass('_account_login') 
+        || $('body').hasClass('_checkout-shipping') 
+        || $('body').hasClass('_checkout-billiing') ) {
+
+        $('div[class="checkbox"]').unbind().bind('click', function() { 
+            var cb = $(this).find('input[type="checkbox"]');
+            if(cb.prop('checked')==true) {
+                cb.prop('checked', false);
+            } else {
+                cb.prop('checked', true);
+            }
+        });
+
+        if($('body').hasClass('_checkout-shipping')) {
+            var shippingMethodCheck = setInterval(function() {
+                if($('.shippingmethod').length == 0) {
+                    return;
+                }
+                $('.shippingmethods .shippingmethod').unbind().bind('click', function() { 
+                    var rb = $(this).find('input[type="radio"]').prop('checked', true);
+                });
+                clearInterval(shippingMethodCheck);
+            }, 1000);
+        }
+
+    }
+
     if($('#menu_container').length < 1) {
         $('<aside style="display:block;"></aside>').insertAfter('#container');
         $('body aside').append('<div id="mw-aside-scroller"></div>');
