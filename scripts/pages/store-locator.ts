@@ -12,6 +12,7 @@ $('//body') {
     $('.//script[contains(text(), "getStateName")]') {
         text() {
             replace(/var\ geolocationObject\ =[^;]*/, '')
+            replace('jQuery(document).ready(function()', 'window.callLocationLookup = (function()')
         }
     }
 }
