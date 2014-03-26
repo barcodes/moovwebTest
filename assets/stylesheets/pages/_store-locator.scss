@@ -78,6 +78,9 @@
                             }
                         }
                     }
+                    #footer-div b + b {
+                        display: none;
+                    }
                 }
             }
         }
