@@ -105,6 +105,9 @@ $("//div[@id='header']") {
             move('./span[@id="userlanguage"]/a', '.', 'bottom')
             remove('./span[@id="userlanguage"]')
             move('./span[@id="f1flag"]', '.', 'bottom')
+            $('./span[@id="f1flag"][not(.//a)]') {
+                wrap('a', id: 'f1contextchooser')
+            }
             $('a') {
                 insert_bottom('i', class: 'fa fa-chevron-right')
             }
