@@ -121,7 +121,7 @@ $(function() {
     }
 
     if( $('body').hasClass('_checkout-login') 
-        || $('body').hasClass('_account_login') 
+        || $('body').hasClass('_account-login') 
         || $('body').hasClass('_checkout-shipping') 
         || $('body').hasClass('_checkout-billiing') ) {
 
