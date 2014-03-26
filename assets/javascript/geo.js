@@ -5,6 +5,7 @@ function doLocation(pos) {
 	        longitude: pos.coords.longitude,
 	        specialty: false
 	    }
+        $('#input-div').insertBefore('#footer-div');
 	} else {
 		window.geolocationObject = {
 			country: 'US'
