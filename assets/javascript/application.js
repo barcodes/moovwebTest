@@ -123,7 +123,7 @@ $(function() {
     if( $('body').hasClass('_checkout-login') 
         || $('body').hasClass('_account-login') 
         || $('body').hasClass('_checkout-shipping') 
-        || $('body').hasClass('_checkout-billiing') ) {
+        || $('body').hasClass('_checkout-billing') ) {
 
         $('div[class="checkbox"]').unbind().bind('click', function() { 
             var cb = $(this).find('input[type="checkbox"]');
