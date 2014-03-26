@@ -78,8 +78,14 @@
                             }
                         }
                     }
+                    #footer-div b + b {
+                        display: none;
+                    }
                 }
             }
         }
+    }
+    .pac-container {
+        z-index: 8000;
     }
 }
