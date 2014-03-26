@@ -12,5 +12,11 @@ $('//body') {
             }
         }
 
+        $('.//div[@class="checkbox"]') {
+            $('./label') {
+                inner_wrap('span')
+                move('../input', '.', 'top')
+            }
+        }
     }
 }
