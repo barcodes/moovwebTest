@@ -38,6 +38,13 @@ $('./body') {
         }
     }
 
+    $('.//div[@class="paymentmethods"]') {
+        $('./label') {
+            wrap_text_children('span')
+            move('../input[1]', '.', 'top')
+        }
+    }
+
     $('//div[@class="txtCopyright"]') {
         add_class('_minimal-footer')
         move_to('//div[@id="copytxt"]', 'top')

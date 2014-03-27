@@ -146,6 +146,12 @@ $(function() {
             }, 1000);
         }
 
+        if($('body').hasClass('_checkout-billing')) {
+            $('.paymentmethods label').unbind().bind('click', function() { 
+                var rb = $(this).find('input[type="radio"]').prop('checked', true);
+            });
+        }
+
     }
 
     if($('#menu_container').length < 1) {

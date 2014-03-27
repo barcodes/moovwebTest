@@ -1,13 +1,23 @@
 ._checkout-billing {
 
+    input[type="radio"],
     input[type="checkbox"] {
         display:none;
     }
 
+    input[type="radio"] + span:before,
     input[type="checkbox"] + span:before {
         font-family: 'FontAwesome';
         padding: 0px 5px;
         font-size: 20px;
+    }
+
+    input[type="radio"] + span:before {
+        content: "\f10c";
+    }
+
+    input[type="radio"]:checked + span:before {
+        content: "\f111";
     }
 
     input[type="checkbox"] + span:before {
@@ -56,6 +66,41 @@
 
             .checkoutbilling {
                 border: none;
+
+                #paymentmethods {
+                    float: none;
+                    padding:0px;
+                    margin: 3px 0px 0px;
+                    
+                    .paymentmethods {
+                        padding: 0px !important;
+                        margin: 0px !important;
+                        width: 100%;
+
+                        label {
+                            width: 100%;
+                            display: block;
+                            clear:both;
+                            text-align: left;
+                            padding:10px 0px;
+                            margin: 5px 0px !important;
+                            margin: 3px auto;
+                            @include border-radius(5px);
+                            border: 1px solid #e2e2e2;
+                            background-color: #e9e9e9;
+
+                            input {
+                                vertical-align:top;
+                                margin: 5px;
+                            }
+
+                            span {
+                                display:inline-block;
+                                vertical-align:top;
+                            }
+                        }
+                    }
+                }
 
                 .formfield {
                     width: 100%;
