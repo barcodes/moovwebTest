@@ -21,6 +21,9 @@
       with(/^\/$|^\/\?/) {
         @import pages/home.ts
       }
+      with(/\/about-us\.html/) {
+        @import pages/about_us.ts
+      }
       with(/\/basket/) {
         @import pages/cart.ts
       }
