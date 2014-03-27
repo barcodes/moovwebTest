@@ -8,7 +8,9 @@ $('//body') {
 
     $('//div[@id="content"]') {
         $('//div[@class="orderpaymentdetails"]') {
-            move('./table/tr/td','.','top')
+            move('.//td[@class="orderbilling"]','.','top')
+            move('.//td[@class="orderpaymentinstruments"]','.','top')
+            move('.//td[@class="orderpaymentsummary"]','.','top')
             remove('./table')
             $('td') {
                 name('div')
