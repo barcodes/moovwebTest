@@ -2,6 +2,7 @@ body._category-landing {
     .search-breadcrumbs {
         display: none;
     }
+
     div.categorylanding {
         margin-top: 6px;
         div.contentslot {
@@ -30,6 +31,18 @@ body._category-landing {
                     span {
                         display: table-cell;
                     }
+                }
+                a.fancybox {
+                    margin-top: -10px !important;
+                    right: 0px !important;
+                    padding: 12px 10px !important;
+                    bottom: 0px !important;
+                    color: #000 !important;;
+                }
+                div.links-secret {
+                    position: relative;
+                    top: -7px;
+
                 }
             }
         }
