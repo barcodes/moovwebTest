@@ -161,6 +161,7 @@ $(function() {
 
         $('.menu-button').bind('click', function() {
             $('body').toggleClass("mw-menu-open");
+            document.location.href = "#mw-aside-scroller";
         });
     }
 
