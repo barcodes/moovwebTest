@@ -1,3 +1,16 @@
+// hack due to removing plugins
+$.fn.jcarousel = function() {
+    return false;
+}
+$.fn.tooltip = function() {
+    return false;
+}
+$.fn.tabs = function() {
+    return false;
+}
+
+
+
 var fs_opts = {
     animation:"slide",
     directionNav:false,

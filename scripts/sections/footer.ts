@@ -1,5 +1,6 @@
 $("//div[@id='footer']") {
     name("footer")
+
     $(".//div[@id='ftwrapper']") {
         remove(".//@style")
     }
@@ -7,6 +8,8 @@ $("//div[@id='footer']") {
         #Fix privacy policy
         insert("div", class: "ftgroup")
     }
+
+    remove('.//script[contains(text(), "a.open_popup")][contains(text(), ".colorbox")]')
 
     #Separate out Policies from Company
     $(".//div[@class='ftgroup'][1]") {
@@ -114,7 +117,35 @@ $("//div[@id='footer']") {
     insert_after('a', id: "_scroll-to-top", style: 'display: inline') {
         insert('i', class: 'fa fa-angle-double-up')
     }
+
+    $('.//img') {
+        perf.optimize_image() {
+            perf.quality(60)
+        }
+    }
 }
+
 $("//div[@class='copytxt-inner']") {
     remove(".//@style")
 }
+
+remove('.//link[contains(@href, "ui.")]')
+remove('.//script[contains(@src, "jquery-ui")]')
+
+remove('.//link[contains(@href, "jquery.jcarousel")]')
+remove('.//script[contains(@src, "jquery.jcarousel")]')
+
+remove('.//link[contains(@href, "jquery.tooltip")]')
+remove('.//script[contains(@src, "jquery.tooltip")]')
+
+remove('.//script[contains(@src, "jquery.bgiframe.min.js")]')
+
+remove('.//link[contains(@href, "fancybox")]')
+remove('.//script[contains(@src, "fancybox")]')
+
+remove('.//link[contains(@href, "colorbox")]')
+remove('.//script[contains(@src, "colorbox")]')
+
+remove('.//script[contains(@src, "hoverIntent")]')
+remove('.//script[contains(@src, "dropdown.js")]')
+remove('.//script[contains(@src, "WelcomeMat.js")]')

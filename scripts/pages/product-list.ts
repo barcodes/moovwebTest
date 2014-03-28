@@ -81,6 +81,12 @@ $("./body") {
             move_here('../div[position() > 1]/div')
         }
         remove('./div[position() > 1]')
+
+        $('.//img') {
+            perf.optimize_image() {
+                perf.quality(60)
+            }
+        }
     }
     $('.//div[@class="swatches"]') {
         $('.//div[@class="innerpalette"]/a[2]') {

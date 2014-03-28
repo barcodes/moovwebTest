@@ -3,13 +3,7 @@
 $("body") {
     add_class("_home")
 
-    insert_top("style", type: "text/css") {
-        inject(read("../../assets/stylesheets/flexslider.css"))
-        text() {
-            replace("/assets/fonts", concat($asset_host, "fonts"))
-            replace("/assets/images", concat($asset_host, "images"))
-        }
-    }
+    insert_top("link", type: "text/css", rel:'stylesheet', href:asset('stylesheets/flexslider.css'))
     insert_top("script", type: "text/javascript", src: asset("javascript/jquery.flexslider-min.js"))
 
     //when there is a main-banner or large-hp-banner
@@ -35,8 +29,7 @@ $("body") {
         }
     }
     //when there is a slider
-    $("//a[contains(@href, 'best-sellers')][contains(@style, 'url(')]")
-    {
+    $("//a[contains(@href, 'best-sellers')][contains(@style, 'url(')]") {
         create_image_from_bg()
         add_class("_best-seller-link")
 
@@ -53,7 +46,6 @@ $("body") {
             }
             remove("following-sibling::div")
         }
-
     }
 
     $('//div[@class="home-slot-top"]') {
@@ -107,10 +99,14 @@ $("body") {
         insert('div', class: 'clear')
 
         $('.//img') {
-            perf.optimize_image()
+            perf.optimize_image() {
+                perf.quality(60)
+            }
         }
     }
 
-    remove("//div[@class='home-slot-bottom']")
-    remove("//div[@class='extended-text']")
+    remove('.//div[@class="mobile-home-bottom-content-slot"]')
+    remove('.//div[@class="homepage"]')
+    remove('.//div[@class="clear"]')
+    remove('.//div[@class="extended-text"]')
 }
