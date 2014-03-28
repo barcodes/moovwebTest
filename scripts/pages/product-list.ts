@@ -84,7 +84,7 @@ $("./body") {
 
         $('.//img') {
             perf.optimize_image() {
-                perf.quality(60)
+                perf.quality(40)
             }
         }
     }
