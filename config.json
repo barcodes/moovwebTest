@@ -17,5 +17,8 @@
 		"$.es-py.perryellis.com => es-us.perryellis.com",
 		"$.es-sv.perryellis.com => es-us.perryellis.com",
 		"$.perryellis.com => perryellis.com"
-	]
+	],
+	"static_paths": {
+		"/mobile/redirect" : "redirect.js"
+	}
 }
