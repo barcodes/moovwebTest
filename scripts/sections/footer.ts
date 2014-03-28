@@ -129,9 +129,6 @@ $("//div[@class='copytxt-inner']") {
     remove(".//@style")
 }
 
-remove('.//link[contains(@href, "ui.")]')
-remove('.//script[contains(@src, "jquery-ui")]')
-
 remove('.//link[contains(@href, "jquery.jcarousel")]')
 remove('.//script[contains(@src, "jquery.jcarousel")]')
 
