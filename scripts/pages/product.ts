@@ -149,6 +149,26 @@ $("body") {
                 }
             }
         }
+
+        $('.//div[@id="pdpContactTab"]') {
+            $phone = fetch('.//table/tbody/tr[2]/td[1]/p[3]/text()')
+            $phone {
+                replace(/[^0-9]/, '')
+            }
+            $email = fetch('.//table/tbody/tr[2]/td[2]/p[3]/a/@href')
+            $('.//table/tbody/tr[1]/td[1]/img') {
+                wrap('a', href: 'tel:' + $phone)
+            }
+            $('.//table/tbody/tr[1]/td[2]/img') {
+                wrap('a', href: $email)
+            }
+            $('.//table/tbody/tr[2]/td[1]') {
+                attributes(onclick: 'javascript:location.href="tel:' + $phone + '"')
+            }
+            $('.//table/tbody/tr[2]/td[2]') {
+                attributes(onclick: 'javascript:location.href="' + $email + '"')
+            }
+        }
     }
 
     $('.//div[@id="pdpMain"]') {
