@@ -338,7 +338,10 @@
             margin-right: 0px;
         }
         .recommendations_cross-sell li {
-            width: 50% !important;
+            float:none;
+            display:inline-block;
+            vertical-align:middle;
+            width: 49% !important;
         }
     }
     .productactions, .productreview {

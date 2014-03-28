@@ -8,6 +8,9 @@ $.fn.tooltip = function() {
 $.fn.tabs = function() {
     return false;
 }
+$.fn.dialog = function() {
+    return false;
+}
 
 
 
