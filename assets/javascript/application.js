@@ -165,6 +165,13 @@ $(function() {
         if($('body').hasClass('_checkout-billing')) {
             $('.paymentmethods label').unbind().bind('click', function() { 
                 var rb = $(this).find('input[type="radio"]').prop('checked', true);
+                if($(this).attr('for').toLowerCase().indexOf('paypal') == -1) {
+                    $('#PaymentMethod_CREDIT_CARD').show();
+                    $('#PaymentMethod_PayPal').hide();
+                } else {
+                    $('#PaymentMethod_CREDIT_CARD').hide();
+                    $('#PaymentMethod_PayPal').show();
+                }
             });
         }
 
