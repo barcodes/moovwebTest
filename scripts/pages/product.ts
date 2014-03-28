@@ -161,6 +161,12 @@ $("body") {
             $('.//table/tbody/tr[1]/td[2]/img') {
                 wrap('a', href: $email)
             }
+            $('.//table/tbody/tr[2]/td[1]') {
+                attributes(onclick: 'javascript:location.href="tel:' + $phone + '"')
+            }
+            $('.//table/tbody/tr[2]/td[2]') {
+                attributes(onclick: 'javascript:location.href="' + $email + '"')
+            }
         }
     }
     $('//script[contains(text(), "getRRDisplayCode")]') {
