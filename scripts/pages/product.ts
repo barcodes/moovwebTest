@@ -174,7 +174,7 @@ $("body") {
     $('.//div[@id="pdpMain"]') {
         $('.//img') {
             perf.optimize_image() {
-                perf.quality(40)
+                perf.quality(60)
             }
         }
     }
@@ -189,7 +189,7 @@ $("body") {
     $('.//script[contains(text(), "app.ProductCache = ")]') {
         inner() {
             replace(/\?sw=450/, '?sw=320')
-            replace(/http:\/\/demandware\.edgesuite\.net\//i, "http://opt.moovweb.net/img?linkEncoded=0&quality=40&img=http://demandware.edgesuite.net/")
+            replace(/http:\/\/demandware\.edgesuite\.net\//i, "http://opt.moovweb.net/img?linkEncoded=0&quality=60&img=http://demandware.edgesuite.net/")
         }
     }
 }
