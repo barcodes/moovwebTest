@@ -336,6 +336,12 @@
 
         .producthits {
             margin-top: -10px;
+
+            .product-count a {
+                background-color:#000;
+                color:#fff !important;
+                padding:6px 12px;
+            }
         }
 
         .pagination li {

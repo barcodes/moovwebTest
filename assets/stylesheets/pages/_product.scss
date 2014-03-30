@@ -92,6 +92,10 @@
             margin: 0 auto;
             padding: 15px 0;
             @include box-shadow(none);
+
+            img {
+                min-height:200px;
+            }
         }
 
         .flex-control-nav {
