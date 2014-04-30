@@ -16,7 +16,8 @@
 		"$.es-pe.perryellis.com => es-us.perryellis.com",
 		"$.es-py.perryellis.com => es-us.perryellis.com",
 		"$.es-sv.perryellis.com => es-us.perryellis.com",
-		"$.perryellis.com => perryellis.com"
+		"$.perryellis.com => perryellis.com",
+		"$.staging.perryellis.com => staging.store.perryellis.demandware.net"
 	],
 	"static_paths": {
 		"/mobile/redirect" : "redirect.js"
