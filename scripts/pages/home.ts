@@ -21,7 +21,7 @@ $("body") {
         # Transform the banners-container to be a flex slider
         
         # insert Tritium here...
-
+		
         insert_after('div', id: '_home-buttons') {
             insert('div', class: 'menu-button', id: '_home-show-categories-btn') {
                 insert('span','All Categories')
